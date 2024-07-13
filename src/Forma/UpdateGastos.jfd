@@ -1,0 +1,95 @@
+JFDML JFormDesigner: "8.2.3.0.386" Java: "17.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq t {par t {seq l {space :p:44:p, par t {comp label6:::p::p, comp label7:::p::p}, space :::p, par l {comp textField2::::204:x, comp textField1::::204:x}}, seq {space ::80:x, par l {comp label4::t:p::p, comp label5::t:p::p}, space u:::p, par l {comp textField3:::p:202:p, comp textField4:::p:202:p}}, seq {space :0:44:x, par t {par l {seq l {space :10:10:p, comp label10:::p:94:p, space :6:6:p, comp textField7:::p:202:p}, seq l {space :34:34:p, comp label9:::p:64:p, space :12:12:p, comp textField6:::p:202:p}, seq l {par t {comp label11:::p:104:p, comp label1:::p::p}, space :6:6:p, comp textField8:::p:202:p}, seq l {space :71:71:p, comp label8:::p:27:p, space :12:12:p, comp textField5:::p:202:p}}, seq t {comp label12:::p::p, space :12:12:p, comp textField9:::p:202:p}, seq t {comp label13:::p::p, space :12:12:p, par l {comp button1:::p::p, comp textField10:::p:202:p}}}}}, space :p:44:p}}"
+			"$verticalGroup": "par l {seq l {space :p:40:p, par l {comp label6:::p::p, comp textField1:::p::p}, space s:::p, par l {comp label7:::p::p, comp textField2:::p::p}, space u:::p, par l {comp textField3::l:p::p, comp label4::l:p::p}, space :p:21:p, par l {comp label5:::p::p, comp textField4:::p::p}, space s:::p, par l {comp label12:::p::p, comp textField9:::p::p}, space :p:27:p, comp label1:::p::p, space s:::p, par l {comp label11:::p::p, comp textField8:::p::p}, space :18:18:p, par l {comp label10:::p::p, comp textField7:::p::p}, space :12:12:p, par l {comp label9:::p::p, comp textField6:::p::p}, space :21:21:p, par l {comp label8:::p::p, comp textField5:::p::p}, space s:::p, par l {comp label13:::p::p, comp textField10:::p::p}, space u:::p, comp button1:::p::p, space ::14:x}}"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label4"
+				"text": "IDGerente"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label5"
+				"text": "Mes"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField1"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField2"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "Insertar"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label6"
+				"text": "Energia eléctrica"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label7"
+				"text": "Mantenimiento"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField3"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField4"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField5"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label8"
+				"text": "Mes"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label9"
+				"text": "IDGerente"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField6"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField7"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label10"
+				"text": "Mantenimiento"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label11"
+				"text": "Energia eléctrica"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField8"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "Cambiar Hacia:"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField9"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label12"
+				"text": "Año"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label13"
+				"text": "Año"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField10"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 400, 640 )
+		} )
+	}
+}

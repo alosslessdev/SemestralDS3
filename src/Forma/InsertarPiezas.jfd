@@ -1,0 +1,49 @@
+JFDML JFormDesigner: "8.2.3.0.386" Java: "17.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :p:36:p, par t {comp label3:::p::p, comp label2:::p::p, comp label1:::p::p, comp label4:::p::p}, space s:::p, par l:::p {comp button1:::p::p, comp textField1::::207:x, comp textField2::::207:x, comp textField3::l::207:x, comp textField4::l::207:x}, space ::42:x}}"
+			"$verticalGroup": "par l {seq l {space :p:39:p, par b {comp textField1::b:p::p, comp label1::b:p::p}, space :p:23:p, par l {comp label2:::p::p, comp textField2:::p::p}, par l {seq {space :p:13:p, comp label3:::p::p}, seq l {space s:::p, comp textField3:::p::p}}, space ::19:x, par l {comp label4:::p::p, comp textField4:::p::p}, space u:::p, comp button1:::p::p, space :p:79:p}}"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "Pieza"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "CodigoMaquina"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "Insertar"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField1"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField2"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "IDGerente"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField3"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField4"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label4"
+				"text": "IDSucursal"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 20, 0 )
+			"size": new java.awt.Dimension( 400, 360 )
+		} )
+	}
+}

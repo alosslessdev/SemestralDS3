@@ -1,0 +1,81 @@
+JFDML JFormDesigner: "8.2.3.0.386" Java: "17.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :p:16:p, par t {seq t {par t {comp label2::t:p::p, comp label6:::p::p, comp label1::t:p::p}, space u:::p, par l {comp checkBox2:::p::p, comp checkBox1:::p::p}, space :p:126:p}, comp textField1::t:p:196:p, par l:t {seq l {space :p:37:p, comp label3:::p::p, space u:::p, comp checkBox3:::p::p}, par t:l {seq t {comp label5:::p::p, space u:::p, comp textField2a:::p:202:p}, seq t {comp label4:::p::p, space :::p, par l {comp button1:::p::p, comp textField3a:::p:202:p}}}}}, space ::51:x}}"
+			"$verticalGroup": "par l {seq l {space :p:21:p, par l {comp label1:::p::p, comp checkBox1:::p::p}, space :p:15:p, par l {comp label6:::p::p, comp textField1:::p::p}, space :p:11:p, par b {comp checkBox2::b:p::p, comp label2::b:p::p}, space :p:32:p, par l {comp label5:::p::p, comp textField2a:::p::p}, space :p:12:p, par b {comp label3::b:p::p, comp checkBox3::b:p::p}, space u:::p, par b {comp label4::b:p::p, comp textField3a::b:p::p}, space :p:35:p, comp button1:::p::p, space ::46:x}}"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "Chequeo"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "Reemplazos"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "Limpieza"
+			} )
+			add( new FormComponent( "javax.swing.JCheckBox" ) {
+				name: "checkBox1"
+				"text": "Se Hizo"
+				addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "checkBox1ItemStateChanged", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JCheckBox" ) {
+				name: "checkBox2"
+				"text": "text"
+				addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "checkBox2ItemStateChanged", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JCheckBox" ) {
+				name: "checkBox3"
+				"text": "text"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label4"
+				"text": "CodigoMaquina"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label5"
+				"text": "CodigoPieza"
+				"enabled": false
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField1"
+				"enabled": false
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField3a"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "Insertar"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label6"
+				"text": "ResultadoChequeo"
+				"enabled": false
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField2a"
+				"enabled": false
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 10, 0 )
+			"size": new java.awt.Dimension( 400, 395 )
+		} )
+		add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+			name: "scrollPane1"
+			add( new FormComponent( "javax.swing.JTable" ) {
+				name: "table1"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 95, 425 )
+			"size": new java.awt.Dimension( 200, 191 )
+		} )
+	}
+}

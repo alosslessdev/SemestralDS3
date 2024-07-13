@@ -1,0 +1,56 @@
+JFDML JFormDesigner: "8.2.3.0.386" Java: "17.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {par l {par l {seq {space ::80:x, par l {comp label4::t:p::p, comp label5::t:p::p, comp label1::t:p::p}, space u:::p, par l:::p {comp textField3::::202:x, comp textField4::::202:x, comp textField5::l::202:x}}, seq {space :p:44:p, par t {comp label6:::p::p, comp label7:::p::p}, space :::p, par l {comp textField2::::204:x, comp textField1::::204:x}}}, seq l {space :p:156:p, comp button1:::p::p}}, space :p:44:p}}"
+			"$verticalGroup": "par l {seq l {space :p:40:p, par l {comp label6:::p::p, comp textField1:::p::p}, space s:::p, par l {comp label7:::p::p, comp textField2:::p::p}, space u:::p, par l {comp textField3::l:p::p, comp label4::l:p::p}, space :p:21:p, par l {comp label5:::p::p, comp textField4:::p::p}, space :::x, par b {comp label1::b:p::p, comp textField5::b:p::p}, space :p:32:p, comp button1:::p::p, space :p:38:p}}"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label4"
+				"text": "IDGerente"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label5"
+				"text": "Mes"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField1"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField2"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "Insertar"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label6"
+				"text": "Energia eléctrica"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label7"
+				"text": "Mantenimiento"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField3"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField4"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "text"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField5"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 400, 370 )
+		} )
+	}
+}

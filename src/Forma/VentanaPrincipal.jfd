@@ -1,0 +1,130 @@
+JFDML JFormDesigner: "8.2.3.0.386" Java: "17.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq t {space ::19:x, comp menuBar1:::p::p, space :p:76:p}}"
+			"$verticalGroup": "par l {seq t {space :p:70:p, comp menuBar1:::p:52:p, space ::98:x}}"
+		} ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JMenuBar", new FormLayoutManager( class javax.swing.JMenuBar ) ) {
+				name: "menuBar1"
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "menu3"
+					"text": "Insertar"
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "IMenuMaterialEntrada"
+						"text": "Material de Entrada"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "IMenuMaterialEntrada", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "IMenuMaterialSalida"
+						"text": "Material de Salida"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "IMenuMaterialSalida", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "IMenuGastos"
+						"text": "Gastos"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "IMenuGastos", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "iMenuGanancias"
+						"text": "Ganancias"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "iMenuGanancias", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "iMenuPiezas"
+						"text": "Piezas"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "iMenuPiezas", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "iMenuMaquinas"
+						"text": "Maquinas"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "iMenuMaquinas", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "iMenuMantenimiento"
+						"text": "Mantenimiento"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "iMenuMantenimiento", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "iMenuEmpleado"
+						"text": "Empleado"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "iMenuEmpleado", true ) )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "menu2"
+					"text": "Actualizar"
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "AMenuGastos2"
+						"text": "Gastos"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "IMenuGastos", true ) )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "AMenuGastos2", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "AMenuPiezas2"
+						"text": "Piezas"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "iMenuPiezas", true ) )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "AMenuPiezas2", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "AMenuEmpleado2"
+						"text": "Empleado"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "iMenuEmpleado", true ) )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "AMenuEmpleado2", true ) )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "menu1"
+					"text": "Consultar"
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "menuItem1"
+						"text": "Procesados por sucursal"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "menuItem1", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "cMenuMaterial"
+						"text": "Material de Entrada"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "menuItem4", true ) )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cMenuMaterial", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "cMenuMaterialSalida"
+						"text": "Material de Salida"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cMenuMaterialSalida", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "cMenuMaquinas"
+						"text": "Maquinas"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cMenuMaquinas", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "cMenuEmpleado"
+						"text": "Empleado"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cMenuEmpleado", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "cMenuGastos"
+						"text": "Gastos"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cMenuGastos", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "cMenuPiezas"
+						"text": "Piezas"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cMenuPiezas", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "cMenuMantenimiento"
+						"text": "Mantenimiento"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cMenuMantenimiento", true ) )
+					} )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 80, 10 )
+			"size": new java.awt.Dimension( 300, 220 )
+		} )
+	}
+}

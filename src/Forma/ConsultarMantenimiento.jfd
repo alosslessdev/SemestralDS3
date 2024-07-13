@@ -1,0 +1,48 @@
+JFDML JFormDesigner: "8.2.3.0.386" Java: "17.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {par l {seq l {space :p:235:p, comp button1:::p::p}, seq l {space :p:34:p, par t {comp scrollPane1:::p:475:p, seq {par l {comp label3::l:p::p, comp label2::t:p::p, comp label1::t:p::p}, space s:::p, par l:::p {comp textField3::::307:x, comp textField1::l::307:x, comp textField2::l::307:x}}}}}, space ::68:x}}"
+			"$verticalGroup": "par l {seq {space :p:45:p, par l {comp textField1:::p::p, comp label1:::p::p}, space u:::p, par l {comp textField2:::p::p, comp label2:::p::p}, space :p:21:p, par l {comp label3:::p::p, comp textField3:::p::p}, space :p:38:p, comp button1:::p::p, space :p:38:p, comp scrollPane1:::p:250:p, space ::35:x}}"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "Consultar"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1", true ) )
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "table1"
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "Codigo De Maquina"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "Fecha"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField1"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField2"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "Numero de Mantenimiento"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField3"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 595, 575 )
+		} )
+	}
+}

@@ -1,0 +1,55 @@
+JFDML JFormDesigner: "8.2.3.0.386" Java: "17.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq t {space ::24:x, par l {seq t {comp button1:::p::p, space :p:158:p}, seq t {comp scrollPane1:::p:359:p, space :p:17:p}}}, seq l {par l {seq l {space :p:73:p, comp label1:::p::p}, seq t {space :::p, par l {comp label2::t:p::p, comp label3::t:p::p, comp label4::t:p::p}}}, space s:::p, par l:::p {comp textField4::::230:x, comp textField3::l::230:x, comp textField2::l::230:x, comp textField1::l::230:x}, space :0:18:x}}"
+			"$verticalGroup": "par l {seq l {space :p:28:p, par l {comp label1:::p::p, comp textField1:::p::p}, space :p:18:p, par l {comp textField2:::p::p, comp label2:::p::p}, space :p:18:p, par l {comp textField3:::p::p, comp label3:::p::p}, space :p:24:p, par l {comp textField4:::p::p, comp label4:::p::p}, space s:::p, comp button1:::p::p, space u:::p, comp scrollPane1:::p:250:p, space ::17:x}}"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "Ubicacion"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "Tipo de Entrada"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "Fecha"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label4"
+				"text": "Horario de Entrada"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField1"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField2"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField3"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField4"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "Consultar"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1", true ) )
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "table1"
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 400, 555 )
+		} )
+	}
+}
