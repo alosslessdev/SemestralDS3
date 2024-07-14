@@ -4,7 +4,6 @@
 
 package Forma;
 
-import DBConsultas.Consultas2;
 import DBConsultas.ConsultasParameterLess;
 import DBConsultas.InsertarUpdate2BooleanA;
 import DBConsultas.InsertarUpdate2NoBoolean;

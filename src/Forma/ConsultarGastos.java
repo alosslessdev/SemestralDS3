@@ -4,7 +4,7 @@
 
 package Forma;
 
-import DBConsultas.Consultas2;
+import DBConsultas.Consultas;
 
 import java.awt.event.*;
 import javax.swing.*;
@@ -21,31 +21,29 @@ public class ConsultarGastos extends JPanel {
     private void button1(ActionEvent e) {
         // TODO add your code here
         if (!textField1.getText().equals("") || !textField2.getText().equals("")){
-            Consultas2 objConsultas2 = new Consultas2();
-            objConsultas2.setTitulo(new String[]{"CodigoGasto",
+            Consultas objConsultas = new Consultas();
+            objConsultas.setTitulo(new String[]{"CodigoGasto",
                     "EnergiaElectrica",
                     "Mantenimiento",
                     "IDGerente",
                     "Mes",
                     "Año"});
-            objConsultas2.setDatos(new String[]{
+            objConsultas.setDatos(new String[]{
                     "CodigoGasto",
                     "EnergiaElectrica",
                     "Mantenimiento",
                     "IDGerente",
                     "Mes",
                     "Año"});
-            objConsultas2.setParametroString(
-                    "select CodigoGasto, " +
-                            "EnergiaElectrica " +
-                            "Mantenimiento " +
-                            "IDGerente " +
-                            "Mes " +
-                            "Año from Gastos where Mes = ? " +
-                            "or Año = ?");
-            objConsultas2.setParametro1(textField1.getText());
-            objConsultas2.setParametro2(textField2.getText());
-            table1.setModel(objConsultas2.consultas());
+            objConsultas.setParametroString(
+                    "select CodigoGasto, EnergiaElectrica, Mantenimiento, IDGerente, Mes, " +
+                            "Año from Gastos where Mes = ? or Año = ?");
+            objConsultas.setParametros(new String[]{
+                    textField1.getText(),
+                    textField2.getText()
+            });
+
+            table1.setModel(objConsultas.consultas());
         }else{
             //impresionDialogo("El campo esta en blanco", "Sin datos", 1);
         }

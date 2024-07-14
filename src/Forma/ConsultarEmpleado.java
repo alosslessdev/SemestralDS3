@@ -4,8 +4,7 @@
 
 package Forma;
 
-import DBConsultas.Consultas2;
-import DBConsultas.Consultas4;
+import DBConsultas.Consultas;
 
 import java.awt.event.*;
 import javax.swing.*;
@@ -24,25 +23,27 @@ public class ConsultarEmpleado extends JPanel {
         if (!textField1.getText().equals("") || !textField2.getText().equals("")
                 || !textField3.getText().equals("")
                 || !textField4.getText().equals("")){
-            Consultas4 objConsultas4 = new Consultas4();
-            objConsultas4.setTitulo(new String[]{"Nombre",
+            Consultas objConsultas = new Consultas();
+            objConsultas.setTitulo(new String[]{"Nombre",
                     "Apellido",
                     "Identificacion",
                     "Codigo de Sucursal"});
-            objConsultas4.setDatos(new String[]{
+            objConsultas.setDatos(new String[]{
                     "Nombre",
                     "Apellido",
                     "Identificacion",
                     "CodigoSucursal"});
-            objConsultas4.setParametroString(
+            objConsultas.setParametroString(
                     "select Nombre, Apellido, Identificacion, CodigoSucursal from Empleado where Nombre = ? " +
                             "or Apellido = ? or Identificacion = ? or CodigoSucursal = ?");
-            objConsultas4.setParametro1(textField1.getText());
-            objConsultas4.setParametro2(textField2.getText());
-            objConsultas4.setParametro3(textField3.getText());
-            objConsultas4.setParametro4(textField4.getText());
+            objConsultas.setParametros(new String[]{
+                    textField1.getText(),
+                    textField2.getText(),
+                    textField3.getText(),
+                    textField4.getText()
+            });
 
-            table1.setModel(objConsultas4.consultas());
+            table1.setModel(objConsultas.consultas());
         }else{
             //impresionDialogo("El campo esta en blanco", "Sin datos", 1);
         }

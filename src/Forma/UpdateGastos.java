@@ -2,7 +2,7 @@ package Forma;/*
  * Created by JFormDesigner on Mon Jun 24 11:32:35 EST 2024
  */
 
-import DBConsultas.InsertarUpdate10;
+import DBConsultas.InsertarUpdate;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -16,22 +16,36 @@ public class UpdateGastos extends JPanel {
     private void button1(ActionEvent e) {
         // TODO add your code here
         if (!textField1.getText().equals("") && !textField2.getText().equals("")) {
-            InsertarUpdate10 objInsertarUpdate10 = new InsertarUpdate10();
-            objInsertarUpdate10.setParametroString(
+            InsertarUpdate objInsertarUpdate = new InsertarUpdate();
+            objInsertarUpdate.setParametroString(
                     "update Gastos set EnergiaElectrica = ?, Mantenimiento = ?, IDGerente = ?, Mes = ?, Año = ? " +
                             "where EnergiaElectrica = ? or Mantenimiento = ? or IDGerente = ? or Mes = ? or Año = ? ");
-            objInsertarUpdate10.setParametro6(textField1.getText());
-            objInsertarUpdate10.setParametro7(textField2.getText());
-            objInsertarUpdate10.setParametro8(textField3.getText());
-            objInsertarUpdate10.setParametro9(textField4.getText());
-            objInsertarUpdate10.setParametro10(textField5.getText());
+            objInsertarUpdate.setParametros(new String[]{
+                    textField6.getText(),
+                    textField7.getText(),
+                    textField8.getText(),
+                    textField9.getText(),
+                    textField10.getText(),
+                    textField1.getText(),
+                    textField2.getText(),
+                    textField3.getText(),
+                    textField4.getText(),
+                    textField5.getText()
+            });
+           /* objInsertarUpdate.setParametro1(textField6.getText());
+            objInsertarUpdate.setParametro2(textField7.getText());
+            objInsertarUpdate.setParametro3(textField8.getText());
+            objInsertarUpdate.setParametro4(textField9.getText());
+            objInsertarUpdate.setParametro5(textField10.getText());
 
-            objInsertarUpdate10.setParametro1(textField6.getText());
-            objInsertarUpdate10.setParametro2(textField7.getText());
-            objInsertarUpdate10.setParametro3(textField8.getText());
-            objInsertarUpdate10.setParametro4(textField9.getText());
-            objInsertarUpdate10.setParametro5(textField10.getText());
-            objInsertarUpdate10.insertar();
+            objInsertarUpdate.setParametro6(textField1.getText());
+            objInsertarUpdate.setParametro7(textField2.getText());
+            objInsertarUpdate.setParametro8(textField3.getText());
+            objInsertarUpdate.setParametro9(textField4.getText());
+            objInsertarUpdate.setParametro10(textField5.getText());*/
+
+
+            objInsertarUpdate.insertar();
             JOptionPane.showMessageDialog(null, "Operacion completada con exito", "Mensaje", 1);
 
         }else{
@@ -66,12 +80,13 @@ public class UpdateGastos extends JPanel {
         textField10 = new JTextField();
 
         //======== this ========
-        setBorder (new javax. swing. border. CompoundBorder( new javax .swing .border .TitledBorder (new javax. swing. border.
-        EmptyBorder( 0, 0, 0, 0) , "JF\u006frmDesi\u0067ner Ev\u0061luatio\u006e", javax. swing. border. TitledBorder. CENTER, javax. swing
-        . border. TitledBorder. BOTTOM, new java .awt .Font ("Dialo\u0067" ,java .awt .Font .BOLD ,12 ),
-        java. awt. Color. red) , getBorder( )) );  addPropertyChangeListener (new java. beans. PropertyChangeListener( )
-        { @Override public void propertyChange (java .beans .PropertyChangeEvent e) {if ("borde\u0072" .equals (e .getPropertyName () ))
-        throw new RuntimeException( ); }} );
+        setBorder ( new javax . swing. border .CompoundBorder ( new javax . swing. border .TitledBorder ( new javax .
+        swing. border .EmptyBorder ( 0, 0 ,0 , 0) ,  "JF\u006frmDes\u0069gner \u0045valua\u0074ion" , javax. swing .border
+        . TitledBorder. CENTER ,javax . swing. border .TitledBorder . BOTTOM, new java. awt .Font ( "D\u0069alog"
+        , java .awt . Font. BOLD ,12 ) ,java . awt. Color .red ) , getBorder
+        () ) );  addPropertyChangeListener( new java. beans .PropertyChangeListener ( ){ @Override public void propertyChange (java
+        . beans. PropertyChangeEvent e) { if( "\u0062order" .equals ( e. getPropertyName () ) )throw new RuntimeException
+        ( ) ;} } );
 
         //---- label4 ----
         label4.setText("IDGerente");

@@ -2,8 +2,7 @@ package Forma;/*
  * Created by JFormDesigner on Fri Jun 28 20:36:34 GMT-05:00 2024
  */
 
-import DBConsultas.InsertarUpdate6NoBoolean;
-import DBConsultas.InsertarUpdate8;
+import DBConsultas.InsertarUpdate;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -21,21 +20,33 @@ public class UpdateEmpleado extends JPanel {
         if (!textField1.getText().equals("") && !textField2.getText().equals("") &&
                 !textField3.getText().equals("") &&
                 !textField4.getText().equals("")) {
-            InsertarUpdate8 objInsertarUpdate8 = new InsertarUpdate8();
-             objInsertarUpdate8.setParametroString(
+            InsertarUpdate objInsertarUpdate = new InsertarUpdate();
+             objInsertarUpdate.setParametroString(
                      "update Empleado set Nombre = ?, Apellido = ?, CodigoSucursal = ?, Identificacion = ? " +
                              "where Nombre = ? or Apellido = ? or CodigoSucursal = ? or Identificacion = ? ");
 
-             objInsertarUpdate8.setParametro5(textField1.getText());
-             objInsertarUpdate8.setParametro6(textField2.getText());
-             objInsertarUpdate8.setParametro7(textField3.getText());
-             objInsertarUpdate8.setParametro8(textField4.getText());
+            objInsertarUpdate.setParametros(new String[]{
+                    textField5.getText(),
+                    textField6.getText(),
+                    textField7.getText(),
+                    textField8.getText(),
+                    textField1.getText(),
+                    textField2.getText(),
+                    textField3.getText(),
+                    textField4.getText()
+            });
 
-             objInsertarUpdate8.setParametro1(textField5.getText());
-             objInsertarUpdate8.setParametro2(textField6.getText());
-             objInsertarUpdate8.setParametro3(textField7.getText());
-             objInsertarUpdate8.setParametro4(textField8.getText());
-             objInsertarUpdate8.insertar();
+            /*objInsertarUpdate.setParametro1(textField5.getText());
+            objInsertarUpdate.setParametro2(textField6.getText());
+            objInsertarUpdate.setParametro3(textField7.getText());
+            objInsertarUpdate.setParametro4(textField8.getText());
+             objInsertarUpdate.setParametro5(textField1.getText());
+             objInsertarUpdate.setParametro6(textField2.getText());
+             objInsertarUpdate.setParametro7(textField3.getText());
+             objInsertarUpdate.setParametro8(textField4.getText());*/
+
+
+             objInsertarUpdate.insertar();
             JOptionPane.showMessageDialog(null, "Operacion completada con exito", "Mensaje", 1);
 
         }else{

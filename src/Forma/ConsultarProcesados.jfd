@@ -4,12 +4,12 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq {par l {seq {space :p:32:p, comp scrollPane1:::p:536:p}, seq l {space :p:267:p, comp button1:::p::p}, seq l {space :p:134:p, comp label4:::p::p, space :::p, comp textField4:::p:231:p}}, space ::67:x}}"
-			"$verticalGroup": "par l {seq t {space :p:35:p, par l {comp label4:::p::p, comp textField4:::p::p}, space :p:29:p, comp scrollPane1:::p:245:p, space s:::p, comp button1:::p::p, space ::55:x}}"
+			"$horizontalGroup": "par l {seq {par l {seq {space :p:32:p, comp scrollPane1:::p:536:p}, seq l {space :p:267:p, comp button1:::p::p}, seq l {space :p:134:p, comp label4:::p::p, space :::p, comp textField1:::p:231:p}}, space ::67:x}}"
+			"$verticalGroup": "par l {seq t {space :p:35:p, par l {comp label4:::p::p, comp textField1:::p::p}, space :p:29:p, comp scrollPane1:::p:245:p, space s:::p, comp button1:::p::p, space ::67:x}}"
 		} ) {
 			name: "this"
 			add( new FormComponent( "javax.swing.JTextField" ) {
-				name: "textField4"
+				name: "textField1"
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label4"

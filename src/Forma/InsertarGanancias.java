@@ -4,8 +4,7 @@
 
 package Forma;
 
-import DBConsultas.InsertarUpdate3;
-import DBConsultas.InsertarUpdate5;
+import DBConsultas.InsertarUpdate;
 
 import java.awt.event.*;
 import javax.swing.*;
@@ -22,16 +21,18 @@ public class InsertarGanancias extends JPanel {
     private void button1(ActionEvent e) {
         // TODO add your code here
         if (!textField1.getText().equals("") && !textField2.getText().equals("") && !textField3.getText().equals("")) {
-            InsertarUpdate5 objInsertarUpdate5 = new InsertarUpdate5();
-            objInsertarUpdate5.setParametroString(
+            InsertarUpdate objInsertarUpdate = new InsertarUpdate();
+            objInsertarUpdate.setParametroString(
                     "insert into IngresosGanancias (Mes, Año, IDGerente, precio, CodigoSalida) " +
                             "values (?, ?, ?, ?, ?) ");
-            objInsertarUpdate5.setParametro1(textField1.getText());
-            objInsertarUpdate5.setParametro2(textField2.getText());
-            objInsertarUpdate5.setParametro3(textField3.getText());
-            objInsertarUpdate5.setParametro4(textField4.getText());
-            objInsertarUpdate5.setParametro5(textField5.getText());
-            objInsertarUpdate5.insertar();
+            objInsertarUpdate.setParametros(new String[]{
+                    textField1.getText(),
+                    textField2.getText(),
+                    textField3.getText(),
+                    textField4.getText(),
+                    textField5.getText()
+            });
+            objInsertarUpdate.insertar();
             JOptionPane.showMessageDialog(null, "Operacion completada con exito", "Mensaje", 1);
 
         }else{

@@ -4,10 +4,9 @@
 
 package Forma;
 
-import DBConsultas.Consultas2;
+import DBConsultas.Consultas;
 
 import java.awt.event.*;
-import java.sql.SQLException;
 import javax.swing.*;
 import javax.swing.GroupLayout;
 
@@ -22,18 +21,20 @@ public class ConsultarPiezas extends JPanel {
     private void button1(ActionEvent e) {
         // TODO add your code here
         if (!textField1.getText().equals("") || !textField2.getText().equals("")){
-            Consultas2 objConsultas2 = new Consultas2();
-            objConsultas2.setTitulo(new String[]{"Codigo de Maquina", "Nombre de Pieza"});
-            objConsultas2.setDatos(new String[]{
+            Consultas objConsultas = new Consultas();
+            objConsultas.setTitulo(new String[]{"Codigo de Maquina", "Nombre de Pieza"});
+            objConsultas.setDatos(new String[]{
                     "CodigoMaquina",
                     "NombrePieza"});
-            objConsultas2.setParametroString(
+            objConsultas.setParametroString(
                     "select CodigoMaquina, NombrePieza from Piezas where CodigoMaquina = ? " +
                             "or NombrePieza = ?");
-            objConsultas2.setParametro1(textField1.getText());
-            objConsultas2.setParametro2(textField2.getText());
-            table1.setModel(objConsultas2.consultas());
-            objConsultas2.clear();
+            objConsultas.setParametros(new String[]{
+                    textField1.getText(),
+                    textField2.getText()
+            });
+            table1.setModel(objConsultas.consultas());
+            objConsultas.clear();
         }else{
             //impresionDialogo("El campo esta en blanco", "Sin datos", 1);
         }

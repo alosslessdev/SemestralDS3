@@ -4,7 +4,7 @@
 
 package Forma;
 
-import DBConsultas.InsertarUpdate3;
+import DBConsultas.InsertarUpdate;
 
 import java.awt.event.*;
 import javax.swing.*;
@@ -18,14 +18,17 @@ public class InsertarMaterialEntrada extends JPanel {
     private void button1(ActionEvent e) {
         // TODO add your code here
         if (!textField1.getText().equals("") && !textField2.getText().equals("") && !textField3.getText().equals("")) {
-            InsertarUpdate3 objInsertarUpdate3 = new InsertarUpdate3();
-            objInsertarUpdate3.setParametroString(
+            InsertarUpdate objInsertarUpdate = new InsertarUpdate();
+            objInsertarUpdate.setParametroString(
                     "insert into MaterialEntrada (EntradaTipo, EntradaPeso, EntradaOrigen, HorarioEntrada, date) " +
                             "values (?, ?, ?, convert(varchar(10), GETDATE(), 108), GETDATE()) ");
-            objInsertarUpdate3.setParametro1(textField1.getText());
-            objInsertarUpdate3.setParametro2(textField2.getText());
-            objInsertarUpdate3.setParametro3(textField3.getText());
-            objInsertarUpdate3.insertar();
+
+            objInsertarUpdate.setParametros(new String[]{
+                    textField1.getText(),
+                    textField2.getText(),
+                    textField3.getText()
+            });
+            objInsertarUpdate.insertar();
             JOptionPane.showMessageDialog(null, "Operacion completada con exito", "Mensaje", 1);
 
         }else{

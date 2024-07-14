@@ -2,7 +2,7 @@ package Forma;/*
  * Created by JFormDesigner on Sat Jun 29 21:51:10 GMT-05:00 2024
  */
 
-import DBConsultas.InsertarUpdate4;
+import DBConsultas.InsertarUpdate;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -18,14 +18,24 @@ public class UpdatePiezas extends JPanel {
     private void button1(ActionEvent e) {
         // TODO add your code here
         if (!textField1.getText().equals("") && !textField2.getText().equals("")) {
-            InsertarUpdate4 objInsertarUpdate4 = new InsertarUpdate4();
-            objInsertarUpdate4.setParametroString(
+            InsertarUpdate objInsertarUpdate = new InsertarUpdate();
+            objInsertarUpdate.setParametroString(
                     "update Piezas set NombrePieza = ?, CodigoMaquina = ? where NombrePieza = ? or CodigoMaquina = ?");
-            objInsertarUpdate4.setParametro3(textField1.getText());
-            objInsertarUpdate4.setParametro4(textField2.getText());
-            objInsertarUpdate4.setParametro1(textField3.getText());
-            objInsertarUpdate4.setParametro2(textField4.getText());
-            objInsertarUpdate4.insertar();
+
+            objInsertarUpdate.setParametros(new String[]{
+                    textField3.getText(),
+                    textField4.getText(),
+                    textField1.getText(),
+                    textField2.getText()
+            });
+            /*
+            objInsertarUpdate.setParametro1(textField3.getText());
+            objInsertarUpdate.setParametro2(textField4.getText());
+            objInsertarUpdate.setParametro3(textField1.getText());
+            objInsertarUpdate.setParametro4(textField2.getText());
+            */
+
+            objInsertarUpdate.insertar();
             JOptionPane.showMessageDialog(null, "Operacion completada con exito", "Mensaje", 1);
 
         }else{
