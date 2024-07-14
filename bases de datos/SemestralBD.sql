@@ -1,5 +1,7 @@
 Create database SemestralBD
+go
 Use SemestralBD
+go
 
 Create Table Clientes(
 ID_cliente Int Primary key IDENTITY(1,1),--codigo generado automaticamente
@@ -64,8 +66,7 @@ ALTER TABLE Citas
 ADD ID_Doctor INT;
 ALTER TABLE Citas
 ADD CONSTRAINT FK_Citas_ID_Doctor FOREIGN KEY (ID_Doctor) REFERENCES Doctores(ID_Doctor);
-
-
+go
 
 SET IDENTITY_INSERT Clientes ON;
 INSERT INTO Clientes (ID_cliente,Nombre, Apellido, ID_Personal, Num_Tarjeta, Tipo_Tarjeta)--inserta tabla cleintes 
@@ -182,7 +183,7 @@ VALUES
 (2, 1021, 1, 87, 'Consulta adicional', '2021-07-22'),
 (3, 1022, 1, 90, 'Consulta programada', '2021-07-23'),
 (4, 1023, 1, 90, 'Consulta urgente', '2021-07-24');
-
+go
 
 --3
 -- Suelte el disparador anterior si existe
@@ -275,20 +276,20 @@ CREATE VIEW V_genero AS
 SELECT *
 FROM Programas
 WHERE Genero IN ('TE', 'CO', 'PRE');
-
+go
 -- Ver para buscar por edad
 CREATE VIEW V_edad AS
 SELECT *
 FROM Programas
 WHERE Edad_Recomendada IN ('menores de 10', '11 a 17', 'mayores de 18');
-
+go
 -- Crear o modificar la vista para buscar por médico.
 CREATE OR ALTER VIEW V_doctor AS
 SELECT p.*, d.Nombre AS Doctor_Nombre
 FROM Programas p
 JOIN Citas c ON p.ID_Programa = c.ID_Programa
 JOIN Doctores d ON c.ID_Doctor = d.ID_Doctor;
-
+go
 --6
 CREATE PROCEDURE p_busqueda
     @tipo_busqueda INT
@@ -311,7 +312,7 @@ BEGIN
         RAISERROR('Tipo de búsqueda no válido', 16, 1);
     END
 END;
-
+go
 --7	Cuando un cliente solicita un nuevo plan
 CREATE PROCEDURE p_validar_cliente--creacion del proceso para validar 
     @nombre VARCHAR(50),
@@ -348,7 +349,7 @@ BEGIN
         PRINT 'Ocurrió un error: ' + ERROR_MESSAGE();
     END CATCH
 END;
-
+go
 --8 definir las preferencias de un cliente particular
 CREATE PROCEDURE p_preferencia_cliente-- crea el procedimineto 
     @ID_cliente INT
@@ -382,6 +383,7 @@ BEGIN
         PRINT 'Ocurrió un error: ' + ERROR_MESSAGE();
     END CATCH
 END;
+go
 --9 para saber cuales son los generos mas reservados 
 DECLARE c_cuenta_genero CURSOR FOR--declara el cursor
 SELECT Genero, COUNT(*) AS Total
@@ -417,12 +419,4 @@ BEGIN CATCH
         DEALLOCATE c_cuenta_genero;
     END
 END CATCH;
-
-
-
-
-
-
-
-
-
+go
