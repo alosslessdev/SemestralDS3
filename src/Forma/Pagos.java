@@ -13,7 +13,7 @@ import javax.swing.GroupLayout;
 public class Pagos extends JInternalFrame {
     public Pagos() {
 
-        super("Pagos", true, true, true, false);
+        super("Pagos", true, true, true, true);
         initComponents();
     }
 

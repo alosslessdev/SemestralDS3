@@ -13,7 +13,7 @@ import javax.swing.GroupLayout;
 public class VerPrograma extends JInternalFrame {
     public VerPrograma() {
 
-        super("Ver Programa", true, true, true, false);
+        super("Ver Programa", true, true, true, true);
         initComponents();
     }
 
