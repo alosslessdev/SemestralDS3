@@ -190,18 +190,18 @@ public class VentanaMDIAdministrador extends JFrame {
             //---- button1 ----
             button1.setText("Iniciar Sesi\u00f3n");
             desktopPane1.add(button1, JLayeredPane.DEFAULT_LAYER);
-            button1.setBounds(145, 95, 110, button1.getPreferredSize().height);
+            button1.setBounds(330, 235, 110, button1.getPreferredSize().height);
         }
 
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
         contentPane.setLayout(contentPaneLayout);
         contentPaneLayout.setHorizontalGroup(
             contentPaneLayout.createParallelGroup()
-                .addComponent(desktopPane1, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 398, Short.MAX_VALUE)
+                .addComponent(desktopPane1, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 798, Short.MAX_VALUE)
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
-                .addComponent(desktopPane1, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
+                .addComponent(desktopPane1, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 546, Short.MAX_VALUE)
         );
         pack();
         setLocationRelativeTo(getOwner());

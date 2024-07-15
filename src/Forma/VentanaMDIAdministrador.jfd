@@ -4,8 +4,8 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {comp desktopPane1::t::398:x}"
-			"$verticalGroup": "par l {comp desktopPane1::t::246:x}"
+			"$horizontalGroup": "par l {comp desktopPane1::t::798:x}"
+			"$verticalGroup": "par l {comp desktopPane1::t::546:x}"
 		} ) {
 			name: "this"
 			add( new FormContainer( "javax.swing.JDesktopPane", new FormLayoutManager( class javax.swing.JDesktopPane ) ) {
@@ -14,8 +14,8 @@ new FormModel {
 					name: "button1"
 					"text": "Iniciar Sesión"
 				}, new FormLayoutConstraints( null ) {
-					"x": 145
-					"y": 95
+					"x": 330
+					"y": 235
 					"width": 110
 				} )
 			} )
@@ -66,7 +66,7 @@ new FormModel {
 			}
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 5 )
-			"size": new java.awt.Dimension( 400, 300 )
+			"size": new java.awt.Dimension( 800, 600 )
 		} )
 	}
 }
