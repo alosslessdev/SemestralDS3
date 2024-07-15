@@ -12,6 +12,8 @@ import javax.swing.GroupLayout;
  */
 public class GenerosA extends JInternalFrame {
     public GenerosA() {
+
+        super("Generos", true, true, true, false);
         initComponents();
     }
 

@@ -12,6 +12,8 @@ import javax.swing.GroupLayout;
  */
 public class Solicitud extends JInternalFrame {
     public Solicitud() {
+
+        super("Solicitud", true, true, true, false);
         initComponents();
     }
 

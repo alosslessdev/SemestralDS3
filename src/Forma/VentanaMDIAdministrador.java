@@ -6,6 +6,7 @@ package Forma;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.beans.PropertyVetoException;
 import javax.swing.*;
 import javax.swing.GroupLayout;
 
@@ -37,102 +38,93 @@ public class VentanaMDIAdministrador extends JFrame {
         MDI.setTitle("Ventana Principal");
     }
 
-    private void IMenuMaterialEntrada(ActionEvent e) {
+    private void PagosMenu(ActionEvent e) {
         // TODO add your code here
-        InsertarMaterialEntrada Entrada = new InsertarMaterialEntrada();
-        Entrada.setSize(desktopPane1.getSize());
-        Entrada.setMaximum()
+        Pagos pagos = new Pagos();
+        pagos.setSize(desktopPane1.getSize());
+        try {
+            pagos.setMaximum(true);
+        } catch (PropertyVetoException ex) {
+            ex.printStackTrace();
+        }
+        this.desktopPane1.add(pagos);
+        pagos.show();    }
+
+    private void PreferenciasMenu(ActionEvent e) {
+        // TODO add your code here
+        Preferencias preferencias = new Preferencias();
+        preferencias.setSize(desktopPane1.getSize());
+        try {
+            preferencias.setMaximum(true);
+        } catch (PropertyVetoException ex) {
+            ex.printStackTrace();
+        }
+        this.desktopPane1.add(preferencias);
+        preferencias.show();    }
+
+    private void SolictudMenu(ActionEvent e) {
+        // TODO add your code here
+        Solicitud solicitud = new Solicitud();
+        solicitud.setSize(desktopPane1.getSize());
+        try {
+            solicitud.setMaximum(true);
+        } catch (PropertyVetoException ex) {
+            ex.printStackTrace();
+        }
+        this.desktopPane1.add(solicitud);
+        solicitud.show();    }
+
+    private void VerProgramaMenu(ActionEvent e) {
+        // TODO add your code here
+        VerPrograma verPrograma = new VerPrograma();
+        verPrograma.setSize(desktopPane1.getSize());
+        try {
+            verPrograma.setMaximum(true);
+        } catch (PropertyVetoException ex) {
+            ex.printStackTrace();
+        }
+        this.desktopPane1.add(verPrograma);
+        verPrograma.show();
     }
 
-    private void IMenuMaterialSalida(ActionEvent e) {
+    private void BuscarMenu(ActionEvent e) {
         // TODO add your code here
-    }
+        Buscar buscar = new Buscar();
+        buscar.setSize(desktopPane1.getSize());
+        try {
+            buscar.setMaximum(true);
+        } catch (PropertyVetoException ex) {
+            ex.printStackTrace();
+        }
+        this.desktopPane1.add(buscar);
+        buscar.show();    }
 
-    private void IMenuGastos(ActionEvent e) {
+    private void GenerosMenu(ActionEvent e) {
         // TODO add your code here
-    }
+        GenerosA generosA = new GenerosA();
+        generosA.setSize(desktopPane1.getSize());
+        try {
+            generosA.setMaximum(true);
+        } catch (PropertyVetoException ex) {
+            ex.printStackTrace();
+        }
+        this.desktopPane1.add(generosA);
+        generosA.show();    }
 
-    private void iMenuGanancias(ActionEvent e) {
-        // TODO add your code here
-    }
-
-    private void iMenuPiezas(ActionEvent e) {
-        // TODO add your code here
-    }
-
-    private void iMenuMaquinas(ActionEvent e) {
-        // TODO add your code here
-    }
-
-    private void iMenuMantenimiento(ActionEvent e) {
-        // TODO add your code here
-    }
-
-    private void iMenuEmpleado(ActionEvent e) {
-        // TODO add your code here
-    }
-
-    private void AMenuGastos2(ActionEvent e) {
-        // TODO add your code here
-    }
-
-    private void AMenuPiezas2(ActionEvent e) {
-        // TODO add your code here
-    }
-
-    private void AMenuEmpleado2(ActionEvent e) {
-        // TODO add your code here
-    }
-
-    private void menuItem1(ActionEvent e) {
-        // TODO add your code here
-    }
-
-    private void menuItem4(ActionEvent e) {
-        // TODO add your code here
-    }
-
-    private void cMenuMaterial(ActionEvent e) {
-        // TODO add your code here
-    }
-
-    private void cMenuMaterialSalida(ActionEvent e) {
-        // TODO add your code here
-    }
-
-    private void cMenuMaquinas(ActionEvent e) {
-        // TODO add your code here
-    }
-
-    private void cMenuEmpleado(ActionEvent e) {
-        // TODO add your code here
-    }
-
-    private void cMenuGastos(ActionEvent e) {
-        // TODO add your code here
-    }
-
-    private void cMenuPiezas(ActionEvent e) {
-        // TODO add your code here
-    }
-
-    private void cMenuMantenimiento(ActionEvent e) {
-        // TODO add your code here
-    }
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         // Generated using JFormDesigner Evaluation license - sdf ads
         menuBar1 = new JMenuBar();
         menu1 = new JMenu();
-        IMenuMaterialEntrada2 = new JMenuItem();
-        IMenuMaterialSalida2 = new JMenuItem();
-        IMenuGastos2 = new JMenuItem();
-        iMenuGanancias2 = new JMenuItem();
+        PagosMenu = new JMenuItem();
+        PreferenciasMenu = new JMenuItem();
+        SolictudMenu = new JMenuItem();
+        VerProgramaMenu = new JMenuItem();
         menu2 = new JMenu();
-        AMenuGastos3 = new JMenuItem();
+        BuscarMenu = new JMenuItem();
         menu3 = new JMenu();
-        menuItem2 = new JMenuItem();
+        GenerosMenu = new JMenuItem();
         desktopPane1 = new JDesktopPane();
         button1 = new JButton();
 
@@ -146,25 +138,25 @@ public class VentanaMDIAdministrador extends JFrame {
             {
                 menu1.setText("Usuario");
 
-                //---- IMenuMaterialEntrada2 ----
-                IMenuMaterialEntrada2.setText("Pagos");
-                IMenuMaterialEntrada2.addActionListener(e -> IMenuMaterialEntrada(e));
-                menu1.add(IMenuMaterialEntrada2);
+                //---- PagosMenu ----
+                PagosMenu.setText("Pagos");
+                PagosMenu.addActionListener(e -> PagosMenu(e));
+                menu1.add(PagosMenu);
 
-                //---- IMenuMaterialSalida2 ----
-                IMenuMaterialSalida2.setText("Preferencias");
-                IMenuMaterialSalida2.addActionListener(e -> IMenuMaterialSalida(e));
-                menu1.add(IMenuMaterialSalida2);
+                //---- PreferenciasMenu ----
+                PreferenciasMenu.setText("Preferencias");
+                PreferenciasMenu.addActionListener(e -> PreferenciasMenu(e));
+                menu1.add(PreferenciasMenu);
 
-                //---- IMenuGastos2 ----
-                IMenuGastos2.setText("Solictud");
-                IMenuGastos2.addActionListener(e -> IMenuGastos(e));
-                menu1.add(IMenuGastos2);
+                //---- SolictudMenu ----
+                SolictudMenu.setText("Solictud");
+                SolictudMenu.addActionListener(e -> SolictudMenu(e));
+                menu1.add(SolictudMenu);
 
-                //---- iMenuGanancias2 ----
-                iMenuGanancias2.setText("Ver Programa");
-                iMenuGanancias2.addActionListener(e -> iMenuGanancias(e));
-                menu1.add(iMenuGanancias2);
+                //---- VerProgramaMenu ----
+                VerProgramaMenu.setText("Ver Programa");
+                VerProgramaMenu.addActionListener(e -> VerProgramaMenu(e));
+                menu1.add(VerProgramaMenu);
             }
             menuBar1.add(menu1);
 
@@ -172,13 +164,10 @@ public class VentanaMDIAdministrador extends JFrame {
             {
                 menu2.setText("Programas");
 
-                //---- AMenuGastos3 ----
-                AMenuGastos3.setText("Gastos");
-                AMenuGastos3.addActionListener(e -> {
-			IMenuGastos(e);
-			AMenuGastos2(e);
-		});
-                menu2.add(AMenuGastos3);
+                //---- BuscarMenu ----
+                BuscarMenu.setText("Buscar");
+                BuscarMenu.addActionListener(e -> BuscarMenu(e));
+                menu2.add(BuscarMenu);
             }
             menuBar1.add(menu2);
 
@@ -186,10 +175,10 @@ public class VentanaMDIAdministrador extends JFrame {
             {
                 menu3.setText("Estadisticas");
 
-                //---- menuItem2 ----
-                menuItem2.setText("Procesados por sucursal");
-                menuItem2.addActionListener(e -> menuItem1(e));
-                menu3.add(menuItem2);
+                //---- GenerosMenu ----
+                GenerosMenu.setText("Generos");
+                GenerosMenu.addActionListener(e -> GenerosMenu(e));
+                menu3.add(GenerosMenu);
             }
             menuBar1.add(menu3);
         }
@@ -223,14 +212,14 @@ public class VentanaMDIAdministrador extends JFrame {
     // Generated using JFormDesigner Evaluation license - sdf ads
     private JMenuBar menuBar1;
     private JMenu menu1;
-    private JMenuItem IMenuMaterialEntrada2;
-    private JMenuItem IMenuMaterialSalida2;
-    private JMenuItem IMenuGastos2;
-    private JMenuItem iMenuGanancias2;
+    private JMenuItem PagosMenu;
+    private JMenuItem PreferenciasMenu;
+    private JMenuItem SolictudMenu;
+    private JMenuItem VerProgramaMenu;
     private JMenu menu2;
-    private JMenuItem AMenuGastos3;
+    private JMenuItem BuscarMenu;
     private JMenu menu3;
-    private JMenuItem menuItem2;
+    private JMenuItem GenerosMenu;
     private JDesktopPane desktopPane1;
     private JButton button1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on

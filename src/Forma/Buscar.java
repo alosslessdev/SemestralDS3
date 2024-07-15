@@ -12,6 +12,7 @@ import javax.swing.GroupLayout;
  */
 public class Buscar extends JInternalFrame {
     public Buscar() {
+        super("Buscar", true, true, true, true);
         initComponents();
     }
 

@@ -12,6 +12,8 @@ import javax.swing.GroupLayout;
  */
 public class Preferencias extends JInternalFrame {
     public Preferencias() {
+
+        super("Preferencias", true, true, true, false);
         initComponents();
     }
 

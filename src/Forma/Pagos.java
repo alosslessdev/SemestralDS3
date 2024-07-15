@@ -12,6 +12,8 @@ import javax.swing.GroupLayout;
  */
 public class Pagos extends JInternalFrame {
     public Pagos() {
+
+        super("Pagos", true, true, true, false);
         initComponents();
     }
 
