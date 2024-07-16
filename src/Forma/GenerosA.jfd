@@ -4,14 +4,24 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormContainer( "javax.swing.JInternalFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {space :0:400:x}"
-			"$verticalGroup": "par l {space :0:300:x}"
+			"$horizontalGroup": "par l {seq {par l {seq l {space :p:59:p, comp scrollPane1:::p::p}, seq l {space :p:250:p, comp button1:::p::p}}, space ::47:x}}"
+			"$verticalGroup": "par l {seq l {space :p:46:p, comp button1:::p::p, space s:::p, comp scrollPane1:::p::p, space ::63:x}}"
 		} ) {
 			name: "this"
 			"visible": true
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "text"
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "table1"
+				} )
+			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 400, 300 )
+			"size": new java.awt.Dimension( 570, 610 )
 		} )
 	}
 }

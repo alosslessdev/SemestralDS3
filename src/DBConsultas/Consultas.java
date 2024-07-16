@@ -17,7 +17,8 @@ public class Consultas {
     private String [] parametros;
     private String [] titulo;
     private String [] datos;
-    private Vector<String> datosA = new Vector<>();
+    private String [] datosc;
+
     private AppLogs objLogs = new AppLogs(Consultas.class);
 
     public void setParametros(String[] parametros) {
@@ -51,14 +52,15 @@ public class Consultas {
                 }
                 try(ResultSet resultado = pst.executeQuery()){
                     resultado.last();
+                    datosc = new String [datos.length];
                     int filas = resultado.getRow();
                     if (filas > 0) {
                         resultado.beforeFirst();
                         while(resultado.next()){
                             for(i=0;i<datos.length;i++) {
-                                datosA.add(resultado.getString(datos[i]));
+                                datosc[i] = resultado.getString(datos[i]);
                             }
-                            consulta.addRow(datosA);
+                            consulta.addRow(datosc);
                         }
                     }else{
                         JOptionPane.showMessageDialog(null, "No hay datos para la fecha ","Info",1);
@@ -71,8 +73,5 @@ public class Consultas {
             objLogs.errorLogs(ex);
         }
         return consulta;
-    }
-    public void clear (){
-        datosA.clear();
     }
 }

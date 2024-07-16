@@ -4,8 +4,8 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormContainer( "javax.swing.JInternalFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq l {space :p:15:p, par t {comp label3:::p::p, comp label2:::p::p, comp label1:::p::p}, space :p:27:p, par l:::p {comp textField1::::67:x, comp textField2::::67:x, comp textField3::::67:x}, space ::261:x}}"
-			"$verticalGroup": "par l {seq l {space :p:18:p, par b {comp label1::b:p::p, comp textField1::b:p::p}, space :p:18:p, par b {comp label2::b:p::p, comp textField2::b:p::p}, space s:::p, par b {comp label3::b:p::p, comp textField3::b:p::p}, space ::131:x}}"
+			"$horizontalGroup": "par l {seq {par l {seq l {space :p:116:p, comp button1:::p::p, space ::123:x}, seq {par l {seq l {space :p:51:p, par l {comp textField1::l:::x, comp textField2::l:::x, comp textField3::l:::x, comp textField4::l:::x, comp textField5::l:::x, seq {par l {comp label6:::p::p, comp label5:::p::p, comp label4:::p::p, comp label1:::p::p, comp label2:::p::p, comp label3:::p::p}, space :0:204:x}}}, seq t {space ::51:x, comp textField6:::p:222:p}}, space u:::p}}, comp scrollPane1:::p::p, space :p:41:p}}"
+			"$verticalGroup": "par l {seq {par l {seq {space :p:28:p, comp label1:::p::p, space u:::p, comp textField1:::p::p, space u:::p, comp label2:::p::p, space u:::p, comp textField2:::p::p, space s:::p, comp label3:::p::p, space u:::p, comp textField3:::p::p, space :::p, comp label4:::p::p, space u:::p, comp textField4:::p::p, space s:::p, comp label5:::p::p, space :::p, comp textField5:::p::p, space s:::p, comp label6:::p::p, space :::p, comp textField6:::p::p, space s:::p, comp button1:::p::p}, seq l {space :p:18:p, comp scrollPane1:::p:515:p}}, space ::26:x}}"
 		} ) {
 			name: "this"
 			"visible": true
@@ -30,9 +30,40 @@ new FormModel {
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField3"
 			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "text"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label4"
+				"text": "text"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField4"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label5"
+				"text": "text"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label6"
+				"text": "text"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField5"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField6"
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "table1"
+				} )
+			} )
 		}, new FormLayoutConstraints( null ) {
-			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 400, 300 )
+			"location": new java.awt.Point( 35, 10 )
+			"size": new java.awt.Dimension( 790, 590 )
 		} )
 	}
 }
