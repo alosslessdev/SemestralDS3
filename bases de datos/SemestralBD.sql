@@ -86,8 +86,8 @@ SET IDENTITY_INSERT Planes ON;--se lo puedes quitar solo le quitas el ID_Plan y 
 
 INSERT INTO Planes (ID_Plan, Nombre_Plan, Costo)--insertar tabla planes 
 VALUES
-(1, 'B·sico', 9.00),
-(2, 'Est·ndar', 14.00),
+(1, 'B√°sico', 9.00),
+(2, 'Est√°ndar', 14.00),
 (3, 'Ultra', 16.00);
 
 SET IDENTITY_INSERT Planes OFF;
@@ -168,7 +168,7 @@ VALUES
 (7, 1006, 1, 90, 'Consulta preventiva', '2021-07-07'),
 (8, 1007, 1, 90, 'Consulta especializada', '2021-07-08'),
 (9, 1008, 1, 90, 'Consulta a distancia', '2021-07-09'),
-(1, 1009, 1, 90, 'Consulta telefÛnica', '2021-07-10'),
+(1, 1009, 1, 90, 'Consulta telef√≥nica', '2021-07-10'),
 (1, 1010, 8, 90, 'Consulta adicional', '2021-07-11'),
 (2, 1011, 5, 75, 'Consulta programada', '2021-07-12'),
 (3, 1012, 7, 90, 'Consulta urgente', '2021-07-13'),
@@ -179,7 +179,7 @@ VALUES
 (8, 1017, 1, 90, 'Consulta preventiva', '2021-07-18'),
 (9, 1018, 1, 90, 'Consulta especializada', '2021-07-19'),
 (1, 1019, 1, 65, 'Consulta a distancia', '2021-07-20'),
-(1, 1020, 1, 90, 'Consulta telefÛnica', '2021-07-21'),
+(1, 1020, 1, 90, 'Consulta telef√≥nica', '2021-07-21'),
 (2, 1021, 1, 87, 'Consulta adicional', '2021-07-22'),
 (3, 1022, 1, 90, 'Consulta programada', '2021-07-23'),
 (4, 1023, 1, 90, 'Consulta urgente', '2021-07-24');
@@ -204,7 +204,7 @@ BEGIN
         -- Recuperar el ID_Cliente de las filas insertadas
         SELECT @ID_Cliente = @ID_Cliente
         FROM inserted;
-        -- Compruebe si la cliente est· en buen estado (paz y salvo)
+        -- Compruebe si la cliente est√° en buen estado (paz y salvo)
         SELECT @Paz_Y_Salvo = CASE 
                                 WHEN EXISTS (
                                     SELECT 1
@@ -217,12 +217,12 @@ BEGIN
         -- Si no paz y salvo, rechaza el inserto.
         IF @Paz_Y_Salvo = 0
         BEGIN
-            RAISERROR ('Su servicio est· suspendido por morosidad', 16, 1);
+            RAISERROR ('Su servicio est√° suspendido por morosidad', 16, 1);
             ROLLBACK TRANSACTION;
             RETURN;
         END;
     END;
-    -- Insertar permitida si la verificaciÛn de paz y salvo pasÛ
+    -- Insertar permitida si la verificaci√≥n de paz y salvo pas√≥
     INSERT INTO Programas (Nombre_Programa, Duracion, Ano_Inicio, Edad_Recomendada, Genero)
     SELECT Nombre_Programa, Duracion, Ano_Inicio, Edad_Recomendada, Genero
     FROM inserted;
@@ -235,7 +235,7 @@ GO
 IF EXISTS (SELECT * FROM sys.procedures WHERE name = 'sp_make_payment')
     DROP PROCEDURE sp_make_payment;
 GO
--- Crear el procedimiento almacenado para la validaciÛn de pagos.
+-- Crear el procedimiento almacenado para la validaci√≥n de pagos.
 CREATE PROCEDURE sp_make_payment
     @ID_Contrato INT,
     @Monto Money
@@ -263,7 +263,7 @@ BEGIN
         RAISERROR ('El monto pagado no corresponde al costo del plan.', 16, 1);
         RETURN;
     END;
-    -- Si pasan las validaciones, proceder con el pago (acciÛn simulada)
+    -- Si pasan las validaciones, proceder con el pago (acci√≥n simulada)
     INSERT INTO Pagos (ID_Contrato, Fecha_Pago, Monto)
     VALUES (@ID_Contrato, GETDATE(), @Monto);
 
@@ -271,7 +271,7 @@ BEGIN
 END;
 GO
 --5
--- Ver para buscar por gÈnero
+-- Ver para buscar por g√©nero
 CREATE VIEW V_genero AS
 SELECT *
 FROM Programas
@@ -283,7 +283,7 @@ SELECT *
 FROM Programas
 WHERE Edad_Recomendada IN ('menores de 10', '11 a 17', 'mayores de 18');
 go
--- Crear o modificar la vista para buscar por mÈdico.
+-- Crear o modificar la vista para buscar por m√©dico.
 CREATE OR ALTER VIEW V_doctor AS
 SELECT p.*, d.Nombre AS Doctor_Nombre
 FROM Programas p
@@ -309,54 +309,54 @@ BEGIN
     END
     ELSE
     BEGIN
-        RAISERROR('Tipo de b˙squeda no v·lido', 16, 1);
+        RAISERROR('Tipo de b√∫squeda no v√°lido', 16, 1);
     END
 END;
 go
 --7	Cuando un cliente solicita un nuevo plan
 CREATE PROCEDURE p_validar_cliente--creacion del proceso para validar 
-    @nombre VARCHAR(50),
-    @apellido VARCHAR(50),
-    @id_personal VARCHAR(20)
+    @nombre VARCHAR(50),--nombre del cliente 
+    @apellido VARCHAR(50),--apellido del cliente
+    @id_personal VARCHAR(20)--cedula o id del cliente
 AS
 BEGIN
     BEGIN TRY
-        DECLARE @ID_cliente INT;
+        DECLARE @ID_cliente INT;--variable para almacenar el id o cedula 
 
         --verifica si el clinete existe 
         SELECT @ID_cliente = ID_cliente 
         FROM Clientes 
         WHERE Nombre = @nombre AND Apellido = @apellido AND ID_Personal = @id_personal;
 
-        IF @ID_cliente IS NOT NULL
+        IF @ID_cliente IS NOT NULL --verifica si tiene valores la variable
         BEGIN
-            -- existe
-            PRINT 'El cliente ya existe. CÛdigo del cliente: ' + CAST(@ID_cliente AS VARCHAR);
+            -- si existe imprime su codico 
+            PRINT 'El cliente ya existe. C√≥digo del cliente: ' + CAST(@ID_cliente AS VARCHAR);
         END
         ELSE
-        BEGIN--no existe
+        BEGIN--si no existe lo
             -- insertar nuevo cliente
-            INSERT INTO Clientes (Nombre, Apellido, ID_Personal)
+            INSERT INTO Clientes (Nombre, Apellido, ID_Personal)--se ingresa un nuevo cliente con los datos ingresados 
             VALUES (@nombre, @apellido, @id_personal);
 
-            -- recuperar el nuevo ID del cliente
+            -- se optiene el ID del cliente 
         SELECT @ID_cliente = SCOPE_IDENTITY();
-        PRINT 'Nuevo cliente registrado. CÛdigo del cliente: ' + CAST(@ID_cliente AS VARCHAR);
+        PRINT 'Nuevo cliente registrado. C√≥digo del cliente: ' + CAST(@ID_cliente AS VARCHAR);--imprime el codigo del nuevo cliente
         END
     END TRY
     BEGIN CATCH
         -- manejo de errores punto#10
-        PRINT 'OcurriÛ un error: ' + ERROR_MESSAGE();
+        PRINT 'Ocurri√≥ un error: ' + ERROR_MESSAGE();
     END CATCH
 END;
-go
+
 --8 definir las preferencias de un cliente particular
-CREATE PROCEDURE p_preferencia_cliente-- crea el procedimineto 
+CREATE PROCEDURE p_preferencia_cliente-- crea el procedimineto Id del cliente
     @ID_cliente INT
 AS
 BEGIN
     BEGIN TRY
-        DECLARE @genero_preferido CHAR(3);
+        DECLARE @genero_preferido CHAR(3);--variable para almacenar el genero preferido 
 
         -- determinar genero preferido
         SELECT TOP 1 @genero_preferido = Genero
@@ -364,7 +364,8 @@ BEGIN
         JOIN Programas p ON c.ID_Programa = p.ID_Programa
         WHERE c.ID_Cliente = @ID_cliente
         GROUP BY Genero
-        ORDER BY COUNT(*) DESC;
+		HAVING COUNT(*) >= 3 --debe tener al menos 3 citas del mismo g√©nero
+        ORDER BY COUNT(*) DESC;-- ordenar por el g√©nero m√°s frecuente
 
         IF @genero_preferido IS NOT NULL
         BEGIN
@@ -374,16 +375,15 @@ BEGIN
             WHERE Genero = @genero_preferido;
         END
         ELSE
-        BEGIN
+        BEGIN--si no encuentra el genero preferido
             PRINT 'El cliente no tiene preferencias definidas.';
         END
     END TRY
     BEGIN CATCH
         -- manejo de errores punto#10
-        PRINT 'OcurriÛ un error: ' + ERROR_MESSAGE();
+        PRINT 'Ocurri√≥ un error: ' + ERROR_MESSAGE();
     END CATCH
 END;
-go
 --9 para saber cuales son los generos mas reservados 
 DECLARE c_cuenta_genero CURSOR FOR--declara el cursor
 SELECT Genero, COUNT(*) AS Total
@@ -397,26 +397,25 @@ BEGIN TRY
     -- abre el cursor 
     OPEN c_cuenta_genero;
 
-    -- obtene los datos
+    -- obtene los datos de la primra fila 
     FETCH NEXT FROM c_cuenta_genero INTO @Genero, @Total;
 
-    -- recorrer el cursor
+    -- recorrer el cursor si hay filas para procesar
     WHILE @@FETCH_STATUS = 0
-    BEGIN
-        PRINT 'GÈnero: ' + @Genero + ', Total: ' + CAST(@Total AS VARCHAR);
-        FETCH NEXT FROM c_cuenta_genero INTO @Genero, @Total;
+    BEGIN--imprime el genero y el total de programas
+        PRINT 'G√©nero: ' + @Genero + ', Total: ' + CAST(@Total AS VARCHAR);
+        FETCH NEXT FROM c_cuenta_genero INTO @Genero, @Total; -- obtener la siguiente fila
     END;
 
     -- Cerrar cursor
     CLOSE c_cuenta_genero;
-    DEALLOCATE c_cuenta_genero;
+    DEALLOCATE c_cuenta_genero;-- liberar los recursos del cursor creo
 END TRY
 BEGIN CATCH
     -- manejo de errores punto#10
     IF CURSOR_STATUS('global', 'c_cuenta_genero') >= 0
     BEGIN
-        CLOSE c_cuenta_genero;
-        DEALLOCATE c_cuenta_genero;
+        CLOSE c_cuenta_genero; --cierra el cursor si est√° abierto.
+        DEALLOCATE c_cuenta_genero;--libera los recursos del cursor si a√∫n no han sido liberados.
     END
 END CATCH;
-go
