@@ -72,10 +72,7 @@ public class CrearPrograma extends JInternalFrame {
             "11 a 17",
             "Mayor 18"
         }));
-        comboBox1.addItemListener(e -> {
-			comboBox1ItemStateChanged(e);
-			comboBox1ItemStateChanged(e);
-		});
+        comboBox1.addItemListener(e -> comboBox1ItemStateChanged(e));
 
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
         contentPane.setLayout(contentPaneLayout);
