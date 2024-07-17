@@ -4,6 +4,8 @@
 
 package Frontend;
 
+import DBConsultas.Consultas;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -21,6 +23,29 @@ public class ClientesPorPlan extends JInternalFrame {
 
     private void button1(ActionEvent e) {
         // TODO add your code here
+        if (!textField1.getText().equals("")){
+            Consultas objConsultas = new Consultas();
+            objConsultas.setTitulo(new String[]{"Nombre",
+                    "Apellido",
+                    "Identificacion",
+                    "Codigo de Sucursal"});
+            objConsultas.setDatos(new String[]{
+                    "Nombre",
+                    "Apellido",
+                    "Identificacion",
+                    "CodigoSucursal"});
+            objConsultas.setParametroString(
+                    "select Nombre, Apellido, Identificacion, CodigoSucursal from Empleado where Nombre = ? " +
+                            "or Apellido = ? or Identificacion = ? or CodigoSucursal = ?");
+            objConsultas.setParametros(new String[]{
+                    textField1.getText(),
+            });
+
+            table1.setModel(objConsultas.consultas());
+            objConsultas.setDatosc(null);
+        }else{
+            //impresionDialogo("El campo esta en blanco", "Sin datos", 1);
+        }
 
     }
 

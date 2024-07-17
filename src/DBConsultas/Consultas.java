@@ -21,6 +21,9 @@ public class Consultas {
 
     private AppLogs objLogs = new AppLogs(Consultas.class);
 
+    public void setDatosc(String[] datosc) {
+        this.datosc = datosc;
+    }
     public void setParametros(String[] parametros) {
         this.parametros = parametros;
     }
