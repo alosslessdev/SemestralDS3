@@ -2,12 +2,11 @@
  * Created by JFormDesigner on Tue Jul 16 20:58:15 GMT-05:00 2024
  */
 
-package Forma;
+package Frontend;
 
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.GroupLayout;
-import javax.swing.event.*;
 
 /**
  * @author pancho

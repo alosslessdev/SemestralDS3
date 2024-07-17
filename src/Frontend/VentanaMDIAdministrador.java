@@ -2,7 +2,7 @@
  * Created by JFormDesigner on Sun Jul 14 21:17:48 GMT-05:00 2024
  */
 
-package Forma;
+package Frontend;
 
 import java.awt.event.*;
 import java.beans.PropertyVetoException;

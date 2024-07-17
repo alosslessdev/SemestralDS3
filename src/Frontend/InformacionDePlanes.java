@@ -1,8 +1,8 @@
 /*
- * Created by JFormDesigner on Tue Jul 16 20:58:45 GMT-05:00 2024
+ * Created by JFormDesigner on Sun Jul 14 23:59:01 GMT-05:00 2024
  */
 
-package Forma;
+package Frontend;
 
 import java.awt.event.*;
 import javax.swing.*;
@@ -11,9 +11,15 @@ import javax.swing.GroupLayout;
 /**
  * @author pancho
  */
-public class HistorialDeCliente extends JInternalFrame {
-    public HistorialDeCliente() {
+public class InformacionDePlanes extends JInternalFrame {
+    public InformacionDePlanes() {
+        super("InformacionDePlanes", true, true, true, true);
         initComponents();
+    }
+
+    private void comboBox1(ActionEvent e) {
+        // TODO add your code here
+
     }
 
     private void button1(ActionEvent e) {
@@ -26,15 +32,13 @@ public class HistorialDeCliente extends JInternalFrame {
         button1 = new JButton();
         scrollPane1 = new JScrollPane();
         table1 = new JTable();
-        label1 = new JLabel();
-        textField1 = new JTextField();
 
         //======== this ========
         setVisible(true);
         var contentPane = getContentPane();
 
         //---- button1 ----
-        button1.setText("text");
+        button1.setText("Ver");
         button1.addActionListener(e -> button1(e));
 
         //======== scrollPane1 ========
@@ -42,41 +46,27 @@ public class HistorialDeCliente extends JInternalFrame {
             scrollPane1.setViewportView(table1);
         }
 
-        //---- label1 ----
-        label1.setText("C\u00f3digo de cliente");
-
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
         contentPane.setLayout(contentPaneLayout);
         contentPaneLayout.setHorizontalGroup(
             contentPaneLayout.createParallelGroup()
                 .addGroup(contentPaneLayout.createSequentialGroup()
-                    .addGap(39, 39, 39)
+                    .addGap(42, 42, 42)
                     .addGroup(contentPaneLayout.createParallelGroup()
-                        .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 282, GroupLayout.PREFERRED_SIZE)
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(202, 202, 202)
-                            .addComponent(button1))
-                        .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(71, 71, 71)
-                            .addComponent(label1)
-                            .addGap(31, 31, 31)
-                            .addComponent(textField1, GroupLayout.PREFERRED_SIZE, 173, GroupLayout.PREFERRED_SIZE)))
-                    .addContainerGap(37, Short.MAX_VALUE))
+                            .addGap(121, 121, 121)
+                            .addComponent(button1)))
+                    .addContainerGap(44, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
                 .addGroup(contentPaneLayout.createSequentialGroup()
-                    .addGap(32, 32, 32)
-                    .addGroup(contentPaneLayout.createParallelGroup()
-                        .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(6, 6, 6)
-                            .addComponent(label1))
-                        .addComponent(textField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                    .addGap(18, 18, 18)
+                    .addGap(15, 15, 15)
                     .addComponent(button1)
                     .addGap(18, 18, 18)
-                    .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(41, Short.MAX_VALUE))
+                    .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 339, GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(34, Short.MAX_VALUE))
         );
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }
@@ -86,7 +76,5 @@ public class HistorialDeCliente extends JInternalFrame {
     private JButton button1;
     private JScrollPane scrollPane1;
     private JTable table1;
-    private JLabel label1;
-    private JTextField textField1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

@@ -2,7 +2,7 @@
  * Created by JFormDesigner on Tue Jul 16 20:59:30 GMT-05:00 2024
  */
 
-package Forma;
+package Frontend;
 
 import java.awt.event.*;
 import javax.swing.*;
