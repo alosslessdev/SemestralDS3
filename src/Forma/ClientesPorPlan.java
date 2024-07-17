@@ -19,6 +19,10 @@ public class ClientesPorPlan extends JInternalFrame {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         // Generated using JFormDesigner Evaluation license - sdfsf
         button1 = new JButton();
+        label1 = new JLabel();
+        textField1 = new JTextField();
+        scrollPane1 = new JScrollPane();
+        table1 = new JTable();
 
         //======== this ========
         setVisible(true);
@@ -27,21 +31,45 @@ public class ClientesPorPlan extends JInternalFrame {
         //---- button1 ----
         button1.setText("text");
 
+        //---- label1 ----
+        label1.setText("Escribir plan:");
+
+        //======== scrollPane1 ========
+        {
+            scrollPane1.setViewportView(table1);
+        }
+
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
         contentPane.setLayout(contentPaneLayout);
         contentPaneLayout.setHorizontalGroup(
             contentPaneLayout.createParallelGroup()
                 .addGroup(contentPaneLayout.createSequentialGroup()
-                    .addGap(156, 156, 156)
-                    .addComponent(button1)
-                    .addContainerGap(186, Short.MAX_VALUE))
+                    .addGroup(contentPaneLayout.createParallelGroup()
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(20, 20, 20)
+                            .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(99, 99, 99)
+                            .addComponent(label1)
+                            .addGap(18, 18, 18)
+                            .addComponent(textField1, GroupLayout.PREFERRED_SIZE, 236, GroupLayout.PREFERRED_SIZE))
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(222, 222, 222)
+                            .addComponent(button1)))
+                    .addContainerGap(66, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
                 .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
-                    .addContainerGap(143, Short.MAX_VALUE)
+                    .addGap(25, 25, 25)
+                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                        .addComponent(label1)
+                        .addComponent(textField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                    .addGap(18, 18, 18)
                     .addComponent(button1)
-                    .addGap(98, 98, 98))
+                    .addGap(12, 12, 12)
+                    .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(74, Short.MAX_VALUE))
         );
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }
@@ -49,5 +77,9 @@ public class ClientesPorPlan extends JInternalFrame {
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     // Generated using JFormDesigner Evaluation license - sdfsf
     private JButton button1;
+    private JLabel label1;
+    private JTextField textField1;
+    private JScrollPane scrollPane1;
+    private JTable table1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

@@ -104,7 +104,6 @@ new FormModel {
 					add( new FormComponent( "javax.swing.JMenuItem" ) {
 						name: "menuItem5"
 						"text": "Crear un programa"
-						"visible": false
 					} )
 				} )
 			}

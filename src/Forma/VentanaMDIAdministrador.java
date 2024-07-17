@@ -229,7 +229,6 @@ public class VentanaMDIAdministrador extends JFrame {
 
                 //---- menuItem5 ----
                 menuItem5.setText("Crear un programa");
-                menuItem5.setVisible(false);
                 menu4.add(menuItem5);
             }
             menuBar1.add(menu4);

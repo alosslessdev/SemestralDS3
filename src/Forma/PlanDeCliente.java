@@ -24,6 +24,10 @@ public class PlanDeCliente extends JInternalFrame {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         // Generated using JFormDesigner Evaluation license - sdfsf
         button1 = new JButton();
+        label1 = new JLabel();
+        textField1 = new JTextField();
+        scrollPane1 = new JScrollPane();
+        table1 = new JTable();
 
         //======== this ========
         setVisible(true);
@@ -33,21 +37,46 @@ public class PlanDeCliente extends JInternalFrame {
         button1.setText("text");
         button1.addActionListener(e -> button1(e));
 
+        //---- label1 ----
+        label1.setText("text");
+
+        //======== scrollPane1 ========
+        {
+            scrollPane1.setViewportView(table1);
+        }
+
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
         contentPane.setLayout(contentPaneLayout);
         contentPaneLayout.setHorizontalGroup(
             contentPaneLayout.createParallelGroup()
-                .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
-                    .addContainerGap(174, Short.MAX_VALUE)
-                    .addComponent(button1)
-                    .addGap(168, 168, 168))
+                .addGroup(contentPaneLayout.createSequentialGroup()
+                    .addGroup(contentPaneLayout.createParallelGroup()
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(29, 29, 29)
+                            .addGroup(contentPaneLayout.createParallelGroup()
+                                .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                    .addGap(110, 110, 110)
+                                    .addComponent(label1)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(textField1, GroupLayout.PREFERRED_SIZE, 163, GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(225, 225, 225)
+                            .addComponent(button1)))
+                    .addContainerGap(27, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
                 .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
-                    .addContainerGap(205, Short.MAX_VALUE)
+                    .addGap(17, 17, 17)
+                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                        .addComponent(label1)
+                        .addComponent(textField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                    .addGap(26, 26, 26)
                     .addComponent(button1)
-                    .addGap(36, 36, 36))
+                    .addGap(31, 31, 31)
+                    .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(100, Short.MAX_VALUE))
         );
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }
@@ -55,5 +84,9 @@ public class PlanDeCliente extends JInternalFrame {
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     // Generated using JFormDesigner Evaluation license - sdfsf
     private JButton button1;
+    private JLabel label1;
+    private JTextField textField1;
+    private JScrollPane scrollPane1;
+    private JTable table1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

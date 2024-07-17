@@ -11,8 +11,8 @@ import javax.swing.GroupLayout;
 /**
  * @author pancho
  */
-public class PagoAtrasado extends JInternalFrame {
-    public PagoAtrasado() {
+public class EstaMoroso extends JInternalFrame {
+    public EstaMoroso() {
         initComponents();
     }
 
@@ -24,6 +24,8 @@ public class PagoAtrasado extends JInternalFrame {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         // Generated using JFormDesigner Evaluation license - sdfsf
         button1 = new JButton();
+        label1 = new JLabel();
+        textField1 = new JTextField();
 
         //======== this ========
         setVisible(true);
@@ -33,21 +35,35 @@ public class PagoAtrasado extends JInternalFrame {
         button1.setText("text");
         button1.addActionListener(e -> button1(e));
 
+        //---- label1 ----
+        label1.setText("text");
+
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
         contentPane.setLayout(contentPaneLayout);
         contentPaneLayout.setHorizontalGroup(
             contentPaneLayout.createParallelGroup()
-                .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
-                    .addContainerGap(176, Short.MAX_VALUE)
-                    .addComponent(button1)
-                    .addGap(166, 166, 166))
+                .addGroup(contentPaneLayout.createSequentialGroup()
+                    .addGroup(contentPaneLayout.createParallelGroup()
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(42, 42, 42)
+                            .addComponent(label1)
+                            .addGap(31, 31, 31)
+                            .addComponent(textField1, GroupLayout.PREFERRED_SIZE, 173, GroupLayout.PREFERRED_SIZE))
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(137, 137, 137)
+                            .addComponent(button1)))
+                    .addContainerGap(34, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
                 .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
-                    .addContainerGap(202, Short.MAX_VALUE)
+                    .addGap(18, 18, 18)
+                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                        .addComponent(label1)
+                        .addComponent(textField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                    .addGap(31, 31, 31)
                     .addComponent(button1)
-                    .addGap(39, 39, 39))
+                    .addContainerGap(84, Short.MAX_VALUE))
         );
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }
@@ -55,5 +71,7 @@ public class PagoAtrasado extends JInternalFrame {
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     // Generated using JFormDesigner Evaluation license - sdfsf
     private JButton button1;
+    private JLabel label1;
+    private JTextField textField1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

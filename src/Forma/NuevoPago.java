@@ -24,6 +24,10 @@ public class NuevoPago extends JInternalFrame {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         // Generated using JFormDesigner Evaluation license - sdfsf
         button1 = new JButton();
+        label1 = new JLabel();
+        textField1 = new JTextField();
+        label4 = new JLabel();
+        textField2 = new JTextField();
 
         //======== this ========
         setVisible(true);
@@ -33,21 +37,48 @@ public class NuevoPago extends JInternalFrame {
         button1.setText("text");
         button1.addActionListener(e -> button1(e));
 
+        //---- label1 ----
+        label1.setText("text");
+
+        //---- label4 ----
+        label4.setText("text");
+
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
         contentPane.setLayout(contentPaneLayout);
         contentPaneLayout.setHorizontalGroup(
             contentPaneLayout.createParallelGroup()
-                .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
-                    .addContainerGap(170, Short.MAX_VALUE)
-                    .addComponent(button1)
-                    .addGap(172, 172, 172))
+                .addGroup(contentPaneLayout.createSequentialGroup()
+                    .addGroup(contentPaneLayout.createParallelGroup()
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(29, 29, 29)
+                            .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                    .addComponent(label4)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(textField2))
+                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                    .addComponent(label1)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(textField1, GroupLayout.PREFERRED_SIZE, 130, GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(107, 107, 107)
+                            .addComponent(button1)))
+                    .addContainerGap(59, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
                 .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
-                    .addContainerGap(193, Short.MAX_VALUE)
+                    .addGap(21, 21, 21)
+                    .addGroup(contentPaneLayout.createParallelGroup()
+                        .addComponent(label1)
+                        .addComponent(textField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                    .addGap(18, 18, 18)
+                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                        .addComponent(label4)
+                        .addComponent(textField2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                    .addGap(38, 38, 38)
                     .addComponent(button1)
-                    .addGap(48, 48, 48))
+                    .addContainerGap(108, Short.MAX_VALUE))
         );
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }
@@ -55,5 +86,9 @@ public class NuevoPago extends JInternalFrame {
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     // Generated using JFormDesigner Evaluation license - sdfsf
     private JButton button1;
+    private JLabel label1;
+    private JTextField textField1;
+    private JLabel label4;
+    private JTextField textField2;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

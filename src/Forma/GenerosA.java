@@ -19,7 +19,7 @@ public class GenerosA extends JInternalFrame {
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
-        // Generated using JFormDesigner Evaluation license - sdf ads
+        // Generated using JFormDesigner Evaluation license - sdfsf
         button1 = new JButton();
         scrollPane1 = new JScrollPane();
         table1 = new JTable();
@@ -46,16 +46,16 @@ public class GenerosA extends JInternalFrame {
                             .addGap(59, 59, 59)
                             .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(250, 250, 250)
+                            .addGap(252, 252, 252)
                             .addComponent(button1)))
                     .addContainerGap(47, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
                 .addGroup(contentPaneLayout.createSequentialGroup()
-                    .addGap(46, 46, 46)
+                    .addGap(30, 30, 30)
                     .addComponent(button1)
-                    .addGap(18, 18, 18)
+                    .addGap(34, 34, 34)
                     .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(63, Short.MAX_VALUE))
         );
@@ -63,7 +63,7 @@ public class GenerosA extends JInternalFrame {
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
-    // Generated using JFormDesigner Evaluation license - sdf ads
+    // Generated using JFormDesigner Evaluation license - sdfsf
     private JButton button1;
     private JScrollPane scrollPane1;
     private JTable table1;
