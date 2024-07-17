@@ -4,8 +4,8 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormContainer( "javax.swing.JInternalFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq {par l {seq l {space :p:174:p, comp button1:::p::p}, seq l {space :p:25:p, par t {seq {comp label2:::p::p, space :6:6:p, comp textField4:::p:155:p}, seq {comp label1:::p::p, space :6:6:p, comp textField3:::p:155:p}}}, seq l {space :p:26:p, par l {comp label3:::p::p, comp label4:::p::p}, space :::p, par l {comp comboBox1:::p::p, comp checkBox1:::p:137:p}}}, space ::168:x}}"
-			"$verticalGroup": "par l {seq t {space :p:24:p, par l {seq {space :6:6:p, comp label1:::p::p}, comp textField3:::p::p}, space s:::p, par l {seq l {space :6:6:p, comp label2:::p::p}, comp textField4:::p::p}, space ::21:x, par l {comp checkBox1:::p::p, comp label4:::p::p}, space s:::p, par b {comp comboBox1::b:p::p, comp label3::b:p::p}, space :p:14:p, comp button1:::p::p, space :p:46:p}}"
+			"$horizontalGroup": "par l {seq {par l {seq l {space :p:25:p, par t {seq {comp label1:::p::p, space :6:6:p, comp textField3:::p:155:p}, seq t {comp label2:::p::p, space :6:6:p, comp textField4:::p:155:p}}}, seq l {space :p:50:p, comp label4:::p::p, space :::p, comp checkBox1:::p::p}, seq l {space :p:80:p, comp label3:::p::p, space :::p, comp comboBox1:::p::p}, seq l {space :p:160:p, comp button1:::p::p}}, space ::81:x}}"
+			"$verticalGroup": "par l {seq t {space :p:24:p, par l {seq {space :6:6:p, comp label1:::p::p}, comp textField3:::p::p}, space s:::p, par l {seq l {space :6:6:p, comp label2:::p::p}, comp textField4:::p::p}, space s:::p, par l:::p {comp checkBox1::::0:x, comp label4:::p::p}, space s:::p, par b {comp comboBox1::b:p::p, comp label3::b:p::p}, space s:::p, comp button1:::p::p, space ::47:x}}"
 		} ) {
 			name: "this"
 			"visible": true
@@ -16,35 +16,43 @@ new FormModel {
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label1"
-				"text": "text"
+				"text": "Código de cliente"
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField3"
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label2"
-				"text": "text"
+				"text": "Edad"
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField4"
 			} )
 			add( new FormComponent( "javax.swing.JComboBox" ) {
 				name: "comboBox1"
+				"model": new javax.swing.DefaultComboBoxModel {
+					selectedItem: "Comercial"
+					addElement( "Comercial" )
+					addElement( "Presencial" )
+					addElement( "Telemedicina" )
+				}
+				addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "comboBox1ItemStateChanged", true ) )
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label3"
-				"text": "text"
+				"text": "Género"
 			} )
 			add( new FormComponent( "javax.swing.JCheckBox" ) {
 				name: "checkBox1"
+				addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "checkBox1ItemStateChanged", true ) )
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label4"
-				"text": "text"
+				"text": "Menor de 18?"
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 400, 300 )
+			"size": new java.awt.Dimension( 375, 300 )
 		} )
 	}
 }

@@ -4,6 +4,7 @@
 
 package Forma;
 
+import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.GroupLayout;
 
@@ -13,6 +14,11 @@ import javax.swing.GroupLayout;
 public class ClientesPorPlan extends JInternalFrame {
     public ClientesPorPlan() {
         initComponents();
+    }
+
+    private void button1(ActionEvent e) {
+        // TODO add your code here
+
     }
 
     private void initComponents() {
@@ -30,6 +36,7 @@ public class ClientesPorPlan extends JInternalFrame {
 
         //---- button1 ----
         button1.setText("text");
+        button1.addActionListener(e -> button1(e));
 
         //---- label1 ----
         label1.setText("Escribir plan:");

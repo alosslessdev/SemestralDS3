@@ -7,18 +7,36 @@ package Forma;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.GroupLayout;
+import javax.swing.event.*;
 
 /**
  * @author pancho
  */
 public class NuevaCita extends JInternalFrame {
+
     public NuevaCita() {
         initComponents();
     }
 
+
+
     private void button1(ActionEvent e) {
         // TODO add your code here
     }
+
+    private void comboBox1ItemStateChanged(ItemEvent e) {
+        // TODO add your code here
+        if (e.getSource() == comboBox1.getSelectedItem()){
+
+            comboBox1.getSelectedItem();
+        }
+    }
+
+    private void checkBox1ItemStateChanged(ItemEvent e) {
+        // TODO add your code here
+    }
+
+
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
@@ -28,7 +46,7 @@ public class NuevaCita extends JInternalFrame {
         textField3 = new JTextField();
         label2 = new JLabel();
         textField4 = new JTextField();
-        comboBox1 = new JComboBox();
+        comboBox1 = new JComboBox<>();
         label3 = new JLabel();
         checkBox1 = new JCheckBox();
         label4 = new JLabel();
@@ -42,16 +60,27 @@ public class NuevaCita extends JInternalFrame {
         button1.addActionListener(e -> button1(e));
 
         //---- label1 ----
-        label1.setText("text");
+        label1.setText("C\u00f3digo de cliente");
 
         //---- label2 ----
-        label2.setText("text");
+        label2.setText("Edad");
+
+        //---- comboBox1 ----
+        comboBox1.setModel(new DefaultComboBoxModel<>(new String[] {
+            "Comercial",
+            "Presencial",
+            "Telemedicina"
+        }));
+        comboBox1.addItemListener(e -> comboBox1ItemStateChanged(e));
 
         //---- label3 ----
-        label3.setText("text");
+        label3.setText("G\u00e9nero");
+
+        //---- checkBox1 ----
+        checkBox1.addItemListener(e -> checkBox1ItemStateChanged(e));
 
         //---- label4 ----
-        label4.setText("text");
+        label4.setText("Menor de 18?");
 
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
         contentPane.setLayout(contentPaneLayout);
@@ -60,29 +89,30 @@ public class NuevaCita extends JInternalFrame {
                 .addGroup(contentPaneLayout.createSequentialGroup()
                     .addGroup(contentPaneLayout.createParallelGroup()
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(174, 174, 174)
-                            .addComponent(button1))
-                        .addGroup(contentPaneLayout.createSequentialGroup()
                             .addGap(25, 25, 25)
                             .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
                                 .addGroup(contentPaneLayout.createSequentialGroup()
-                                    .addComponent(label2)
-                                    .addGap(6, 6, 6)
-                                    .addComponent(textField4, GroupLayout.PREFERRED_SIZE, 155, GroupLayout.PREFERRED_SIZE))
-                                .addGroup(contentPaneLayout.createSequentialGroup()
                                     .addComponent(label1)
                                     .addGap(6, 6, 6)
-                                    .addComponent(textField3, GroupLayout.PREFERRED_SIZE, 155, GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(textField3, GroupLayout.PREFERRED_SIZE, 155, GroupLayout.PREFERRED_SIZE))
+                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                    .addComponent(label2)
+                                    .addGap(6, 6, 6)
+                                    .addComponent(textField4, GroupLayout.PREFERRED_SIZE, 155, GroupLayout.PREFERRED_SIZE))))
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(26, 26, 26)
-                            .addGroup(contentPaneLayout.createParallelGroup()
-                                .addComponent(label3)
-                                .addComponent(label4))
+                            .addGap(50, 50, 50)
+                            .addComponent(label4)
                             .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(contentPaneLayout.createParallelGroup()
-                                .addComponent(comboBox1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                .addComponent(checkBox1, GroupLayout.PREFERRED_SIZE, 137, GroupLayout.PREFERRED_SIZE))))
-                    .addContainerGap(168, Short.MAX_VALUE))
+                            .addComponent(checkBox1))
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(80, 80, 80)
+                            .addComponent(label3)
+                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(comboBox1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(160, 160, 160)
+                            .addComponent(button1)))
+                    .addContainerGap(81, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
@@ -99,17 +129,17 @@ public class NuevaCita extends JInternalFrame {
                             .addGap(6, 6, 6)
                             .addComponent(label2))
                         .addComponent(textField4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
-                    .addGroup(contentPaneLayout.createParallelGroup()
-                        .addComponent(checkBox1)
+                    .addGap(18, 18, 18)
+                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                        .addComponent(checkBox1, GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
                         .addComponent(label4))
                     .addGap(18, 18, 18)
                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                         .addComponent(comboBox1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                         .addComponent(label3))
-                    .addGap(14, 14, 14)
+                    .addGap(18, 18, 18)
                     .addComponent(button1)
-                    .addGap(46, 46, 46))
+                    .addContainerGap(47, Short.MAX_VALUE))
         );
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }
@@ -121,7 +151,7 @@ public class NuevaCita extends JInternalFrame {
     private JTextField textField3;
     private JLabel label2;
     private JTextField textField4;
-    private JComboBox comboBox1;
+    private JComboBox<String> comboBox1;
     private JLabel label3;
     private JCheckBox checkBox1;
     private JLabel label4;

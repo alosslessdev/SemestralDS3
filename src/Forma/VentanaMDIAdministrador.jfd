@@ -25,43 +25,47 @@ new FormModel {
 					name: "menu6"
 					"text": "Cita"
 					add( new FormComponent( "javax.swing.JMenuItem" ) {
-						name: "menuItem7"
+						name: "NuevaCitaF"
 						"text": "Nueva cita"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "NuevaCitaF", true ) )
 					} )
 				} )
 				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
-					name: "menu1"
+					name: "ClienteF"
 					"text": "Cliente"
 					add( new FormComponent( "javax.swing.JMenuItem" ) {
-						name: "SolictudMenu"
+						name: "InformacionDePagoF"
 						"text": "Informacion de pago"
-						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "SolictudMenu", true ) )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "InformacionDePagoF", true ) )
 					} )
 					add( new FormComponent( "javax.swing.JMenuItem" ) {
-						name: "PagosMenu"
+						name: "HistorialDeClienteF"
 						"text": "Historial de cliente"
-						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "PagosMenu", true ) )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "HistorialDeClienteF", true ) )
 					} )
 					add( new FormComponent( "javax.swing.JMenuItem" ) {
-						name: "menuItem3"
+						name: "NuevoClienteF"
 						"text": "Nuevo Cliente"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "NuevoClienteF", true ) )
 					} )
 					add( new FormComponent( "javax.swing.JMenuItem" ) {
-						name: "menuItem8"
+						name: "PlanDeClienteF"
 						"text": "Plan de cliente"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "PlanDeClienteF", true ) )
 					} )
 					add( new FormComponent( "javax.swing.JMenuItem" ) {
-						name: "VerProgramaMenu"
+						name: "PagoAtrasadoF"
 						"text": "Ver si tiene pago atrasado"
-						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "VerProgramaMenu", true ) )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "PagoAtrasadoF", true ) )
 					} )
 				} )
 				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
 					name: "menu8"
 					"text": "Doctores"
 					add( new FormComponent( "javax.swing.JMenuItem" ) {
-						name: "menuItem6"
+						name: "DoctoresF"
 						"text": "Lista de doctores"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "DoctoresF", true ) )
 					} )
 				} )
 				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
@@ -77,8 +81,9 @@ new FormModel {
 					name: "menu7"
 					"text": "Pagos"
 					add( new FormComponent( "javax.swing.JMenuItem" ) {
-						name: "menuItem4"
+						name: "NuevoPagoF"
 						"text": "Nuevo pago"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "NuevoPagoF", true ) )
 					} )
 				} )
 				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
@@ -90,20 +95,23 @@ new FormModel {
 						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "BuscarMenu", true ) )
 					} )
 					add( new FormComponent( "javax.swing.JMenuItem" ) {
-						name: "menuItem1"
+						name: "ClientesPlanF"
 						"text": "Lista de clientes por plan"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "ClientesPlanF", true ) )
 					} )
 				} )
 				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
 					name: "menu4"
 					"text": "Programas"
 					add( new FormComponent( "javax.swing.JMenuItem" ) {
-						name: "menuItem2"
+						name: "ListaProgramasF"
 						"text": "Lista de programas"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "ListaProgramasF", true ) )
 					} )
 					add( new FormComponent( "javax.swing.JMenuItem" ) {
-						name: "menuItem5"
+						name: "CrearProgramaF"
 						"text": "Crear un programa"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "CrearProgramaF", true ) )
 					} )
 				} )
 			}

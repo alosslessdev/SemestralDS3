@@ -4,8 +4,8 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormContainer( "javax.swing.JInternalFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq {par l {seq l {space :p:42:p, comp label1:::p::p, space :p:31:p, comp textField1:::p:173:p}, seq l {space :p:137:p, comp button1:::p::p}}, space ::34:x}}"
-			"$verticalGroup": "par l {seq t {space :p:18:p, par b {comp label1::b:p::p, comp textField1::b:p::p}, space :p:31:p, comp button1:::p::p, space ::84:x}}"
+			"$horizontalGroup": "par l {seq {par l {seq l {space :p:161:p, comp button1:::p::p}, seq l {space :p:42:p, par l {comp scrollPane1:::p:300:p, seq {comp label1:::p::p, space :p:31:p, comp textField1:::p:173:p}}}}, space ::46:x}}"
+			"$verticalGroup": "par l {seq t {space :p:18:p, par b {comp label1::b:p::p, comp textField1::b:p::p}, space :p:30:p, comp button1:::p::p, space s:::p, comp scrollPane1:::p:212:p, space ::45:x}}"
 		} ) {
 			name: "this"
 			"visible": true
@@ -16,14 +16,20 @@ new FormModel {
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label1"
-				"text": "text"
+				"text": "Código de cliente"
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField1"
 			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "table1"
+				} )
+			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 310, 220 )
+			"size": new java.awt.Dimension( 400, 410 )
 		} )
 	}
 }

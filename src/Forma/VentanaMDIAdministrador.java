@@ -37,45 +37,6 @@ public class VentanaMDIAdministrador extends JFrame {
         MDI.setTitle("Ventana Principal");
     }
 
-    private void PagosMenu(ActionEvent e) {
-        // TODO add your code here
-        InformacionDePago informacionDePago = new InformacionDePago();
-        informacionDePago.setSize(desktopPane1.getSize());
-        try {
-            informacionDePago.setMaximum(true);
-        } catch (PropertyVetoException ex) {
-            ex.printStackTrace();
-        }
-        this.desktopPane1.add(informacionDePago);
-        informacionDePago.show();    }
-
-
-
-    private void SolictudMenu(ActionEvent e) {
-        // TODO add your code here
-        NuevoCliente nuevoCliente = new NuevoCliente();
-        nuevoCliente.setSize(desktopPane1.getSize());
-        try {
-            nuevoCliente.setMaximum(true);
-        } catch (PropertyVetoException ex) {
-            ex.printStackTrace();
-        }
-        this.desktopPane1.add(nuevoCliente);
-        nuevoCliente.show();    }
-
-    private void VerProgramaMenu(ActionEvent e) {
-        // TODO add your code here
-        ListaDeProgramas listaDeProgramas = new ListaDeProgramas();
-        listaDeProgramas.setSize(desktopPane1.getSize());
-        try {
-            listaDeProgramas.setMaximum(true);
-        } catch (PropertyVetoException ex) {
-            ex.printStackTrace();
-        }
-        this.desktopPane1.add(listaDeProgramas);
-        listaDeProgramas.show();
-    }
-
     private void BuscarMenu(ActionEvent e) {
         // TODO add your code here
         InformacionDePlanes informacionDePlanes = new InformacionDePlanes();
@@ -86,7 +47,8 @@ public class VentanaMDIAdministrador extends JFrame {
             ex.printStackTrace();
         }
         this.desktopPane1.add(informacionDePlanes);
-        informacionDePlanes.show();    }
+        informacionDePlanes.show();   
+    }
 
     private void GenerosMenu(ActionEvent e) {
         // TODO add your code here
@@ -98,7 +60,152 @@ public class VentanaMDIAdministrador extends JFrame {
             ex.printStackTrace();
         }
         this.desktopPane1.add(generosA);
-        generosA.show();    }
+        generosA.show();   
+    }
+
+        private void NuevaCitaF(ActionEvent e) {
+            // TODO add your code here
+            NuevaCita nuevaCita = new NuevaCita();
+            nuevaCita.setSize(desktopPane1.getSize());
+            try {
+                nuevaCita.setMaximum(true);
+            } catch (PropertyVetoException ex) {
+                ex.printStackTrace();
+            }
+            this.desktopPane1.add(nuevaCita);
+            nuevaCita.show();
+    }
+
+        private void InformacionDePagoF(ActionEvent e) {
+            // TODO add your code here
+            InformacionDePago informacionDePago = new InformacionDePago();
+            informacionDePago.setSize(desktopPane1.getSize());
+            try {
+                informacionDePago.setMaximum(true);
+            } catch (PropertyVetoException ex) {
+                ex.printStackTrace();
+            }
+            this.desktopPane1.add(informacionDePago);
+            informacionDePago.show();        
+    }
+
+        private void HistorialDeClienteF(ActionEvent e) {
+            // TODO add your code here
+            HistorialDeCliente historialDeCliente = new HistorialDeCliente();
+            historialDeCliente.setSize(desktopPane1.getSize());
+            try {
+                historialDeCliente.setMaximum(true);
+            } catch (PropertyVetoException ex) {
+                ex.printStackTrace();
+            }
+            this.desktopPane1.add(historialDeCliente);
+            historialDeCliente.show();      
+    }
+
+        private void NuevoClienteF(ActionEvent e) {
+            // TODO add your code here
+            NuevoCliente nuevoCliente = new NuevoCliente();
+            nuevoCliente.setSize(desktopPane1.getSize());
+            try {
+                nuevoCliente.setMaximum(true);
+            } catch (PropertyVetoException ex) {
+                ex.printStackTrace();
+            }
+            this.desktopPane1.add(nuevoCliente);
+            nuevoCliente.show();      
+    }
+
+        private void PlanDeClienteF(ActionEvent e) {
+            // TODO add your code here
+            PlanDeCliente planDeCliente = new PlanDeCliente();
+            planDeCliente.setSize(desktopPane1.getSize());
+            try {
+                planDeCliente.setMaximum(true);
+            } catch (PropertyVetoException ex) {
+                ex.printStackTrace();
+            }
+            this.desktopPane1.add(planDeCliente);
+            planDeCliente.show();      
+    }
+
+        private void PagoAtrasadoF(ActionEvent e) {
+            // TODO add your code here
+            EstaMoroso estaMoroso = new EstaMoroso();
+            estaMoroso.setSize(desktopPane1.getSize());
+            try {
+                estaMoroso.setMaximum(true);
+            } catch (PropertyVetoException ex) {
+                ex.printStackTrace();
+            }
+            this.desktopPane1.add(estaMoroso);
+            estaMoroso.show();         
+    }
+
+        private void DoctoresF(ActionEvent e) {
+            // TODO add your code here
+            ListaDeDoctores listaDeDoctores = new ListaDeDoctores();
+            listaDeDoctores.setSize(desktopPane1.getSize());
+            try {
+                listaDeDoctores.setMaximum(true);
+            } catch (PropertyVetoException ex) {
+                ex.printStackTrace();
+            }
+            this.desktopPane1.add(listaDeDoctores);
+            listaDeDoctores.show();        
+    }
+
+        private void NuevoPagoF(ActionEvent e) {
+            // TODO add your code here
+            NuevoPago nuevoPago = new NuevoPago();
+            nuevoPago.setSize(desktopPane1.getSize());
+            try {
+                nuevoPago.setMaximum(true);
+            } catch (PropertyVetoException ex) {
+                ex.printStackTrace();
+            }
+            this.desktopPane1.add(nuevoPago);
+            nuevoPago.show();        
+    }
+
+        private void ClientesPlanF(ActionEvent e) {
+            // TODO add your code here
+            ClientesPorPlan clientesPorPlan = new ClientesPorPlan();
+            clientesPorPlan.setSize(desktopPane1.getSize());
+            try {
+                clientesPorPlan.setMaximum(true);
+            } catch (PropertyVetoException ex) {
+                ex.printStackTrace();
+            }
+            this.desktopPane1.add(clientesPorPlan);
+            clientesPorPlan.show();         
+    }
+
+        private void ListaProgramasF(ActionEvent e) {
+            // TODO add your code here
+            ListaDeProgramas listaDeProgramas = new ListaDeProgramas();
+            listaDeProgramas.setSize(desktopPane1.getSize());
+            try {
+                listaDeProgramas.setMaximum(true);
+            } catch (PropertyVetoException ex) {
+                ex.printStackTrace();
+            }
+            this.desktopPane1.add(listaDeProgramas);
+            listaDeProgramas.show();      
+    }
+
+        private void CrearProgramaF(ActionEvent e) {
+            // TODO add your code here
+            CrearPrograma crearPrograma = new CrearPrograma();
+            crearPrograma.setSize(desktopPane1.getSize());
+            try {
+                crearPrograma.setMaximum(true);
+            } catch (PropertyVetoException ex) {
+                ex.printStackTrace();
+            }
+            this.desktopPane1.add(crearPrograma);
+            crearPrograma.show();        
+    }
+
 
 
     private void initComponents() {
@@ -106,25 +213,25 @@ public class VentanaMDIAdministrador extends JFrame {
         // Generated using JFormDesigner Evaluation license - sdfsf
         menuBar1 = new JMenuBar();
         menu6 = new JMenu();
-        menuItem7 = new JMenuItem();
-        menu1 = new JMenu();
-        SolictudMenu = new JMenuItem();
-        PagosMenu = new JMenuItem();
-        menuItem3 = new JMenuItem();
-        menuItem8 = new JMenuItem();
-        VerProgramaMenu = new JMenuItem();
+        NuevaCitaF = new JMenuItem();
+        ClienteF = new JMenu();
+        InformacionDePagoF = new JMenuItem();
+        HistorialDeClienteF = new JMenuItem();
+        NuevoClienteF = new JMenuItem();
+        PlanDeClienteF = new JMenuItem();
+        PagoAtrasadoF = new JMenuItem();
         menu8 = new JMenu();
-        menuItem6 = new JMenuItem();
+        DoctoresF = new JMenuItem();
         menu3 = new JMenu();
         GenerosMenu = new JMenuItem();
         menu7 = new JMenu();
-        menuItem4 = new JMenuItem();
+        NuevoPagoF = new JMenuItem();
         menu2 = new JMenu();
         BuscarMenu = new JMenuItem();
-        menuItem1 = new JMenuItem();
+        ClientesPlanF = new JMenuItem();
         menu4 = new JMenu();
-        menuItem2 = new JMenuItem();
-        menuItem5 = new JMenuItem();
+        ListaProgramasF = new JMenuItem();
+        CrearProgramaF = new JMenuItem();
         desktopPane1 = new JDesktopPane();
         button1 = new JButton();
 
@@ -138,48 +245,52 @@ public class VentanaMDIAdministrador extends JFrame {
             {
                 menu6.setText("Cita");
 
-                //---- menuItem7 ----
-                menuItem7.setText("Nueva cita");
-                menu6.add(menuItem7);
+                //---- NuevaCitaF ----
+                NuevaCitaF.setText("Nueva cita");
+                NuevaCitaF.addActionListener(e -> NuevaCitaF(e));
+                menu6.add(NuevaCitaF);
             }
             menuBar1.add(menu6);
 
-            //======== menu1 ========
+            //======== ClienteF ========
             {
-                menu1.setText("Cliente");
+                ClienteF.setText("Cliente");
 
-                //---- SolictudMenu ----
-                SolictudMenu.setText("Informacion de pago");
-                SolictudMenu.addActionListener(e -> SolictudMenu(e));
-                menu1.add(SolictudMenu);
+                //---- InformacionDePagoF ----
+                InformacionDePagoF.setText("Informacion de pago");
+                InformacionDePagoF.addActionListener(e -> InformacionDePagoF(e));
+                ClienteF.add(InformacionDePagoF);
 
-                //---- PagosMenu ----
-                PagosMenu.setText("Historial de cliente");
-                PagosMenu.addActionListener(e -> PagosMenu(e));
-                menu1.add(PagosMenu);
+                //---- HistorialDeClienteF ----
+                HistorialDeClienteF.setText("Historial de cliente");
+                HistorialDeClienteF.addActionListener(e -> HistorialDeClienteF(e));
+                ClienteF.add(HistorialDeClienteF);
 
-                //---- menuItem3 ----
-                menuItem3.setText("Nuevo Cliente");
-                menu1.add(menuItem3);
+                //---- NuevoClienteF ----
+                NuevoClienteF.setText("Nuevo Cliente");
+                NuevoClienteF.addActionListener(e -> NuevoClienteF(e));
+                ClienteF.add(NuevoClienteF);
 
-                //---- menuItem8 ----
-                menuItem8.setText("Plan de cliente");
-                menu1.add(menuItem8);
+                //---- PlanDeClienteF ----
+                PlanDeClienteF.setText("Plan de cliente");
+                PlanDeClienteF.addActionListener(e -> PlanDeClienteF(e));
+                ClienteF.add(PlanDeClienteF);
 
-                //---- VerProgramaMenu ----
-                VerProgramaMenu.setText("Ver si tiene pago atrasado");
-                VerProgramaMenu.addActionListener(e -> VerProgramaMenu(e));
-                menu1.add(VerProgramaMenu);
+                //---- PagoAtrasadoF ----
+                PagoAtrasadoF.setText("Ver si tiene pago atrasado");
+                PagoAtrasadoF.addActionListener(e -> PagoAtrasadoF(e));
+                ClienteF.add(PagoAtrasadoF);
             }
-            menuBar1.add(menu1);
+            menuBar1.add(ClienteF);
 
             //======== menu8 ========
             {
                 menu8.setText("Doctores");
 
-                //---- menuItem6 ----
-                menuItem6.setText("Lista de doctores");
-                menu8.add(menuItem6);
+                //---- DoctoresF ----
+                DoctoresF.setText("Lista de doctores");
+                DoctoresF.addActionListener(e -> DoctoresF(e));
+                menu8.add(DoctoresF);
             }
             menuBar1.add(menu8);
 
@@ -198,9 +309,10 @@ public class VentanaMDIAdministrador extends JFrame {
             {
                 menu7.setText("Pagos");
 
-                //---- menuItem4 ----
-                menuItem4.setText("Nuevo pago");
-                menu7.add(menuItem4);
+                //---- NuevoPagoF ----
+                NuevoPagoF.setText("Nuevo pago");
+                NuevoPagoF.addActionListener(e -> NuevoPagoF(e));
+                menu7.add(NuevoPagoF);
             }
             menuBar1.add(menu7);
 
@@ -213,9 +325,10 @@ public class VentanaMDIAdministrador extends JFrame {
                 BuscarMenu.addActionListener(e -> BuscarMenu(e));
                 menu2.add(BuscarMenu);
 
-                //---- menuItem1 ----
-                menuItem1.setText("Lista de clientes por plan");
-                menu2.add(menuItem1);
+                //---- ClientesPlanF ----
+                ClientesPlanF.setText("Lista de clientes por plan");
+                ClientesPlanF.addActionListener(e -> ClientesPlanF(e));
+                menu2.add(ClientesPlanF);
             }
             menuBar1.add(menu2);
 
@@ -223,13 +336,15 @@ public class VentanaMDIAdministrador extends JFrame {
             {
                 menu4.setText("Programas");
 
-                //---- menuItem2 ----
-                menuItem2.setText("Lista de programas");
-                menu4.add(menuItem2);
+                //---- ListaProgramasF ----
+                ListaProgramasF.setText("Lista de programas");
+                ListaProgramasF.addActionListener(e -> ListaProgramasF(e));
+                menu4.add(ListaProgramasF);
 
-                //---- menuItem5 ----
-                menuItem5.setText("Crear un programa");
-                menu4.add(menuItem5);
+                //---- CrearProgramaF ----
+                CrearProgramaF.setText("Crear un programa");
+                CrearProgramaF.addActionListener(e -> CrearProgramaF(e));
+                menu4.add(CrearProgramaF);
             }
             menuBar1.add(menu4);
         }
@@ -263,25 +378,25 @@ public class VentanaMDIAdministrador extends JFrame {
     // Generated using JFormDesigner Evaluation license - sdfsf
     private JMenuBar menuBar1;
     private JMenu menu6;
-    private JMenuItem menuItem7;
-    private JMenu menu1;
-    private JMenuItem SolictudMenu;
-    private JMenuItem PagosMenu;
-    private JMenuItem menuItem3;
-    private JMenuItem menuItem8;
-    private JMenuItem VerProgramaMenu;
+    private JMenuItem NuevaCitaF;
+    private JMenu ClienteF;
+    private JMenuItem InformacionDePagoF;
+    private JMenuItem HistorialDeClienteF;
+    private JMenuItem NuevoClienteF;
+    private JMenuItem PlanDeClienteF;
+    private JMenuItem PagoAtrasadoF;
     private JMenu menu8;
-    private JMenuItem menuItem6;
+    private JMenuItem DoctoresF;
     private JMenu menu3;
     private JMenuItem GenerosMenu;
     private JMenu menu7;
-    private JMenuItem menuItem4;
+    private JMenuItem NuevoPagoF;
     private JMenu menu2;
     private JMenuItem BuscarMenu;
-    private JMenuItem menuItem1;
+    private JMenuItem ClientesPlanF;
     private JMenu menu4;
-    private JMenuItem menuItem2;
-    private JMenuItem menuItem5;
+    private JMenuItem ListaProgramasF;
+    private JMenuItem CrearProgramaF;
     private JDesktopPane desktopPane1;
     private JButton button1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on

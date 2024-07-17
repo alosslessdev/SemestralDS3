@@ -38,10 +38,10 @@ public class NuevoPago extends JInternalFrame {
         button1.addActionListener(e -> button1(e));
 
         //---- label1 ----
-        label1.setText("text");
+        label1.setText("C\u00f3digo de cliente");
 
         //---- label4 ----
-        label4.setText("text");
+        label4.setText("Monto");
 
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
         contentPane.setLayout(contentPaneLayout);
@@ -50,20 +50,21 @@ public class NuevoPago extends JInternalFrame {
                 .addGroup(contentPaneLayout.createSequentialGroup()
                     .addGroup(contentPaneLayout.createParallelGroup()
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(29, 29, 29)
+                            .addGroup(contentPaneLayout.createParallelGroup()
+                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                    .addGap(29, 29, 29)
+                                    .addComponent(label1))
+                                .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
+                                    .addContainerGap()
+                                    .addComponent(label4)))
+                            .addGap(18, 18, 18)
                             .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                                .addGroup(contentPaneLayout.createSequentialGroup()
-                                    .addComponent(label4)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(textField2))
-                                .addGroup(contentPaneLayout.createSequentialGroup()
-                                    .addComponent(label1)
-                                    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(textField1, GroupLayout.PREFERRED_SIZE, 130, GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(textField2, GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+                                .addComponent(textField1, GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)))
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(107, 107, 107)
+                            .addGap(126, 126, 126)
                             .addComponent(button1)))
-                    .addContainerGap(59, Short.MAX_VALUE))
+                    .addContainerGap(25, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
@@ -74,11 +75,11 @@ public class NuevoPago extends JInternalFrame {
                         .addComponent(textField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                     .addGap(18, 18, 18)
                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                        .addComponent(label4)
-                        .addComponent(textField2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                    .addGap(38, 38, 38)
+                        .addComponent(textField2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(label4))
+                    .addGap(18, 18, 18)
                     .addComponent(button1)
-                    .addContainerGap(108, Short.MAX_VALUE))
+                    .addContainerGap(43, Short.MAX_VALUE))
         );
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }

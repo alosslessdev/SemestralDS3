@@ -26,6 +26,8 @@ public class EstaMoroso extends JInternalFrame {
         button1 = new JButton();
         label1 = new JLabel();
         textField1 = new JTextField();
+        scrollPane1 = new JScrollPane();
+        table1 = new JTable();
 
         //======== this ========
         setVisible(true);
@@ -36,7 +38,12 @@ public class EstaMoroso extends JInternalFrame {
         button1.addActionListener(e -> button1(e));
 
         //---- label1 ----
-        label1.setText("text");
+        label1.setText("C\u00f3digo de cliente");
+
+        //======== scrollPane1 ========
+        {
+            scrollPane1.setViewportView(table1);
+        }
 
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
         contentPane.setLayout(contentPaneLayout);
@@ -45,14 +52,17 @@ public class EstaMoroso extends JInternalFrame {
                 .addGroup(contentPaneLayout.createSequentialGroup()
                     .addGroup(contentPaneLayout.createParallelGroup()
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(42, 42, 42)
-                            .addComponent(label1)
-                            .addGap(31, 31, 31)
-                            .addComponent(textField1, GroupLayout.PREFERRED_SIZE, 173, GroupLayout.PREFERRED_SIZE))
+                            .addGap(161, 161, 161)
+                            .addComponent(button1))
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(137, 137, 137)
-                            .addComponent(button1)))
-                    .addContainerGap(34, Short.MAX_VALUE))
+                            .addGap(42, 42, 42)
+                            .addGroup(contentPaneLayout.createParallelGroup()
+                                .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
+                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                    .addComponent(label1)
+                                    .addGap(31, 31, 31)
+                                    .addComponent(textField1, GroupLayout.PREFERRED_SIZE, 173, GroupLayout.PREFERRED_SIZE)))))
+                    .addContainerGap(46, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
@@ -61,9 +71,11 @@ public class EstaMoroso extends JInternalFrame {
                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                         .addComponent(label1)
                         .addComponent(textField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                    .addGap(31, 31, 31)
+                    .addGap(30, 30, 30)
                     .addComponent(button1)
-                    .addContainerGap(84, Short.MAX_VALUE))
+                    .addGap(18, 18, 18)
+                    .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 212, GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(45, Short.MAX_VALUE))
         );
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }
@@ -73,5 +85,7 @@ public class EstaMoroso extends JInternalFrame {
     private JButton button1;
     private JLabel label1;
     private JTextField textField1;
+    private JScrollPane scrollPane1;
+    private JTable table1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

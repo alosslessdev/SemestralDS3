@@ -24,10 +24,10 @@ public class HistorialDeCliente extends JInternalFrame {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         // Generated using JFormDesigner Evaluation license - sdfsf
         button1 = new JButton();
-        label1 = new JLabel();
-        textField1 = new JTextField();
         scrollPane1 = new JScrollPane();
         table1 = new JTable();
+        label1 = new JLabel();
+        textField1 = new JTextField();
 
         //======== this ========
         setVisible(true);
@@ -37,34 +37,31 @@ public class HistorialDeCliente extends JInternalFrame {
         button1.setText("text");
         button1.addActionListener(e -> button1(e));
 
-        //---- label1 ----
-        label1.setText("text");
-
         //======== scrollPane1 ========
         {
             scrollPane1.setViewportView(table1);
         }
+
+        //---- label1 ----
+        label1.setText("C\u00f3digo de cliente");
 
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
         contentPane.setLayout(contentPaneLayout);
         contentPaneLayout.setHorizontalGroup(
             contentPaneLayout.createParallelGroup()
                 .addGroup(contentPaneLayout.createSequentialGroup()
+                    .addGap(39, 39, 39)
                     .addGroup(contentPaneLayout.createParallelGroup()
+                        .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(88, 88, 88)
-                            .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                            .addGap(202, 202, 202)
+                            .addComponent(button1))
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(197, 197, 197)
-                            .addGroup(contentPaneLayout.createParallelGroup()
-                                .addGroup(contentPaneLayout.createSequentialGroup()
-                                    .addComponent(label1)
-                                    .addGap(24, 24, 24)
-                                    .addComponent(textField1, GroupLayout.PREFERRED_SIZE, 180, GroupLayout.PREFERRED_SIZE))
-                                .addGroup(contentPaneLayout.createSequentialGroup()
-                                    .addGap(93, 93, 93)
-                                    .addComponent(button1)))))
-                    .addContainerGap(103, Short.MAX_VALUE))
+                            .addGap(71, 71, 71)
+                            .addComponent(label1)
+                            .addGap(31, 31, 31)
+                            .addComponent(textField1, GroupLayout.PREFERRED_SIZE, 173, GroupLayout.PREFERRED_SIZE)))
+                    .addContainerGap(37, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
@@ -79,7 +76,7 @@ public class HistorialDeCliente extends JInternalFrame {
                     .addComponent(button1)
                     .addGap(18, 18, 18)
                     .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(96, Short.MAX_VALUE))
+                    .addContainerGap(41, Short.MAX_VALUE))
         );
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }
@@ -87,9 +84,9 @@ public class HistorialDeCliente extends JInternalFrame {
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     // Generated using JFormDesigner Evaluation license - sdfsf
     private JButton button1;
-    private JLabel label1;
-    private JTextField textField1;
     private JScrollPane scrollPane1;
     private JTable table1;
+    private JLabel label1;
+    private JTextField textField1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

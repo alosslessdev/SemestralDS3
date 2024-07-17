@@ -17,11 +17,11 @@ new FormModel {
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label1"
-				"text": "text"
+				"text": "Género"
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label2"
-				"text": "text"
+				"text": "Duración"
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField2"

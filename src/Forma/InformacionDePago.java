@@ -25,18 +25,15 @@ public class InformacionDePago extends JInternalFrame {
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         // Generated using JFormDesigner Evaluation license - sdfsf
-        label1 = new JLabel();
         button1 = new JButton();
-        textField1 = new JTextField();
         scrollPane1 = new JScrollPane();
         table1 = new JTable();
+        label2 = new JLabel();
+        textField2 = new JTextField();
 
         //======== this ========
         setVisible(true);
         var contentPane = getContentPane();
-
-        //---- label1 ----
-        label1.setText("text");
 
         //---- button1 ----
         button1.setText("text");
@@ -46,6 +43,9 @@ public class InformacionDePago extends JInternalFrame {
         {
             scrollPane1.setViewportView(table1);
         }
+
+        //---- label2 ----
+        label2.setText("C\u00f3digo de cliente");
 
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
         contentPane.setLayout(contentPaneLayout);
@@ -61,19 +61,21 @@ public class InformacionDePago extends JInternalFrame {
                                     .addComponent(button1))
                                 .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(122, 122, 122)
-                            .addComponent(label1)
-                            .addGap(18, 18, 18)
-                            .addComponent(textField1, GroupLayout.PREFERRED_SIZE, 280, GroupLayout.PREFERRED_SIZE)))
+                            .addGap(125, 125, 125)
+                            .addComponent(label2)
+                            .addGap(31, 31, 31)
+                            .addComponent(textField2, GroupLayout.PREFERRED_SIZE, 173, GroupLayout.PREFERRED_SIZE)))
                     .addContainerGap(53, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
                 .addGroup(contentPaneLayout.createSequentialGroup()
                     .addGap(19, 19, 19)
-                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                        .addComponent(textField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(label1))
+                    .addGroup(contentPaneLayout.createParallelGroup()
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(6, 6, 6)
+                            .addComponent(label2))
+                        .addComponent(textField2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                     .addGap(18, 18, 18)
                     .addComponent(button1)
                     .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
@@ -85,10 +87,10 @@ public class InformacionDePago extends JInternalFrame {
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     // Generated using JFormDesigner Evaluation license - sdfsf
-    private JLabel label1;
     private JButton button1;
-    private JTextField textField1;
     private JScrollPane scrollPane1;
     private JTable table1;
+    private JLabel label2;
+    private JTextField textField2;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

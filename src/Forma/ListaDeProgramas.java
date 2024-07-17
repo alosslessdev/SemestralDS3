@@ -43,10 +43,10 @@ public class ListaDeProgramas extends JInternalFrame {
         }
 
         //---- label1 ----
-        label1.setText("text");
+        label1.setText("G\u00e9nero");
 
         //---- label2 ----
-        label2.setText("text");
+        label2.setText("Duraci\u00f3n");
 
         //---- button1 ----
         button1.setText("text");

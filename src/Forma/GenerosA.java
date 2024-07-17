@@ -4,6 +4,7 @@
 
 package Forma;
 
+import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.GroupLayout;
 
@@ -15,6 +16,10 @@ public class GenerosA extends JInternalFrame {
 
         super("Generos", true, true, true, true);
         initComponents();
+    }
+
+    private void button1(ActionEvent e) {
+        // TODO add your code here
     }
 
     private void initComponents() {
@@ -29,7 +34,8 @@ public class GenerosA extends JInternalFrame {
         var contentPane = getContentPane();
 
         //---- button1 ----
-        button1.setText("text");
+        button1.setText("Ver");
+        button1.addActionListener(e -> button1(e));
 
         //======== scrollPane1 ========
         {
