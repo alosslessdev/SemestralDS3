@@ -44,6 +44,7 @@ new FormModel {
 					addElement( "Mayor 18" )
 				}
 				addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "comboBox1ItemStateChanged", true ) )
+				addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "comboBox1ItemStateChanged", true ) )
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField1"
