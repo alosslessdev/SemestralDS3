@@ -11,10 +11,10 @@ import javax.swing.GroupLayout;
 /**
  * @author pancho
  */
-public class Solicitud extends JInternalFrame {
-    public Solicitud() {
+public class NuevoCliente extends JInternalFrame {
+    public NuevoCliente() {
 
-        super("Solicitud", true, true, true, true);
+        super("NuevoCliente", true, true, true, true);
         initComponents();
     }
 

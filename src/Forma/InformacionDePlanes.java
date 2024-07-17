@@ -10,9 +10,9 @@ import javax.swing.GroupLayout;
 /**
  * @author pancho
  */
-public class Buscar extends JInternalFrame {
-    public Buscar() {
-        super("Buscar", true, true, true, true);
+public class InformacionDePlanes extends JInternalFrame {
+    public InformacionDePlanes() {
+        super("InformacionDePlanes", true, true, true, true);
         initComponents();
     }
 

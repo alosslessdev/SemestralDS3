@@ -110,7 +110,7 @@ VALUES
 SET IDENTITY_INSERT Contratos OFF;
 
 
-INSERT INTO Pagos (ID_Contrato, Fecha_Pago, Monto)--inserta tabla pagos
+INSERT INTO Pagos (ID_Contrato, Fecha_Pago, Monto)--inserta tabla informacionDePago
 VALUES
 (69584714, '2021-07-23', 9.00),
 (65858745, '2021-07-24', 14.00),
@@ -235,7 +235,7 @@ GO
 IF EXISTS (SELECT * FROM sys.procedures WHERE name = 'sp_make_payment')
     DROP PROCEDURE sp_make_payment;
 GO
--- Crear el procedimiento almacenado para la validación de pagos.
+-- Crear el procedimiento almacenado para la validación de informacionDePago.
 CREATE PROCEDURE sp_make_payment
     @ID_Contrato INT,
     @Monto Money
@@ -271,19 +271,19 @@ BEGIN
 END;
 GO
 --5
--- Ver para buscar por género
+-- Ver para informacionDePlanes por género
 CREATE VIEW V_genero AS
 SELECT *
 FROM Programas
 WHERE Genero IN ('TE', 'CO', 'PRE');
 go
--- Ver para buscar por edad
+-- Ver para informacionDePlanes por edad
 CREATE VIEW V_edad AS
 SELECT *
 FROM Programas
 WHERE Edad_Recomendada IN ('menores de 10', '11 a 17', 'mayores de 18');
 go
--- Crear o modificar la vista para buscar por médico.
+-- Crear o modificar la vista para informacionDePlanes por médico.
 CREATE OR ALTER VIEW V_doctor AS
 SELECT p.*, d.Nombre AS Doctor_Nombre
 FROM Programas p

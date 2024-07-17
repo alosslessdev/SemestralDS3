@@ -11,10 +11,10 @@ import javax.swing.GroupLayout;
 /**
  * @author pancho
  */
-public class Pagos extends JInternalFrame {
-    public Pagos() {
+public class InformacionDePago extends JInternalFrame {
+    public InformacionDePago() {
 
-        super("Pagos", true, true, true, true);
+        super("InformacionDePago", true, true, true, true);
         initComponents();
     }
 

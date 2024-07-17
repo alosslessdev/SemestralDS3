@@ -11,8 +11,8 @@ import javax.swing.GroupLayout;
 /**
  * @author pancho
  */
-public class VerPrograma extends JInternalFrame {
-    public VerPrograma() {
+public class ListaDeProgramas extends JInternalFrame {
+    public ListaDeProgramas() {
 
         super("Ver Programa", true, true, true, true);
         initComponents();
