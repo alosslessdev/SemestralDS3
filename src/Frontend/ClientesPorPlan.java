@@ -4,6 +4,7 @@
 
 package Frontend;
 
+import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.GroupLayout;
@@ -13,6 +14,8 @@ import javax.swing.GroupLayout;
  */
 public class ClientesPorPlan extends JInternalFrame {
     public ClientesPorPlan() {
+        super("Clientes Por Plan", true, true, true, false);
+
         initComponents();
     }
 
@@ -32,10 +35,11 @@ public class ClientesPorPlan extends JInternalFrame {
 
         //======== this ========
         setVisible(true);
+        setPreferredSize(new Dimension(787, 542));
         var contentPane = getContentPane();
 
         //---- button1 ----
-        button1.setText("text");
+        button1.setText("Ver");
         button1.addActionListener(e -> button1(e));
 
         //---- label1 ----
@@ -53,17 +57,19 @@ public class ClientesPorPlan extends JInternalFrame {
                 .addGroup(contentPaneLayout.createSequentialGroup()
                     .addGroup(contentPaneLayout.createParallelGroup()
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(20, 20, 20)
+                            .addGap(146, 146, 146)
                             .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(99, 99, 99)
-                            .addComponent(label1)
-                            .addGap(18, 18, 18)
-                            .addComponent(textField1, GroupLayout.PREFERRED_SIZE, 236, GroupLayout.PREFERRED_SIZE))
-                        .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(222, 222, 222)
-                            .addComponent(button1)))
-                    .addContainerGap(66, Short.MAX_VALUE))
+                            .addGap(218, 218, 218)
+                            .addGroup(contentPaneLayout.createParallelGroup()
+                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                    .addComponent(label1)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(textField1, GroupLayout.PREFERRED_SIZE, 236, GroupLayout.PREFERRED_SIZE))
+                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                    .addGap(123, 123, 123)
+                                    .addComponent(button1)))))
+                    .addContainerGap(170, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
@@ -74,9 +80,9 @@ public class ClientesPorPlan extends JInternalFrame {
                         .addComponent(textField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                     .addGap(18, 18, 18)
                     .addComponent(button1)
-                    .addGap(12, 12, 12)
-                    .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(74, Short.MAX_VALUE))
+                    .addGap(18, 18, 18)
+                    .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 378, GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(19, Short.MAX_VALUE))
         );
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }

@@ -13,7 +13,7 @@ import javax.swing.GroupLayout;
  */
 public class InformacionDePlanes extends JInternalFrame {
     public InformacionDePlanes() {
-        super("InformacionDePlanes", true, true, true, true);
+        super("Informacion De Planes", true, true, true, false);
         initComponents();
     }
 
@@ -51,13 +51,14 @@ public class InformacionDePlanes extends JInternalFrame {
         contentPaneLayout.setHorizontalGroup(
             contentPaneLayout.createParallelGroup()
                 .addGroup(contentPaneLayout.createSequentialGroup()
-                    .addGap(42, 42, 42)
+                    .addContainerGap(65, Short.MAX_VALUE)
                     .addGroup(contentPaneLayout.createParallelGroup()
-                        .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 282, GroupLayout.PREFERRED_SIZE)
-                        .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(121, 121, 121)
-                            .addComponent(button1)))
-                    .addContainerGap(44, Short.MAX_VALUE))
+                        .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
+                            .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 659, GroupLayout.PREFERRED_SIZE)
+                            .addGap(51, 51, 51))
+                        .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
+                            .addComponent(button1)
+                            .addGap(364, 364, 364))))
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
@@ -65,8 +66,8 @@ public class InformacionDePlanes extends JInternalFrame {
                     .addGap(15, 15, 15)
                     .addComponent(button1)
                     .addGap(18, 18, 18)
-                    .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 339, GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(34, Short.MAX_VALUE))
+                    .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 403, GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(47, Short.MAX_VALUE))
         );
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }

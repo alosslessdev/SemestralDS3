@@ -14,6 +14,8 @@ import javax.swing.GroupLayout;
 public class NuevaCita extends JInternalFrame {
 
     public NuevaCita() {
+        super("Nueva Cita", true, true, true, false);
+
         initComponents();
     }
 
@@ -55,7 +57,7 @@ public class NuevaCita extends JInternalFrame {
         var contentPane = getContentPane();
 
         //---- button1 ----
-        button1.setText("text");
+        button1.setText("Crear");
         button1.addActionListener(e -> button1(e));
 
         //---- label1 ----
@@ -86,37 +88,36 @@ public class NuevaCita extends JInternalFrame {
         contentPaneLayout.setHorizontalGroup(
             contentPaneLayout.createParallelGroup()
                 .addGroup(contentPaneLayout.createSequentialGroup()
+                    .addGap(241, 241, 241)
                     .addGroup(contentPaneLayout.createParallelGroup()
+                        .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                            .addGroup(contentPaneLayout.createSequentialGroup()
+                                .addComponent(label1)
+                                .addGap(6, 6, 6)
+                                .addComponent(textField3, GroupLayout.PREFERRED_SIZE, 155, GroupLayout.PREFERRED_SIZE))
+                            .addGroup(contentPaneLayout.createSequentialGroup()
+                                .addComponent(label2)
+                                .addGap(6, 6, 6)
+                                .addComponent(textField4, GroupLayout.PREFERRED_SIZE, 155, GroupLayout.PREFERRED_SIZE)))
                         .addGroup(contentPaneLayout.createSequentialGroup()
                             .addGap(25, 25, 25)
-                            .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                                .addGroup(contentPaneLayout.createSequentialGroup()
-                                    .addComponent(label1)
-                                    .addGap(6, 6, 6)
-                                    .addComponent(textField3, GroupLayout.PREFERRED_SIZE, 155, GroupLayout.PREFERRED_SIZE))
-                                .addGroup(contentPaneLayout.createSequentialGroup()
-                                    .addComponent(label2)
-                                    .addGap(6, 6, 6)
-                                    .addComponent(textField4, GroupLayout.PREFERRED_SIZE, 155, GroupLayout.PREFERRED_SIZE))))
-                        .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(50, 50, 50)
                             .addComponent(label4)
                             .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(checkBox1))
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(80, 80, 80)
+                            .addGap(55, 55, 55)
                             .addComponent(label3)
                             .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(comboBox1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(160, 160, 160)
+                            .addGap(135, 135, 135)
                             .addComponent(button1)))
-                    .addContainerGap(81, Short.MAX_VALUE))
+                    .addContainerGap(277, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
-                .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
-                    .addGap(24, 24, 24)
+                .addGroup(contentPaneLayout.createSequentialGroup()
+                    .addGap(34, 34, 34)
                     .addGroup(contentPaneLayout.createParallelGroup()
                         .addGroup(contentPaneLayout.createSequentialGroup()
                             .addGap(6, 6, 6)
@@ -138,7 +139,7 @@ public class NuevaCita extends JInternalFrame {
                         .addComponent(label3))
                     .addGap(18, 18, 18)
                     .addComponent(button1)
-                    .addContainerGap(47, Short.MAX_VALUE))
+                    .addContainerGap(279, Short.MAX_VALUE))
         );
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }

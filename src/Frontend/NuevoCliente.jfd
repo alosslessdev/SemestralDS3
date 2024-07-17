@@ -4,8 +4,8 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormContainer( "javax.swing.JInternalFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq l {par l {seq {space :p:40:p, comp label1:::p::p}, seq t {space :::p, par t {comp label2:::p::p, comp label3:::p::p, comp label4::t:p::p, comp label5::t:p::p, comp label6::t:p::p}}}, space :::p, par l:::p {comp textField4::::152:x, comp comboBox1:::p::p, comp textField3::l::152:x, comp textField2::l::152:x, comp textField1::l::152:x, par t:l {comp button1:::p::p, comp comboBox2:::p::p}}, space ::48:x}}"
-			"$verticalGroup": "par l {seq l {space :p:45:p, par b {comp label1::b:p::p, comp textField1::b:p::p}, space :::p, par b {comp label2::b:p::p, comp textField2::b:p::p}, space s:::p, par l {comp label3:::p::p, comp textField3:::p::p}, space :p:15:p, par b {comp label4::b:p::p, comp textField4::b:p::p}, space s:::p, par l {comp label5:::p::p, comp comboBox1:::p::p}, space :p:13:p, par b {comp label6::b:p::p, comp comboBox2::b:p::p}, space :p:30:p, comp button1:::p::p, space ::37:x}}"
+			"$horizontalGroup": "par l {seq l {space :p:249:p, par l {seq l {space :p:6:p, comp label1:::p::p}, comp label2::t:p::p, comp label3::t:p::p, comp label4::t:p::p, comp label5::t:p::p, comp label6::t:p::p}, space :::p, par l:::p {comp textField4:::::x, comp comboBox1:::p::p, comp textField3::l:::x, comp textField2::l:::x, comp textField1::l:p:152:p, par t:l {comp button1:::p::p, comp comboBox2:::p::p}}, space ::290:x}}"
+			"$verticalGroup": "par l {seq l {space :p:40:p, par b {comp label1::b:p::p, comp textField1::b:p::p}, space :::p, par b {comp label2::b:p::p, comp textField2::b:p::p}, space s:::p, par l {comp label3:::p::p, comp textField3:::p::p}, space :p:15:p, par b {comp label4::b:p::p, comp textField4::b:p::p}, space s:::p, par l {comp label5:::p::p, comp comboBox1:::p::p}, space :p:13:p, par b {comp label6::b:p::p, comp comboBox2::b:p::p}, space :p:30:p, comp button1:::p::p, space ::179:x}}"
 		} ) {
 			name: "this"
 			"visible": true
@@ -47,20 +47,31 @@ new FormModel {
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button1"
-				"text": "text"
+				"text": "Crear"
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1", true ) )
 			} )
 			add( new FormComponent( "javax.swing.JComboBox" ) {
 				name: "comboBox1"
+				"model": new javax.swing.DefaultComboBoxModel {
+					selectedItem: "Debito"
+					addElement( "Debito" )
+					addElement( "Credito" )
+				}
 				addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "comboBox1ItemStateChanged", true ) )
 			} )
 			add( new FormComponent( "javax.swing.JComboBox" ) {
 				name: "comboBox2"
+				"model": new javax.swing.DefaultComboBoxModel {
+					selectedItem: "Basico"
+					addElement( "Basico" )
+					addElement( "Normal" )
+					addElement( "Ultra" )
+				}
 				addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "comboBox2ItemStateChanged", true ) )
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 330, 405 )
+			"size": new java.awt.Dimension( 787, 542 )
 		} )
 	}
 }

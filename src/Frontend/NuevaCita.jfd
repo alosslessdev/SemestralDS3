@@ -4,14 +4,14 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormContainer( "javax.swing.JInternalFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq {par l {seq l {space :p:25:p, par t {seq {comp label1:::p::p, space :6:6:p, comp textField3:::p:155:p}, seq t {comp label2:::p::p, space :6:6:p, comp textField4:::p:155:p}}}, seq l {space :p:50:p, comp label4:::p::p, space :::p, comp checkBox1:::p::p}, seq l {space :p:80:p, comp label3:::p::p, space :::p, comp comboBox1:::p::p}, seq l {space :p:160:p, comp button1:::p::p}}, space ::81:x}}"
-			"$verticalGroup": "par l {seq t {space :p:24:p, par l {seq {space :6:6:p, comp label1:::p::p}, comp textField3:::p::p}, space s:::p, par l {seq l {space :6:6:p, comp label2:::p::p}, comp textField4:::p::p}, space s:::p, par l:::p {comp checkBox1::::0:x, comp label4:::p::p}, space s:::p, par b {comp comboBox1::b:p::p, comp label3::b:p::p}, space s:::p, comp button1:::p::p, space ::47:x}}"
+			"$horizontalGroup": "par l {seq l {space :p:241:p, par l {par t:l {seq t {comp label1:::p::p, space :6:6:p, comp textField3:::p:155:p}, seq t {comp label2:::p::p, space :6:6:p, comp textField4:::p:155:p}}, seq l {space :p:25:p, comp label4:::p::p, space :::p, comp checkBox1:::p::p}, seq l {space :p:55:p, comp label3:::p::p, space :::p, comp comboBox1:::p::p}, seq l {space :p:135:p, comp button1:::p::p}}, space ::277:x}}"
+			"$verticalGroup": "par l {seq l {space :p:34:p, par l {seq l {space :6:6:p, comp label1:::p::p}, comp textField3:::p::p}, space s:::p, par l {seq l {space :6:6:p, comp label2:::p::p}, comp textField4:::p::p}, space s:::p, par l:::p {comp checkBox1::::0:x, comp label4:::p::p}, space s:::p, par b {comp comboBox1::b:p::p, comp label3::b:p::p}, space s:::p, comp button1:::p::p, space ::279:x}}"
 		} ) {
 			name: "this"
 			"visible": true
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button1"
-				"text": "text"
+				"text": "Crear"
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1", true ) )
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
@@ -52,7 +52,7 @@ new FormModel {
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 375, 300 )
+			"size": new java.awt.Dimension( 787, 542 )
 		} )
 	}
 }

@@ -14,7 +14,7 @@ import javax.swing.GroupLayout;
 public class NuevoCliente extends JInternalFrame {
     public NuevoCliente() {
 
-        super("NuevoCliente", true, true, true, true);
+        super("Nuevo Cliente", true, true, true, false);
         initComponents();
     }
 
@@ -44,8 +44,8 @@ public class NuevoCliente extends JInternalFrame {
         textField4 = new JTextField();
         label6 = new JLabel();
         button1 = new JButton();
-        comboBox1 = new JComboBox();
-        comboBox2 = new JComboBox();
+        comboBox1 = new JComboBox<>();
+        comboBox2 = new JComboBox<>();
 
         //======== this ========
         setVisible(true);
@@ -70,13 +70,22 @@ public class NuevoCliente extends JInternalFrame {
         label6.setText("Plan");
 
         //---- button1 ----
-        button1.setText("text");
+        button1.setText("Crear");
         button1.addActionListener(e -> button1(e));
 
         //---- comboBox1 ----
+        comboBox1.setModel(new DefaultComboBoxModel<>(new String[] {
+            "Debito",
+            "Credito"
+        }));
         comboBox1.addItemListener(e -> comboBox1ItemStateChanged(e));
 
         //---- comboBox2 ----
+        comboBox2.setModel(new DefaultComboBoxModel<>(new String[] {
+            "Basico",
+            "Normal",
+            "Ultra"
+        }));
         comboBox2.addItemListener(e -> comboBox2ItemStateChanged(e));
 
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
@@ -84,34 +93,32 @@ public class NuevoCliente extends JInternalFrame {
         contentPaneLayout.setHorizontalGroup(
             contentPaneLayout.createParallelGroup()
                 .addGroup(contentPaneLayout.createSequentialGroup()
+                    .addGap(249, 249, 249)
                     .addGroup(contentPaneLayout.createParallelGroup()
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(40, 40, 40)
+                            .addGap(6, 6, 6)
                             .addComponent(label1))
-                        .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
-                            .addContainerGap()
-                            .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                                .addComponent(label2)
-                                .addComponent(label3)
-                                .addComponent(label4)
-                                .addComponent(label5)
-                                .addComponent(label6))))
+                        .addComponent(label2, GroupLayout.Alignment.TRAILING)
+                        .addComponent(label3, GroupLayout.Alignment.TRAILING)
+                        .addComponent(label4, GroupLayout.Alignment.TRAILING)
+                        .addComponent(label5, GroupLayout.Alignment.TRAILING)
+                        .addComponent(label6, GroupLayout.Alignment.TRAILING))
                     .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                        .addComponent(textField4, GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
+                        .addComponent(textField4)
                         .addComponent(comboBox1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(textField3, GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
-                        .addComponent(textField2, GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
-                        .addComponent(textField1, GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
+                        .addComponent(textField3)
+                        .addComponent(textField2)
+                        .addComponent(textField1, GroupLayout.PREFERRED_SIZE, 152, GroupLayout.PREFERRED_SIZE)
                         .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
                             .addComponent(button1)
                             .addComponent(comboBox2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-                    .addContainerGap(48, Short.MAX_VALUE))
+                    .addContainerGap(290, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
                 .addGroup(contentPaneLayout.createSequentialGroup()
-                    .addGap(45, 45, 45)
+                    .addGap(40, 40, 40)
                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                         .addComponent(label1)
                         .addComponent(textField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
@@ -137,7 +144,7 @@ public class NuevoCliente extends JInternalFrame {
                         .addComponent(comboBox2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                     .addGap(30, 30, 30)
                     .addComponent(button1)
-                    .addContainerGap(37, Short.MAX_VALUE))
+                    .addContainerGap(179, Short.MAX_VALUE))
         );
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }
@@ -155,7 +162,7 @@ public class NuevoCliente extends JInternalFrame {
     private JTextField textField4;
     private JLabel label6;
     private JButton button1;
-    private JComboBox comboBox1;
-    private JComboBox comboBox2;
+    private JComboBox<String> comboBox1;
+    private JComboBox<String> comboBox2;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

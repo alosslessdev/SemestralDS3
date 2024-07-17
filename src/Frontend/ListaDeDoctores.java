@@ -13,6 +13,8 @@ import javax.swing.GroupLayout;
  */
 public class ListaDeDoctores extends JInternalFrame {
     public ListaDeDoctores() {
+        super("Lista De Doctores", true, true, true, false);
+
         initComponents();
     }
 
@@ -31,13 +33,15 @@ public class ListaDeDoctores extends JInternalFrame {
         scrollPane1 = new JScrollPane();
         table1 = new JTable();
         separator1 = new JSeparator();
+        label3 = new JLabel();
+        textField3 = new JTextField();
 
         //======== this ========
         setVisible(true);
         var contentPane = getContentPane();
 
         //---- button1 ----
-        button1.setText("text");
+        button1.setText("Ver");
         button1.addActionListener(e -> button1(e));
 
         //---- label1 ----
@@ -51,46 +55,54 @@ public class ListaDeDoctores extends JInternalFrame {
             scrollPane1.setViewportView(table1);
         }
 
+        //---- label3 ----
+        label3.setText("Nombre");
+
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
         contentPane.setLayout(contentPaneLayout);
         contentPaneLayout.setHorizontalGroup(
             contentPaneLayout.createParallelGroup()
                 .addGroup(contentPaneLayout.createSequentialGroup()
-                    .addGap(28, 28, 28)
                     .addGroup(contentPaneLayout.createParallelGroup()
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addComponent(label1)
-                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(textField1, GroupLayout.PREFERRED_SIZE, 143, GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(label2)
-                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(textField2, GroupLayout.PREFERRED_SIZE, 167, GroupLayout.PREFERRED_SIZE))
-                        .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                    .addGap(0, 38, Short.MAX_VALUE))
+                            .addGap(275, 275, 275)
+                            .addComponent(separator1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(358, 358, 358)
+                            .addComponent(button1)))
+                    .addGap(371, 371, Short.MAX_VALUE))
                 .addGroup(contentPaneLayout.createSequentialGroup()
-                    .addGap(229, 229, 229)
-                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                        .addComponent(separator1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(button1))
-                    .addGap(19, 19, 19))
+                    .addGroup(contentPaneLayout.createParallelGroup()
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(28, 28, 28)
+                            .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 707, GroupLayout.PREFERRED_SIZE))
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(132, 132, 132)
+                            .addComponent(label3)
+                            .addGap(18, 18, 18)
+                            .addComponent(textField3, GroupLayout.PREFERRED_SIZE, 167, GroupLayout.PREFERRED_SIZE)
+                            .addGap(28, 28, 28)
+                            .addComponent(label2)
+                            .addGap(18, 18, 18)
+                            .addComponent(textField2, GroupLayout.PREFERRED_SIZE, 167, GroupLayout.PREFERRED_SIZE)))
+                    .addGap(0, 40, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
                 .addGroup(contentPaneLayout.createSequentialGroup()
-                    .addGap(14, 14, 14)
+                    .addGap(18, 18, 18)
                     .addComponent(separator1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                     .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                        .addComponent(label1)
-                        .addComponent(label2)
-                        .addComponent(textField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(textField2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                        .addComponent(textField3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(label3)
+                        .addComponent(textField2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(label2))
                     .addGap(18, 18, 18)
                     .addComponent(button1)
-                    .addGap(18, 18, 18)
-                    .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(46, Short.MAX_VALUE))
+                    .addGap(29, 29, 29)
+                    .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 366, GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(16, Short.MAX_VALUE))
         );
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }
@@ -105,5 +117,7 @@ public class ListaDeDoctores extends JInternalFrame {
     private JScrollPane scrollPane1;
     private JTable table1;
     private JSeparator separator1;
+    private JLabel label3;
+    private JTextField textField3;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

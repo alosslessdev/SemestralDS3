@@ -4,6 +4,7 @@
 
 package Frontend;
 
+import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.GroupLayout;
@@ -13,6 +14,8 @@ import javax.swing.GroupLayout;
  */
 public class EstaMoroso extends JInternalFrame {
     public EstaMoroso() {
+        super("Ver estado de pago", true, true, true, false);
+
         initComponents();
     }
 
@@ -34,7 +37,7 @@ public class EstaMoroso extends JInternalFrame {
         var contentPane = getContentPane();
 
         //---- button1 ----
-        button1.setText("text");
+        button1.setText("Ver");
         button1.addActionListener(e -> button1(e));
 
         //---- label1 ----
@@ -52,30 +55,29 @@ public class EstaMoroso extends JInternalFrame {
                 .addGroup(contentPaneLayout.createSequentialGroup()
                     .addGroup(contentPaneLayout.createParallelGroup()
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(161, 161, 161)
-                            .addComponent(button1))
+                            .addGap(68, 68, 68)
+                            .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 627, GroupLayout.PREFERRED_SIZE))
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(42, 42, 42)
+                            .addGap(225, 225, 225)
+                            .addComponent(label1)
+                            .addGap(31, 31, 31)
                             .addGroup(contentPaneLayout.createParallelGroup()
-                                .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
-                                .addGroup(contentPaneLayout.createSequentialGroup()
-                                    .addComponent(label1)
-                                    .addGap(31, 31, 31)
-                                    .addComponent(textField1, GroupLayout.PREFERRED_SIZE, 173, GroupLayout.PREFERRED_SIZE)))))
-                    .addContainerGap(46, Short.MAX_VALUE))
+                                .addComponent(button1)
+                                .addComponent(textField1, GroupLayout.PREFERRED_SIZE, 173, GroupLayout.PREFERRED_SIZE))))
+                    .addContainerGap(83, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
-                .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
-                    .addGap(18, 18, 18)
+                .addGroup(contentPaneLayout.createSequentialGroup()
+                    .addContainerGap()
                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                         .addComponent(label1)
                         .addComponent(textField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                    .addGap(30, 30, 30)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                     .addComponent(button1)
-                    .addGap(18, 18, 18)
-                    .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 212, GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(45, Short.MAX_VALUE))
+                    .addGap(36, 36, 36)
+                    .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 349, GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(50, Short.MAX_VALUE))
         );
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }

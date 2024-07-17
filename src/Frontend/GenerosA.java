@@ -14,7 +14,7 @@ import javax.swing.GroupLayout;
 public class GenerosA extends JInternalFrame {
     public GenerosA() {
 
-        super("Generos", true, true, true, true);
+        super("Generos", true, true, true, false);
         initComponents();
     }
 
@@ -49,21 +49,21 @@ public class GenerosA extends JInternalFrame {
                 .addGroup(contentPaneLayout.createSequentialGroup()
                     .addGroup(contentPaneLayout.createParallelGroup()
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(59, 59, 59)
-                            .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                            .addGap(86, 86, 86)
+                            .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 593, GroupLayout.PREFERRED_SIZE))
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(252, 252, 252)
+                            .addGap(358, 358, 358)
                             .addComponent(button1)))
-                    .addContainerGap(47, Short.MAX_VALUE))
+                    .addContainerGap(94, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
-                .addGroup(contentPaneLayout.createSequentialGroup()
-                    .addGap(30, 30, 30)
+                .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
+                    .addContainerGap(33, Short.MAX_VALUE)
                     .addComponent(button1)
-                    .addGap(34, 34, 34)
-                    .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(63, Short.MAX_VALUE))
+                    .addGap(18, 18, 18)
+                    .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 369, GroupLayout.PREFERRED_SIZE)
+                    .addGap(61, 61, 61))
         );
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }

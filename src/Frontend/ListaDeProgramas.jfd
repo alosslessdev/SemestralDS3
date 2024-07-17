@@ -4,8 +4,8 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormContainer( "javax.swing.JInternalFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq {space :p:40:p, par l {seq l {comp scrollPane1:::p::p, space ::9:p}, seq t {par t {seq t {space ::162:p, comp button1:::p:114:p}, seq t {space :p:1:p, comp label1:::p::p, space :::p, comp textField3:::p:155:p, space :::x, comp label2:::p::p}}, space :::p, comp textField2:::p:179:p}}, space :p:32:p}}"
-			"$verticalGroup": "par l {seq l {space :p:33:p, par l {par b:t {comp textField2::b:p::p, comp label2::b:p::p}, par b:t {comp label1::b:p::p, comp textField3::b:p::p}}, space :p:14:p, comp button1:::p::p, space u:::p, comp scrollPane1:::p:370:p, space ::49:x}}"
+			"$horizontalGroup": "par l {seq {par l {seq l {space :p:38:p, comp scrollPane1:::p:694:p}, seq l {space :p:162:p, par t {seq {comp label1:::p::p, space :::p, comp textField3:::p:155:p, space :p::p, comp label2:::p::p}, comp button1:::p::p}, space :::p, comp textField2:::p:179:p}}, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :p:39:p, par b {comp label1::b:p::p, comp textField3::b:p::p, comp textField2::b:p::p, comp label2::b:p::p}, space :p:8:p, comp button1:::p::p, space u:::p, comp scrollPane1:::p:370:p, space ::26:x}}"
 		} ) {
 			name: "this"
 			"visible": true
@@ -31,12 +31,12 @@ new FormModel {
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button1"
-				"text": "text"
+				"text": "Ver"
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1", true ) )
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 35, 40 )
-			"size": new java.awt.Dimension( 545, 565 )
+			"size": new java.awt.Dimension( 787, 542 )
 		} )
 	}
 }

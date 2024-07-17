@@ -41,6 +41,7 @@ public class VentanaMDIAdministrador extends JFrame {
         // TODO add your code here
         InformacionDePlanes informacionDePlanes = new InformacionDePlanes();
         informacionDePlanes.setSize(desktopPane1.getSize());
+
         try {
             informacionDePlanes.setMaximum(true);
         } catch (PropertyVetoException ex) {

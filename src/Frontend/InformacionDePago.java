@@ -14,7 +14,7 @@ import javax.swing.GroupLayout;
 public class InformacionDePago extends JInternalFrame {
     public InformacionDePago() {
 
-        super("InformacionDePago", true, true, true, true);
+        super("Informacion De Pago", true, true, true, false);
         initComponents();
     }
 
@@ -36,7 +36,7 @@ public class InformacionDePago extends JInternalFrame {
         var contentPane = getContentPane();
 
         //---- button1 ----
-        button1.setText("text");
+        button1.setText("Ver");
         button1.addActionListener(e -> button1(e));
 
         //======== scrollPane1 ========
@@ -55,17 +55,18 @@ public class InformacionDePago extends JInternalFrame {
                     .addGroup(contentPaneLayout.createParallelGroup()
                         .addGroup(contentPaneLayout.createSequentialGroup()
                             .addGap(68, 68, 68)
+                            .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 617, GroupLayout.PREFERRED_SIZE))
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(204, 204, 204)
                             .addGroup(contentPaneLayout.createParallelGroup()
                                 .addGroup(contentPaneLayout.createSequentialGroup()
-                                    .addGap(203, 203, 203)
+                                    .addGap(146, 146, 146)
                                     .addComponent(button1))
-                                .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(125, 125, 125)
-                            .addComponent(label2)
-                            .addGap(31, 31, 31)
-                            .addComponent(textField2, GroupLayout.PREFERRED_SIZE, 173, GroupLayout.PREFERRED_SIZE)))
-                    .addContainerGap(53, Short.MAX_VALUE))
+                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                    .addComponent(label2)
+                                    .addGap(31, 31, 31)
+                                    .addComponent(textField2, GroupLayout.PREFERRED_SIZE, 173, GroupLayout.PREFERRED_SIZE)))))
+                    .addContainerGap(90, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
@@ -79,8 +80,8 @@ public class InformacionDePago extends JInternalFrame {
                     .addGap(18, 18, 18)
                     .addComponent(button1)
                     .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(30, Short.MAX_VALUE))
+                    .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 370, GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(36, Short.MAX_VALUE))
         );
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }

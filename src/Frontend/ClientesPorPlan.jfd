@@ -4,14 +4,15 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormContainer( "javax.swing.JInternalFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq {par l {seq l {space :p:20:p, comp scrollPane1:::p::p}, seq l {space :p:99:p, comp label1:::p::p, space s:::p, comp textField1:::p:236:p}, seq l {space :p:222:p, comp button1:::p::p}}, space ::66:x}}"
-			"$verticalGroup": "par l {seq t {space :p:25:p, par b {comp label1::b:p::p, comp textField1::b:p::p}, space s:::p, comp button1:::p::p, space :p:12:p, comp scrollPane1:::p::p, space ::74:x}}"
+			"$horizontalGroup": "par l {seq {par l {seq {space :p:146:p, comp scrollPane1:::p::p}, seq l {space :p:218:p, par l {seq l {comp label1:::p::p, space s:::p, comp textField1:::p:236:p}, seq l {space :p:123:p, comp button1:::p::p}}}}, space ::170:x}}"
+			"$verticalGroup": "par l {seq t {space :p:25:p, par b {comp label1::b:p::p, comp textField1::b:p::p}, space s:::p, comp button1:::p::p, space s:::p, comp scrollPane1:::p:378:p, space ::19:x}}"
 		} ) {
 			name: "this"
 			"visible": true
+			"preferredSize": new java.awt.Dimension( 787, 542 )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button1"
-				"text": "text"
+				"text": "Ver"
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1", true ) )
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
@@ -29,7 +30,7 @@ new FormModel {
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 550, 640 )
+			"size": new java.awt.Dimension( 780, 545 )
 		} )
 	}
 }
