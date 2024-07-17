@@ -1,10 +1,14 @@
-Información de clientes y sus planes:
+
+
+--Información de clientes y sus planes:
 --Listar todos los clientes y sus planes actuales
 SELECT c.ID_cliente, c.Nombre, c.Apellido, p.Nombre_Plan, p.Costo, co.Fecha_Inicio
 FROM Clientes c
 JOIN Contratos co ON c.ID_cliente = co.ID_Cliente
 JOIN Planes p ON co.ID_Plan = p.ID_Plan
 ORDER BY c.ID_cliente;
+go
+
 --Buscar clientes por nombre, apellido o ID personal:
 CREATE PROCEDURE BuscarCliente
     @busqueda VARCHAR(50)
@@ -18,7 +22,7 @@ BEGIN
 END
 -- EJEMPLO DE COMO USARLO
 EXEC BuscarCliente @busqueda = 'Andrew';
-
+go
 --para filtrar clientes por plan 
 CREATE PROCEDURE FiltrarClientesPorPlan
     @NombrePlan VARCHAR(20) = NULL
@@ -47,8 +51,8 @@ EXEC FiltrarClientesPorPlan
 
 --para filtrar clientes por un plan especifico
 EXEC FiltrarClientesPorPlan @NombrePlan = 'Básico'
-
-Información sobre pagos:
+go
+--Información sobre pagos:
 --ver el historial de pagos de un cliente específico
 CREATE PROCEDURE HistorialPagosCliente
     @ID_Cliente INT
@@ -75,6 +79,7 @@ BEGIN
 END
 -- como usar
 EXEC HistorialPagosCliente @ID_Cliente = 1;
+go
 
  CREATE PROCEDURE ClientesConPagosAtrasados
 AS
@@ -102,7 +107,9 @@ BEGIN
         MAX(p.Fecha_Pago)
 END  --como usar 
 EXEC ClientesConPagosAtrasados
-Programas médicos:
+go
+
+--Programas médicos:
 --Listar de programas disponibles
  CREATE PROCEDURE ListarProgramasDisponibles
 AS
@@ -126,6 +133,7 @@ BEGIN
 END 
 --como usar 
 EXEC ListarProgramasDisponibles
+go
 
 --filtrar programas por genero
  CREATE PROCEDURE FiltrarProgramasPorGenero
@@ -158,6 +166,7 @@ BEGIN
 END 
 --como usar
 EXEC FiltrarProgramasPorGenero @Genero = 'TE'
+go
 
 --buscar programas por edad 
  CREATE PROCEDURE BuscarProgramasPorEdad
@@ -190,8 +199,9 @@ BEGIN
 	END 
 	--como usarlo
 	EXEC BuscarProgramasPorEdad @EdadRecomendada = '11 a 17'
+	go
 
-Citas:
+--Citas:
 --ver todas las citas programadas para un cliente 
  CREATE PROCEDURE CitasClienteEspecif
     @ID_Cliente INT
@@ -219,6 +229,7 @@ BEGIN
 END 
 --como usar
 EXEC CitasClienteEspecif @ID_Cliente = 1
+go
 
 --Listar citas por fecha o rango de fecha
  CREATE PROCEDURE CitasPorRango
