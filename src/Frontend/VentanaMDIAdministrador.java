@@ -180,7 +180,21 @@ public class VentanaMDIAdministrador extends JFrame {
             ex.printStackTrace();
         }
         this.desktopPane1.add(buscarCliente);
-        buscarCliente.show();       }
+        buscarCliente.show();
+    }
+
+        private void BuscarCitasF(ActionEvent e) {
+            // TODO add your code here
+            BuscarCitas buscarCitas = new BuscarCitas();
+            buscarCitas.setSize(desktopPane1.getSize());
+            try {
+                buscarCitas.setMaximum(true);
+            } catch (PropertyVetoException ex) {
+                ex.printStackTrace();
+            }
+            this.desktopPane1.add(buscarCitas);
+            buscarCitas.show();
+        }
 
 
 
@@ -191,6 +205,7 @@ public class VentanaMDIAdministrador extends JFrame {
         menu6 = new JMenu();
         NuevaCitaF = new JMenuItem();
         ClienteF = new JMenu();
+        BuscarCitasF = new JMenuItem();
         HistorialDeClienteF = new JMenuItem();
         NuevoClienteF = new JMenuItem();
         BuscarClienteF = new JMenuItem();
@@ -228,6 +243,11 @@ public class VentanaMDIAdministrador extends JFrame {
             //======== ClienteF ========
             {
                 ClienteF.setText("Cliente");
+
+                //---- BuscarCitasF ----
+                BuscarCitasF.setText("Buscar citas del cliente");
+                BuscarCitasF.addActionListener(e -> BuscarCitasF(e));
+                ClienteF.add(BuscarCitasF);
 
                 //---- HistorialDeClienteF ----
                 HistorialDeClienteF.setText("Historial De Pagos Del Cliente");
@@ -337,6 +357,7 @@ public class VentanaMDIAdministrador extends JFrame {
     private JMenu menu6;
     private JMenuItem NuevaCitaF;
     private JMenu ClienteF;
+    private JMenuItem BuscarCitasF;
     private JMenuItem HistorialDeClienteF;
     private JMenuItem NuevoClienteF;
     private JMenuItem BuscarClienteF;
