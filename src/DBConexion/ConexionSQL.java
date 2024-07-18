@@ -6,6 +6,7 @@ import javax.swing.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.*;
 
 public class ConexionSQL implements AutoCloseable{
     // Atributos de la clase
@@ -63,6 +64,19 @@ public class ConexionSQL implements AutoCloseable{
     // Método privado para mostrar un cuadro de diálogo
     private void impresionDialogo(String mensaje, String titulo, int icono) {
         JOptionPane.showMessageDialog(null, mensaje, titulo, icono); // Mostrar un cuadro de diálogo
+    }
+
+    public int intentarLogin(Connection conn, String nombreUsuario, String contraseña) throws SQLException {
+        String sql = "{call sp_IntentarLogin(?, ?, ?)}";
+        try (CallableStatement stmt = conn.prepareCall(sql)) {
+            stmt.setString(1, nombreUsuario);
+            stmt.setString(2, contraseña);
+            stmt.registerOutParameter(3, Types.INTEGER);
+
+            stmt.execute();
+            int resultado = stmt.getInt(3);
+            return resultado;
+        }
     }
 }
 

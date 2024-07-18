@@ -1,0 +1,95 @@
+JFDML JFormDesigner: "8.2.3.0.386" Java: "17.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+			"$layoutConstraints": "insets 0,hidemode 3,align center center"
+			"$columnConstraints": "[fill][fill]"
+			"$rowConstraints": "[fill]"
+		} ) {
+			name: "this"
+			"title": "Login"
+			"$locationPolicy": 1
+			"defaultCloseOperation": 3
+			"minimumSize": new java.awt.Dimension( 800, 600 )
+			"$sizePolicy": 2
+			"maximumSize": new java.awt.Dimension( 1920, 1080 )
+			"preferredSize": new java.awt.Dimension( 800, 600 )
+			"background": sfield java.awt.Color darkGray
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+				"$layoutConstraints": "fillx,insets 35 45 30 45,hidemode 3,wrap"
+				"$columnConstraints": "[fill]"
+				"$rowConstraints": "[][][][][][]"
+			} ) {
+				name: "panel2"
+				"foreground": sfield java.awt.Color lightGray
+				"background": sfield java.awt.Color darkGray
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labelLogin"
+					"text": "Bienvenido"
+					"foreground": new java.awt.Color( 255, 255, 255, 255 )
+					"horizontalAlignment": 2
+					"font": new java.awt.Font( "Inter", 1, 36 )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 0 0"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labelUsuario"
+					"text": "Usuario:"
+					"foreground": sfield java.awt.Color white
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 0 1"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textFieldUsuario"
+					"background": sfield java.awt.Color gray
+					"font": new java.awt.Font( "Inter", 1, 14 )
+					"cursor": &Cursor0 new java.awt.Cursor( 2 )
+					"caretColor": sfield java.awt.Color lightGray
+					"margin": new java.awt.Insets( 2, 5, 2, 5 )
+					"foreground": sfield java.awt.Color lightGray
+					"preferredSize": new java.awt.Dimension( 49, 36 )
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 0 2"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labelContra"
+					"text": "Contraseña:"
+					"foreground": sfield java.awt.Color white
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 0 3"
+				} )
+				add( new FormComponent( "javax.swing.JPasswordField" ) {
+					name: "passwordField1"
+					"background": sfield java.awt.Color gray
+					"font": new java.awt.Font( "Agency FB", 0, 13 )
+					"cursor": #Cursor0
+					"caretColor": sfield java.awt.Color lightGray
+					"foreground": sfield java.awt.Color lightGray
+					"preferredSize": new java.awt.Dimension( 49, 36 )
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 0 4"
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "buttonLogin"
+					"text": "Login"
+					"foreground": sfield java.awt.Color white
+					"background": new java.awt.Color( 40, 40, 40, 255 )
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"preferredSize": new java.awt.Dimension( 72, 35 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "buttonLogin", true ) )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 0 5"
+				} )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 1 0,width 400,height 300"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 800, 600 )
+		} )
+	}
+}
