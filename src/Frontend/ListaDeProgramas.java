@@ -106,6 +106,26 @@ public class ListaDeProgramas extends JInternalFrame {
 
             table1.setModel(objConsultas.consultas());
             objConsultas.setDatosc(null);
+        } else if (textField3.getText().equals("") || textField2.getText().equals("") ) {
+                Consultas objConsultas = new Consultas();
+                objConsultas.setTitulo(new String[]{
+                        "ID de Programa",
+                        "Nombre de Programa",
+                        "Duracion",
+                        "Ano de Inicio",
+                        "Edad de Recomendada"});
+                objConsultas.setDatos(new String[]{
+                        "ID_Programa",
+                        "Nombre_Programa",
+                        "Duracion",
+                        "Ano_Inicio",
+                        "Edad_Recomendada"});
+                objConsultas.setParametroString(
+                        "{call ListarProgramasDisponibles}");
+                objConsultas.setParametros(null);
+
+                table1.setModel(objConsultas.consultas());
+                objConsultas.setDatosc(null);
         }
 
     }
