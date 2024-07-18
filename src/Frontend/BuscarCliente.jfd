@@ -16,7 +16,7 @@ new FormModel {
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label1"
-				"text": "Codigo de cliente"
+				"text": "Nombre de Cliente"
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField1"

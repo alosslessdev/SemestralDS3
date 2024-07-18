@@ -5,6 +5,7 @@
 package Frontend;
 
 import DBConsultas.Consultas;
+import DBConsultas.ExecProcedimientos;
 
 import java.awt.event.*;
 import javax.swing.*;
@@ -13,9 +14,9 @@ import javax.swing.GroupLayout;
 /**
  * @author pancho
  */
-public class PlanDeCliente extends JInternalFrame {
-    public PlanDeCliente() {
-        super("Plan Del Cliente", true, true, true, false);
+public class BuscarCliente extends JInternalFrame {
+    public BuscarCliente() {
+        super("Buscar Cliente", true, true, true, false);
 
         initComponents();
     }
@@ -23,25 +24,25 @@ public class PlanDeCliente extends JInternalFrame {
     private void button1(ActionEvent e) {
         // TODO add your code here
         if (!textField1.getText().equals("")){
-            Consultas objConsultas = new Consultas();
-            objConsultas.setTitulo(new String[]{"Nombre",
-                    "Apellido",
-                    "Identificacion",
-                    "Codigo de Sucursal"});
-            objConsultas.setDatos(new String[]{
+            ExecProcedimientos execProcedimientos = new ExecProcedimientos();
+            execProcedimientos.setTitulo(new String[]{
+                    "ID de cliente",
                     "Nombre",
                     "Apellido",
-                    "Identificacion",
-                    "CodigoSucursal"});
-            objConsultas.setParametroString(
-                    "select Nombre, Apellido, Identificacion, CodigoSucursal from Empleado where Nombre = ? " +
-                            "or Apellido = ? or Identificacion = ? or CodigoSucursal = ?");
-            objConsultas.setParametros(new String[]{
-                    textField1.getText(),
+                    "ID de Personal"});
+            execProcedimientos.setDatos(new String[]{
+                    "ID_cliente",
+                    "Nombre",
+                    "Apellido",
+                    "ID_Personal"});
+            execProcedimientos.setParametroString(
+                    "{call BuscarCliente (?)}");
+            execProcedimientos.setParametros(new String[]{
+                    textField1.getText()
             });
 
-            table1.setModel(objConsultas.consultas());
-            objConsultas.setDatosc(null);
+            table1.setModel(execProcedimientos.consultas());
+            execProcedimientos.setDatosc(null);
         }else{
             JOptionPane.showMessageDialog(null, "Uno o mas campos estan en blanco", "Sin datos",
                     1);        }
@@ -66,7 +67,7 @@ public class PlanDeCliente extends JInternalFrame {
         button1.addActionListener(e -> button1(e));
 
         //---- label1 ----
-        label1.setText("Codigo de cliente");
+        label1.setText("Nombre de Cliente");
 
         //======== scrollPane1 ========
         {

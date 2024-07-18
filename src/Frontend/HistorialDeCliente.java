@@ -46,9 +46,9 @@ public class HistorialDeCliente extends JInternalFrame {
                     "Nombre_Plan"
             });
             execProcedimientos.setParametroString(
-                    "{call HistorialPagosCliente (?)}}");
+                    "{call HistorialPagosCliente (?)}");
             execProcedimientos.setParametros(new String[]{
-                    textField1.getText(),
+                    textField1.getText()
             });
 
             table1.setModel(execProcedimientos.consultas());

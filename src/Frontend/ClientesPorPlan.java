@@ -45,7 +45,7 @@ public class ClientesPorPlan extends JInternalFrame {
             execProcedimientos.setParametroString(
                     "{call FiltrarClientesPorPlan (?)}");
             execProcedimientos.setParametros(new String[]{
-                    textField1.getText(),
+                    textField1.getText()
             });
 
             table1.setModel(execProcedimientos.consultas());

@@ -44,9 +44,9 @@ new FormModel {
 						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "NuevoClienteF", true ) )
 					} )
 					add( new FormComponent( "javax.swing.JMenuItem" ) {
-						name: "PlanDeClienteF"
+						name: "BuscarClienteF"
 						"text": "Plan del cliente"
-						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "PlanDeClienteF", true ) )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "BuscarClienteF", true ) )
 					} )
 					add( new FormComponent( "javax.swing.JMenuItem" ) {
 						name: "PagoAtrasadoF"

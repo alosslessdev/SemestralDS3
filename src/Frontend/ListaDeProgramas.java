@@ -40,7 +40,7 @@ public class ListaDeProgramas extends JInternalFrame {
             execProcedimientos.setParametroString(
                     "{call BuscarProgramasPorEdad (?)}");
             execProcedimientos.setParametros(new String[]{
-                    textField2.getText(),
+                    textField2.getText()
             });
 
             table1.setModel(execProcedimientos.consultas());
@@ -62,7 +62,7 @@ public class ListaDeProgramas extends JInternalFrame {
             execProcedimientos.setParametroString(
                     "{call BuscarProgramasPorGenero (?)}");
             execProcedimientos.setParametros(new String[]{
-                    textField3.getText(),
+                    textField3.getText()
             });
 
             table1.setModel(execProcedimientos.consultas());
@@ -152,10 +152,10 @@ public class ListaDeProgramas extends JInternalFrame {
         }
 
         //---- label1 ----
-        label1.setText("G\u00e9nero");
+        label1.setText("Edad");
 
         //---- label2 ----
-        label2.setText("Edad");
+        label2.setText("Genero");
 
         //---- button1 ----
         button1.setText("Ver");

@@ -103,18 +103,6 @@ public class VentanaMDIAdministrador extends JFrame {
             nuevoCliente.show();      
     }
 
-        private void PlanDeClienteF(ActionEvent e) {
-            // TODO add your code here
-            PlanDeCliente planDeCliente = new PlanDeCliente();
-            planDeCliente.setSize(desktopPane1.getSize());
-            try {
-                planDeCliente.setMaximum(true);
-            } catch (PropertyVetoException ex) {
-                ex.printStackTrace();
-            }
-            this.desktopPane1.add(planDeCliente);
-            planDeCliente.show();      
-    }
 
         private void PagoAtrasadoF(ActionEvent e) {
             // TODO add your code here
@@ -182,6 +170,18 @@ public class VentanaMDIAdministrador extends JFrame {
             crearPrograma.show();        
     }
 
+    private void BuscarClienteF(ActionEvent e) {
+        // TODO add your code here
+        BuscarCliente buscarCliente = new BuscarCliente();
+        buscarCliente.setSize(desktopPane1.getSize());
+        try {
+            buscarCliente.setMaximum(true);
+        } catch (PropertyVetoException ex) {
+            ex.printStackTrace();
+        }
+        this.desktopPane1.add(buscarCliente);
+        buscarCliente.show();       }
+
 
 
     private void initComponents() {
@@ -193,7 +193,7 @@ public class VentanaMDIAdministrador extends JFrame {
         ClienteF = new JMenu();
         HistorialDeClienteF = new JMenuItem();
         NuevoClienteF = new JMenuItem();
-        PlanDeClienteF = new JMenuItem();
+        BuscarClienteF = new JMenuItem();
         PagoAtrasadoF = new JMenuItem();
         menu3 = new JMenu();
         GenerosMenu = new JMenuItem();
@@ -239,10 +239,10 @@ public class VentanaMDIAdministrador extends JFrame {
                 NuevoClienteF.addActionListener(e -> NuevoClienteF(e));
                 ClienteF.add(NuevoClienteF);
 
-                //---- PlanDeClienteF ----
-                PlanDeClienteF.setText("Plan del cliente");
-                PlanDeClienteF.addActionListener(e -> PlanDeClienteF(e));
-                ClienteF.add(PlanDeClienteF);
+                //---- BuscarClienteF ----
+                BuscarClienteF.setText("Plan del cliente");
+                BuscarClienteF.addActionListener(e -> BuscarClienteF(e));
+                ClienteF.add(BuscarClienteF);
 
                 //---- PagoAtrasadoF ----
                 PagoAtrasadoF.setText("Lista de clientes morosos");
@@ -339,7 +339,7 @@ public class VentanaMDIAdministrador extends JFrame {
     private JMenu ClienteF;
     private JMenuItem HistorialDeClienteF;
     private JMenuItem NuevoClienteF;
-    private JMenuItem PlanDeClienteF;
+    private JMenuItem BuscarClienteF;
     private JMenuItem PagoAtrasadoF;
     private JMenu menu3;
     private JMenuItem GenerosMenu;
