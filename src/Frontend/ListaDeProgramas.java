@@ -5,6 +5,7 @@
 package Frontend;
 
 import DBConsultas.Consultas;
+import DBConsultas.ExecProcedimientos;
 
 import java.awt.event.*;
 import javax.swing.*;
@@ -23,65 +24,65 @@ public class ListaDeProgramas extends JInternalFrame {
     private void button1(ActionEvent e) {
         // TODO add your code here
         if (!textField2.getText().equals("") || textField3.getText().equals("")){
-            Consultas objConsultas = new Consultas();
-            objConsultas.setTitulo(new String[]{
+            ExecProcedimientos execProcedimientos = new ExecProcedimientos();
+            execProcedimientos.setTitulo(new String[]{
                     "ID de Programa",
                     "Nombre de Programa",
                     "Duracion",
                     "Ano de Inicio",
                     "Edad de Recomendada"});
-            objConsultas.setDatos(new String[]{
+            execProcedimientos.setDatos(new String[]{
                     "ID_Programa",
                     "Nombre_Programa",
                     "Duracion",
                     "Ano_Inicio",
                     "Edad_Recomendada"});
-            objConsultas.setParametroString(
+            execProcedimientos.setParametroString(
                     "{call BuscarProgramasPorEdad (?)}");
-            objConsultas.setParametros(new String[]{
+            execProcedimientos.setParametros(new String[]{
                     textField2.getText(),
             });
 
-            table1.setModel(objConsultas.consultas());
-            objConsultas.setDatosc(null);
+            table1.setModel(execProcedimientos.consultas());
+            execProcedimientos.setDatosc(null);
         }else if (!textField3.getText().equals("") || textField2.getText().equals("") ){
-            Consultas objConsultas = new Consultas();
-            objConsultas.setTitulo(new String[]{
+            ExecProcedimientos execProcedimientos = new ExecProcedimientos();
+            execProcedimientos.setTitulo(new String[]{
                     "ID de Programa",
                     "Nombre de Programa",
                     "Duracion",
                     "Ano de Inicio",
                     "Edad de Recomendada"});
-            objConsultas.setDatos(new String[]{
+            execProcedimientos.setDatos(new String[]{
                     "ID_Programa",
                     "Nombre_Programa",
                     "Duracion",
                     "Ano_Inicio",
                     "Edad_Recomendada"});
-            objConsultas.setParametroString(
+            execProcedimientos.setParametroString(
                     "{call BuscarProgramasPorGenero (?)}");
-            objConsultas.setParametros(new String[]{
+            execProcedimientos.setParametros(new String[]{
                     textField3.getText(),
             });
 
-            table1.setModel(objConsultas.consultas());
-            objConsultas.setDatosc(null);
+            table1.setModel(execProcedimientos.consultas());
+            execProcedimientos.setDatosc(null);
 
         }else if (!textField3.getText().equals("") || !textField2.getText().equals("")){
-            Consultas objConsultas = new Consultas();
-            objConsultas.setTitulo(new String[]{
+            ExecProcedimientos execProcedimientos = new ExecProcedimientos();
+            execProcedimientos.setTitulo(new String[]{
                     "ID de Programa",
                     "Nombre de Programa",
                     "Duracion",
                     "Ano de Inicio",
                     "Edad de Recomendada"});
-            objConsultas.setDatos(new String[]{
+            execProcedimientos.setDatos(new String[]{
                     "ID_Programa",
                     "Nombre_Programa",
                     "Duracion",
                     "Ano_Inicio",
                     "Edad_Recomendada"});
-            objConsultas.setParametroString(
+            execProcedimientos.setParametroString(
                     "SELECT " +
                             "ID_Programa, " +
                             "Nombre_Programa, " +
@@ -99,33 +100,33 @@ public class ListaDeProgramas extends JInternalFrame {
                             "Genero = ? AND Edad_Recomendada = ? " +
                             "ORDER BY  " +
                             "Nombre_Programa ");
-            objConsultas.setParametros(new String[]{
+            execProcedimientos.setParametros(new String[]{
                     textField2.getText(),
                     textField3.getText()
             });
 
-            table1.setModel(objConsultas.consultas());
-            objConsultas.setDatosc(null);
+            table1.setModel(execProcedimientos.consultas());
+            execProcedimientos.setDatosc(null);
         } else if (textField3.getText().equals("") || textField2.getText().equals("") ) {
-                Consultas objConsultas = new Consultas();
-                objConsultas.setTitulo(new String[]{
+            ExecProcedimientos execProcedimientos = new ExecProcedimientos();
+                execProcedimientos.setTitulo(new String[]{
                         "ID de Programa",
                         "Nombre de Programa",
                         "Duracion",
                         "Ano de Inicio",
                         "Edad de Recomendada"});
-                objConsultas.setDatos(new String[]{
+                execProcedimientos.setDatos(new String[]{
                         "ID_Programa",
                         "Nombre_Programa",
                         "Duracion",
                         "Ano_Inicio",
                         "Edad_Recomendada"});
-                objConsultas.setParametroString(
+                execProcedimientos.setParametroString(
                         "{call ListarProgramasDisponibles}");
-                objConsultas.setParametros(null);
+                execProcedimientos.setParametros(null);
 
-                table1.setModel(objConsultas.consultas());
-                objConsultas.setDatosc(null);
+                table1.setModel(execProcedimientos.consultas());
+                execProcedimientos.setDatosc(null);
         }
 
     }

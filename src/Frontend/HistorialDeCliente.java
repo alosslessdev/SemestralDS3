@@ -5,6 +5,7 @@
 package Frontend;
 
 import DBConsultas.Consultas;
+import DBConsultas.ExecProcedimientos;
 
 import java.awt.event.*;
 import javax.swing.*;
@@ -23,8 +24,8 @@ public class HistorialDeCliente extends JInternalFrame {
     private void button1(ActionEvent e) {
         // TODO add your code here
         if (!textField1.getText().equals("")){
-            Consultas objConsultas = new Consultas();
-            objConsultas.setTitulo(new String[]{
+            ExecProcedimientos execProcedimientos = new ExecProcedimientos();
+            execProcedimientos.setTitulo(new String[]{
                     "ID de cliente",
                     "Nombre",
                     "Apellido",
@@ -34,7 +35,7 @@ public class HistorialDeCliente extends JInternalFrame {
                     "Monto",
                     "Nombre de Plan"
             });
-            objConsultas.setDatos(new String[]{
+            execProcedimientos.setDatos(new String[]{
                     "ID_cliente",
                     "Nombre",
                     "Apellido",
@@ -44,14 +45,14 @@ public class HistorialDeCliente extends JInternalFrame {
                     "Monto",
                     "Nombre_Plan"
             });
-            objConsultas.setParametroString(
+            execProcedimientos.setParametroString(
                     "{call HistorialPagosCliente (?)}}");
-            objConsultas.setParametros(new String[]{
+            execProcedimientos.setParametros(new String[]{
                     textField1.getText(),
             });
 
-            table1.setModel(objConsultas.consultas());
-            objConsultas.setDatosc(null);
+            table1.setModel(execProcedimientos.consultas());
+            execProcedimientos.setDatosc(null);
         }else{
             JOptionPane.showMessageDialog(null, "Uno o mas campos estan en blanco", "Sin datos",
                     1);       
