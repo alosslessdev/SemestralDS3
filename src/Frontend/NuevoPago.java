@@ -44,7 +44,8 @@ public class NuevoPago extends JInternalFrame {
 
             objInsertarUpdate.insertar();
         }else{
-            //impresionDialogo("Uno o mas campos estan en blanco", "Sin datos", 1);
+            JOptionPane.showMessageDialog(null, "Uno o mas campos estan en blanco", "Sin datos",
+                    1);
         }
 
     }

@@ -45,7 +45,8 @@ public class BuscarCliente extends JInternalFrame {
             execProcedimientos.setDatosc(null);
         }else{
             JOptionPane.showMessageDialog(null, "Uno o mas campos estan en blanco", "Sin datos",
-                    1);        }
+                    1);
+        }
 
     }
 

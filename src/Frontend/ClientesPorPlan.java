@@ -51,7 +51,8 @@ public class ClientesPorPlan extends JInternalFrame {
             table1.setModel(execProcedimientos.consultas());
             execProcedimientos.setDatosc(null);
         }else{
-            //impresionDialogo("Uno o mas campos estan en blanco", "Sin datos", 1);
+            JOptionPane.showMessageDialog(null, "Uno o mas campos estan en blanco", "Sin datos",
+                    1);
         }
 
     }
