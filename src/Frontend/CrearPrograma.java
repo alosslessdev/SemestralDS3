@@ -4,10 +4,11 @@
 
 package Frontend;
 
-import DBConsultas.Consultas;
+import DBConsultas.InsertarUpdate;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.util.Objects;
 import javax.swing.*;
 import javax.swing.GroupLayout;
 
@@ -23,26 +24,31 @@ public class CrearPrograma extends JInternalFrame {
 
     private void button1(ActionEvent e) {
         // TODO add your code here
-        if (!textField1.getText().equals("")){
-            Consultas objConsultas = new Consultas();
-            objConsultas.setTitulo(new String[]{"Nombre",
-                    "Apellido",
-                    "Identificacion",
-                    "Codigo de Sucursal"});
-            objConsultas.setDatos(new String[]{
-                    "Nombre",
-                    "Apellido",
-                    "Identificacion",
-                    "CodigoSucursal"});
-            objConsultas.setParametroString(
-                    "select Nombre, Apellido, Identificacion, CodigoSucursal from Empleado where Nombre = ? " +
-                            "or Apellido = ? or Identificacion = ? or CodigoSucursal = ?");
-            objConsultas.setParametros(new String[]{
+        if (!textField1.getText().equals("") || comboBox1.getSelectedItem() != null || !textField2.getText().equals("")
+                || !textField3.getText().equals("")
+                || !textField4.getText().equals("")){
+            InsertarUpdate objInsertarUpdate = new InsertarUpdate();
+
+            objInsertarUpdate.setParametroString(
+                    "INSERT INTO [Programas] " +
+                            "([Genero], " +
+                            "[Edad_Recomendada], " +
+                            "[Duracion], " +
+                            "[Nombre_Programa], " +
+                            "[Año_Inicio]) " +
+                            "VALUES " +
+                            "(?, ?, ?, ?, ?) "
+            );
+            objInsertarUpdate.setParametros(new String[]{
                     textField1.getText(),
+                    Objects.requireNonNull(comboBox1.getSelectedItem()).toString(),
+                    textField2.getText(),
+                    textField3.getText(),
+                    textField4.getText()
             });
 
-            table1.setModel(objConsultas.consultas());
-            objConsultas.setDatosc(null);
+            objInsertarUpdate.insertar();
+
         }else{
             //impresionDialogo("El campo esta en blanco", "Sin datos", 1);
         }
@@ -87,10 +93,10 @@ public class CrearPrograma extends JInternalFrame {
         label3.setText("Duraci\u00f3n");
 
         //---- label4 ----
-        label4.setText("N\u00famero de citas");
+        label4.setText("Nombre de programa");
 
         //---- label5 ----
-        label5.setText("Duraci\u00f3n por cita");
+        label5.setText("A\u00f1o de inicio");
 
         //---- comboBox1 ----
         comboBox1.setModel(new DefaultComboBoxModel<>(new String[] {
@@ -105,36 +111,36 @@ public class CrearPrograma extends JInternalFrame {
         contentPaneLayout.setHorizontalGroup(
             contentPaneLayout.createParallelGroup()
                 .addGroup(contentPaneLayout.createSequentialGroup()
-                    .addGap(213, 213, 213)
                     .addGroup(contentPaneLayout.createParallelGroup()
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(6, 6, 6)
+                            .addGap(219, 219, 219)
                             .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                                .addGroup(GroupLayout.Alignment.LEADING, contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                                    .addGroup(contentPaneLayout.createSequentialGroup()
-                                        .addComponent(label4)
-                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(textField3, GroupLayout.PREFERRED_SIZE, 180, GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(contentPaneLayout.createSequentialGroup()
-                                        .addComponent(label3)
-                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(textField2, GroupLayout.PREFERRED_SIZE, 180, GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(contentPaneLayout.createSequentialGroup()
-                                        .addComponent(label1)
-                                        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(textField1, GroupLayout.PREFERRED_SIZE, 180, GroupLayout.PREFERRED_SIZE)))
-                                .addGroup(GroupLayout.Alignment.LEADING, contentPaneLayout.createSequentialGroup()
+                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                    .addComponent(label4)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(textField3, GroupLayout.PREFERRED_SIZE, 180, GroupLayout.PREFERRED_SIZE))
+                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                    .addComponent(label3)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(textField2, GroupLayout.PREFERRED_SIZE, 180, GroupLayout.PREFERRED_SIZE))
+                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                    .addComponent(label1)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(textField1, GroupLayout.PREFERRED_SIZE, 180, GroupLayout.PREFERRED_SIZE))
+                                .addGroup(contentPaneLayout.createSequentialGroup()
                                     .addComponent(label2)
                                     .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(comboBox1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(comboBox1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                    .addGap(83, 83, 83))))
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(104, 104, 104)
+                            .addGap(317, 317, 317)
                             .addComponent(button1))
                         .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
+                            .addGap(213, 213, 213)
                             .addComponent(label5)
                             .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(textField4, GroupLayout.PREFERRED_SIZE, 178, GroupLayout.PREFERRED_SIZE)))
-                    .addContainerGap(247, Short.MAX_VALUE))
+                    .addContainerGap(227, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
@@ -143,11 +149,11 @@ public class CrearPrograma extends JInternalFrame {
                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                         .addComponent(textField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                         .addComponent(label1))
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                    .addGap(19, 19, 19)
                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                         .addComponent(comboBox1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                         .addComponent(label2))
-                    .addGap(25, 25, 25)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                         .addComponent(textField2, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
                         .addComponent(label3))

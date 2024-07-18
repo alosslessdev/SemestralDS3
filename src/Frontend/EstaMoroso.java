@@ -5,6 +5,7 @@
 package Frontend;
 
 import DBConsultas.Consultas;
+import DBConsultas.ExecProcedimientos;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -24,25 +25,26 @@ public class EstaMoroso extends JInternalFrame {
     private void button1(ActionEvent e) {
         // TODO add your code here
         if (!textField1.getText().equals("")){
-            Consultas objConsultas = new Consultas();
-            objConsultas.setTitulo(new String[]{"Nombre",
-                    "Apellido",
-                    "Identificacion",
-                    "Codigo de Sucursal"});
-            objConsultas.setDatos(new String[]{
+            ExecProcedimientos execProcedimientos = new ExecProcedimientos();
+            execProcedimientos.setTitulo(new String[]{
                     "Nombre",
                     "Apellido",
-                    "Identificacion",
-                    "CodigoSucursal"});
-            objConsultas.setParametroString(
-                    "select Nombre, Apellido, Identificacion, CodigoSucursal from Empleado where Nombre = ? " +
-                            "or Apellido = ? or Identificacion = ? or CodigoSucursal = ?");
-            objConsultas.setParametros(new String[]{
-                    textField1.getText(),
-            });
-
-            table1.setModel(objConsultas.consultas());
-            objConsultas.setDatosc(null);
+                    "ID_cliente",
+                    "ID_Contrato",
+                    "Nombre de Plan",
+                    "Ultimo Pago"});
+            execProcedimientos.setDatos(new String[]{
+                    "Nombre",
+                    "Apellido",
+                    "ID_cliente",
+                    "ID_Contrato",
+                    "Nombre_Plan",
+                    "UltimoPago"});
+            execProcedimientos.setParametroString(
+                    "{call ClientesConPagosAtrasados}");
+            execProcedimientos.setParametros(null);
+            table1.setModel(execProcedimientos.consultas());
+            execProcedimientos.setDatosc(null);
         }else{
             //impresionDialogo("El campo esta en blanco", "Sin datos", 1);
         }

@@ -4,8 +4,8 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormContainer( "javax.swing.JInternalFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq l {space :p:213:p, par l {seq l {space :p:6:p, par t {par t:l {seq t {comp label4:::p::p, space :::p, comp textField3:::p:180:p}, seq t {comp label3:::p::p, space :::p, comp textField2:::p:180:p}, seq t {comp label1:::p::p, space u:::p, comp textField1:::p:180:p}}, seq l {comp label2:::p::p, space u:::p, comp comboBox1:::p::p}}}, seq l {space :p:104:p, comp button1:::p::p}, seq t {comp label5:::p::p, space u:::p, comp textField4:::p:178:p}}, space ::247:x}}"
-			"$verticalGroup": "par l {seq l {space :p:31:p, par b {comp textField1::b:p::p, comp label1::b:p::p}, space :::p, par b {comp comboBox1::b:p::p, comp label2::b:p::p}, space :p:25:p, par b {comp textField2::b:p:28:p, comp label3::b:p::p}, space :p:12:p, par b {comp textField3::b:p::p, comp label4::b:p::p}, space u:::p, par b {comp textField4::b:p::p, comp label5::b:p::p}, space :p:36:p, comp button1:::p::p, space ::211:x}}"
+			"$horizontalGroup": "par l {seq l {par l {seq l {space :p:219:p, par t {seq t {comp label4:::p::p, space :::p, comp textField3:::p:180:p}, seq t {comp label3:::p::p, space :::p, comp textField2:::p:180:p}, seq t {comp label1:::p::p, space u:::p, comp textField1:::p:180:p}, seq t {comp label2:::p::p, space u:::p, comp comboBox1:::p::p, space :p:83:p}}}, seq l {space :p:317:p, comp button1:::p::p}, seq t {space :p:213:p, comp label5:::p::p, space u:::p, comp textField4:::p:178:p}}, space ::227:x}}"
+			"$verticalGroup": "par l {seq l {space :p:31:p, par b {comp textField1::b:p::p, comp label1::b:p::p}, space :p:19:p, par b {comp comboBox1::b:p::p, comp label2::b:p::p}, space u:::p, par b {comp textField2::b:p:28:p, comp label3::b:p::p}, space :p:12:p, par b {comp textField3::b:p::p, comp label4::b:p::p}, space u:::p, par b {comp textField4::b:p::p, comp label5::b:p::p}, space :p:36:p, comp button1:::p::p, space ::211:x}}"
 		} ) {
 			name: "this"
 			"visible": true
@@ -29,11 +29,11 @@ new FormModel {
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label4"
-				"text": "Número de citas"
+				"text": "Nombre de programa"
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label5"
-				"text": "Duración por cita"
+				"text": "Año de inicio"
 			} )
 			add( new FormComponent( "javax.swing.JComboBox" ) {
 				name: "comboBox1"

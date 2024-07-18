@@ -5,6 +5,7 @@
 package Frontend;
 
 import DBConsultas.Consultas;
+import DBConsultas.ExecProcedimientos;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -24,25 +25,31 @@ public class ClientesPorPlan extends JInternalFrame {
     private void button1(ActionEvent e) {
         // TODO add your code here
         if (!textField1.getText().equals("")){
-            Consultas objConsultas = new Consultas();
-            objConsultas.setTitulo(new String[]{"Nombre",
-                    "Apellido",
-                    "Identificacion",
-                    "Codigo de Sucursal"});
-            objConsultas.setDatos(new String[]{
+            ExecProcedimientos execProcedimientos = new ExecProcedimientos();
+            execProcedimientos.setTitulo(new String[]{
+                    "ID de cliente",
                     "Nombre",
                     "Apellido",
-                    "Identificacion",
-                    "CodigoSucursal"});
-            objConsultas.setParametroString(
-                    "select Nombre, Apellido, Identificacion, CodigoSucursal from Empleado where Nombre = ? " +
-                            "or Apellido = ? or Identificacion = ? or CodigoSucursal = ?");
-            objConsultas.setParametros(new String[]{
+                    "ID Personal",
+                    "Nombre de Plan",
+                    "Costo",
+                    "Fecha de Inicio"});
+            execProcedimientos.setDatos(new String[]{
+                    "ID_cliente",
+                    "Nombre",
+                    "Apellido",
+                    "ID_Personal",
+                    "Nombre_Plan",
+                    "Costo",
+                    "Fecha_Inicio"});
+            execProcedimientos.setParametroString(
+                    "{call FiltrarClientesPorPlan (?)}");
+            execProcedimientos.setParametros(new String[]{
                     textField1.getText(),
             });
 
-            table1.setModel(objConsultas.consultas());
-            objConsultas.setDatosc(null);
+            table1.setModel(execProcedimientos.consultas());
+            execProcedimientos.setDatosc(null);
         }else{
             //impresionDialogo("El campo esta en blanco", "Sin datos", 1);
         }

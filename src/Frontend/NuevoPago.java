@@ -5,8 +5,10 @@
 package Frontend;
 
 import DBConsultas.Consultas;
+import DBConsultas.InsertarUpdate;
 
 import java.awt.event.*;
+import java.util.Objects;
 import javax.swing.*;
 import javax.swing.GroupLayout;
 
@@ -22,26 +24,25 @@ public class NuevoPago extends JInternalFrame {
 
     private void button1(ActionEvent e) {
         // TODO add your code here
-        if (!textField1.getText().equals("")){
-            Consultas objConsultas = new Consultas();
-            objConsultas.setTitulo(new String[]{"Nombre",
-                    "Apellido",
-                    "Identificacion",
-                    "Codigo de Sucursal"});
-            objConsultas.setDatos(new String[]{
-                    "Nombre",
-                    "Apellido",
-                    "Identificacion",
-                    "CodigoSucursal"});
-            objConsultas.setParametroString(
-                    "select Nombre, Apellido, Identificacion, CodigoSucursal from Empleado where Nombre = ? " +
-                            "or Apellido = ? or Identificacion = ? or CodigoSucursal = ?");
-            objConsultas.setParametros(new String[]{
+        if (!textField1.getText().equals("") || !textField2.getText().equals("")){
+            InsertarUpdate objInsertarUpdate = new InsertarUpdate();
+
+            objInsertarUpdate.setParametroString(
+                    "INSERT INTO [Programas] " +
+                            "([Genero], " +
+                            "[Edad_Recomendada], " +
+                            "[Duracion], " +
+                            "[Nombre_Programa], " +
+                            "[Año_Inicio]) " +
+                            "VALUES " +
+                            "(?, ?, ?, ?, ?) "
+            );
+            objInsertarUpdate.setParametros(new String[]{
                     textField1.getText(),
+                    textField2.getText()
             });
 
-            table1.setModel(objConsultas.consultas());
-            objConsultas.setDatosc(null);
+            objInsertarUpdate.insertar();
         }else{
             //impresionDialogo("El campo esta en blanco", "Sin datos", 1);
         }

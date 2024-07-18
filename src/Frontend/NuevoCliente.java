@@ -7,6 +7,7 @@ package Frontend;
 import DBConsultas.Consultas;
 
 import java.awt.event.*;
+import java.util.Objects;
 import javax.swing.*;
 import javax.swing.GroupLayout;
 
@@ -22,25 +23,29 @@ public class NuevoCliente extends JInternalFrame {
 
     private void button1(ActionEvent e) {
         // TODO add your code here
-        if (!textField1.getText().equals("")){
+        if (!textField1.getText().equals("") || !textField2.getText().equals("")
+        || !textField3.getText().equals("") || !textField4.getText().equals("")
+        || comboBox1.getSelectedItem() != null
+                || comboBox2.getSelectedItem() != null){
             Consultas objConsultas = new Consultas();
-            objConsultas.setTitulo(new String[]{"Nombre",
-                    "Apellido",
-                    "Identificacion",
-                    "Codigo de Sucursal"});
-            objConsultas.setDatos(new String[]{
-                    "Nombre",
-                    "Apellido",
-                    "Identificacion",
-                    "CodigoSucursal"});
             objConsultas.setParametroString(
-                    "select Nombre, Apellido, Identificacion, CodigoSucursal from Empleado where Nombre = ? " +
-                            "or Apellido = ? or Identificacion = ? or CodigoSucursal = ?");
+                    "INSERT INTO [dbo].[Clientes] " +
+                            "([Nombre]," +
+                            "[Apellido]," +
+                            "[ID_Personal]," +
+                            "[Num_Tarjeta]," +
+                            "[Tipo_Tarjeta])" +
+                            "VALUES " +
+                            "(?, ?, ?, ?, ?) "
+            );
             objConsultas.setParametros(new String[]{
                     textField1.getText(),
+                    textField2.getText(),
+                    textField3.getText(),
+                    textField4.getText(),
+                    Objects.requireNonNull(comboBox1.getSelectedItem()).toString(),
+                    Objects.requireNonNull(comboBox2.getSelectedItem()).toString()
             });
-
-            table1.setModel(objConsultas.consultas());
             objConsultas.setDatosc(null);
         }else{
             //impresionDialogo("El campo esta en blanco", "Sin datos", 1);
