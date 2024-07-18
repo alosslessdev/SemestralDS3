@@ -50,8 +50,10 @@ public class Consultas {
                 PreparedStatement pst = conectar.prepareStatement(sql,
                         ResultSet.TYPE_SCROLL_INSENSITIVE,
                         ResultSet.CONCUR_READ_ONLY);
-                for(i=1; i<= parametros.length; i++) {
+                if (parametros != null){
+                    for(i=1; i<= parametros.length; i++) {
                     pst.setString(i, parametros[i-1]);
+                    }
                 }
                 try(ResultSet resultado = pst.executeQuery()){
                     resultado.last();

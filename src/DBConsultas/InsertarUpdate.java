@@ -31,8 +31,11 @@ public class InsertarUpdate {
             //CONCUR_READ_ONLY
             try(Connection conectar = conexion.getConexion()) {
                 PreparedStatement pst = conectar.prepareStatement(sql);
-                for (int i = 1; i <= parametros.length; i++) {
-                pst.setString(i, parametros[i-1]);
+                if (parametros != null){
+
+                    for (int i = 1; i <= parametros.length; i++) {
+                    pst.setString(i, parametros[i-1]);
+                    }
                 }
                 pst.executeQuery();
                 JOptionPane.showMessageDialog(null, "Informacion registrada correctamente",
