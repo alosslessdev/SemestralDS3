@@ -17,37 +17,33 @@ import javax.swing.GroupLayout;
  */
 public class EstaMoroso extends JInternalFrame {
     public EstaMoroso() {
-        super("Ver estado de pago", true, true, true, false);
+        super("Lista de clientes morosos", true, true, true, false);
 
         initComponents();
     }
 
     private void button1(ActionEvent e) {
         // TODO add your code here
-        if (!textField1.getText().equals("")){
-            ExecProcedimientos execProcedimientos = new ExecProcedimientos();
-            execProcedimientos.setTitulo(new String[]{
-                    "Nombre",
-                    "Apellido",
-                    "ID_cliente",
-                    "ID_Contrato",
-                    "Nombre de Plan",
-                    "Ultimo Pago"});
-            execProcedimientos.setDatos(new String[]{
-                    "Nombre",
-                    "Apellido",
-                    "ID_cliente",
-                    "ID_Contrato",
-                    "Nombre_Plan",
-                    "UltimoPago"});
-            execProcedimientos.setParametroString(
-                    "{call ClientesConPagosAtrasados}");
-            execProcedimientos.setParametros(null);
-            table1.setModel(execProcedimientos.consultas());
-            execProcedimientos.setDatosc(null);
-        }else{
-            JOptionPane.showMessageDialog(null, "Uno o mas campos estan en blanco", "Sin datos",
-                    1);        }
+        ExecProcedimientos execProcedimientos = new ExecProcedimientos();
+        execProcedimientos.setTitulo(new String[]{
+                "Nombre",
+                "Apellido",
+                "ID_cliente",
+                "ID_Contrato",
+                "Nombre de Plan",
+                "Ultimo Pago"});
+        execProcedimientos.setDatos(new String[]{
+                "Nombre",
+                "Apellido",
+                "ID_cliente",
+                "ID_Contrato",
+                "Nombre_Plan",
+                "UltimoPago"});
+        execProcedimientos.setParametroString(
+                "{call ClientesConPagosAtrasados}");
+        execProcedimientos.setParametros(null);
+        table1.setModel(execProcedimientos.consultas());
+        execProcedimientos.setDatosc(null);
 
     }
 
@@ -55,8 +51,6 @@ public class EstaMoroso extends JInternalFrame {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         // Generated using JFormDesigner Evaluation license - sdfsf
         button1 = new JButton();
-        label1 = new JLabel();
-        textField1 = new JTextField();
         scrollPane1 = new JScrollPane();
         table1 = new JTable();
 
@@ -67,9 +61,6 @@ public class EstaMoroso extends JInternalFrame {
         //---- button1 ----
         button1.setText("Ver");
         button1.addActionListener(e -> button1(e));
-
-        //---- label1 ----
-        label1.setText("C\u00f3digo de cliente");
 
         //======== scrollPane1 ========
         {
@@ -83,29 +74,21 @@ public class EstaMoroso extends JInternalFrame {
                 .addGroup(contentPaneLayout.createSequentialGroup()
                     .addGroup(contentPaneLayout.createParallelGroup()
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(68, 68, 68)
+                            .addGap(74, 74, 74)
                             .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 627, GroupLayout.PREFERRED_SIZE))
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(225, 225, 225)
-                            .addComponent(label1)
-                            .addGap(31, 31, 31)
-                            .addGroup(contentPaneLayout.createParallelGroup()
-                                .addComponent(button1)
-                                .addComponent(textField1, GroupLayout.PREFERRED_SIZE, 173, GroupLayout.PREFERRED_SIZE))))
-                    .addContainerGap(83, Short.MAX_VALUE))
+                            .addGap(362, 362, 362)
+                            .addComponent(button1)))
+                    .addContainerGap(77, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
                 .addGroup(contentPaneLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                        .addComponent(label1)
-                        .addComponent(textField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addGap(35, 35, 35)
                     .addComponent(button1)
-                    .addGap(36, 36, 36)
-                    .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 349, GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(50, Short.MAX_VALUE))
+                    .addGap(18, 18, 18)
+                    .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 380, GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(48, Short.MAX_VALUE))
         );
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }
@@ -113,8 +96,6 @@ public class EstaMoroso extends JInternalFrame {
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     // Generated using JFormDesigner Evaluation license - sdfsf
     private JButton button1;
-    private JLabel label1;
-    private JTextField textField1;
     private JScrollPane scrollPane1;
     private JTable table1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on

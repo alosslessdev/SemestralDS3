@@ -15,7 +15,7 @@ import javax.swing.GroupLayout;
  */
 public class PlanDeCliente extends JInternalFrame {
     public PlanDeCliente() {
-        super("Plan De Cliente", true, true, true, false);
+        super("Plan Del Cliente", true, true, true, false);
 
         initComponents();
     }

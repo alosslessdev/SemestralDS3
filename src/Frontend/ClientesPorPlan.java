@@ -17,7 +17,7 @@ import javax.swing.GroupLayout;
  */
 public class ClientesPorPlan extends JInternalFrame {
     public ClientesPorPlan() {
-        super("Clientes Por Plan", true, true, true, false);
+        super("Lista de clientes por plan", true, true, true, false);
 
         initComponents();
     }

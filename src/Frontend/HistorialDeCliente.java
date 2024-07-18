@@ -16,7 +16,7 @@ import javax.swing.GroupLayout;
  */
 public class HistorialDeCliente extends JInternalFrame {
     public HistorialDeCliente() {
-        super("Historial De Cliente", true, true, true, false);
+        super("Historial De Pagos Del Cliente", true, true, true, false);
 
         initComponents();
     }

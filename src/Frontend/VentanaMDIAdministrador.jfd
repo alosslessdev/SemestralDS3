@@ -35,7 +35,7 @@ new FormModel {
 					"text": "Cliente"
 					add( new FormComponent( "javax.swing.JMenuItem" ) {
 						name: "HistorialDeClienteF"
-						"text": "Historial de cliente"
+						"text": "Historial De Pagos Del Cliente"
 						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "HistorialDeClienteF", true ) )
 					} )
 					add( new FormComponent( "javax.swing.JMenuItem" ) {
@@ -45,12 +45,12 @@ new FormModel {
 					} )
 					add( new FormComponent( "javax.swing.JMenuItem" ) {
 						name: "PlanDeClienteF"
-						"text": "Plan de cliente"
+						"text": "Plan del cliente"
 						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "PlanDeClienteF", true ) )
 					} )
 					add( new FormComponent( "javax.swing.JMenuItem" ) {
 						name: "PagoAtrasadoF"
-						"text": "Ver si tiene pago atrasado"
+						"text": "Lista de clientes morosos"
 						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "PagoAtrasadoF", true ) )
 					} )
 				} )
@@ -91,7 +91,7 @@ new FormModel {
 					"text": "Planes"
 					add( new FormComponent( "javax.swing.JMenuItem" ) {
 						name: "BuscarMenu"
-						"text": "Informacion de planes"
+						"text": "Informacion De Planes Y Sus Clientes"
 						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "BuscarMenu", true ) )
 					} )
 					add( new FormComponent( "javax.swing.JMenuItem" ) {

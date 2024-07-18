@@ -230,7 +230,7 @@ public class VentanaMDIAdministrador extends JFrame {
                 ClienteF.setText("Cliente");
 
                 //---- HistorialDeClienteF ----
-                HistorialDeClienteF.setText("Historial de cliente");
+                HistorialDeClienteF.setText("Historial De Pagos Del Cliente");
                 HistorialDeClienteF.addActionListener(e -> HistorialDeClienteF(e));
                 ClienteF.add(HistorialDeClienteF);
 
@@ -240,12 +240,12 @@ public class VentanaMDIAdministrador extends JFrame {
                 ClienteF.add(NuevoClienteF);
 
                 //---- PlanDeClienteF ----
-                PlanDeClienteF.setText("Plan de cliente");
+                PlanDeClienteF.setText("Plan del cliente");
                 PlanDeClienteF.addActionListener(e -> PlanDeClienteF(e));
                 ClienteF.add(PlanDeClienteF);
 
                 //---- PagoAtrasadoF ----
-                PagoAtrasadoF.setText("Ver si tiene pago atrasado");
+                PagoAtrasadoF.setText("Lista de clientes morosos");
                 PagoAtrasadoF.addActionListener(e -> PagoAtrasadoF(e));
                 ClienteF.add(PagoAtrasadoF);
             }
@@ -294,7 +294,7 @@ public class VentanaMDIAdministrador extends JFrame {
                 menu2.setText("Planes");
 
                 //---- BuscarMenu ----
-                BuscarMenu.setText("Informacion de planes");
+                BuscarMenu.setText("Informacion De Planes Y Sus Clientes");
                 BuscarMenu.addActionListener(e -> BuscarMenu(e));
                 menu2.add(BuscarMenu);
 

@@ -15,7 +15,7 @@ import javax.swing.GroupLayout;
  */
 public class InformacionDePlanes extends JInternalFrame {
     public InformacionDePlanes() {
-        super("Informacion De Planes", true, true, true, false);
+        super("Informacion De Planes Y Sus Clientes", true, true, true, false);
         initComponents();
     }
 
