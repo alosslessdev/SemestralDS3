@@ -68,7 +68,7 @@ public class Consultas {
                             consulta.addRow(datosc);
                         }
                     }else{
-                        JOptionPane.showMessageDialog(null, "No hay datos para la fecha ","Info",1);
+                        JOptionPane.showMessageDialog(null, "No hay datos ","Info",1);
                     }
                 }
             }catch (Exception e){
