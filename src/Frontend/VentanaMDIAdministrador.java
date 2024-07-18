@@ -129,18 +129,6 @@ public class VentanaMDIAdministrador extends JFrame {
             estaMoroso.show();         
     }
 
-        private void DoctoresF(ActionEvent e) {
-            // TODO add your code here
-            ListaDeDoctores listaDeDoctores = new ListaDeDoctores();
-            listaDeDoctores.setSize(desktopPane1.getSize());
-            try {
-                listaDeDoctores.setMaximum(true);
-            } catch (PropertyVetoException ex) {
-                ex.printStackTrace();
-            }
-            this.desktopPane1.add(listaDeDoctores);
-            listaDeDoctores.show();        
-    }
 
         private void NuevoPagoF(ActionEvent e) {
             // TODO add your code here
@@ -207,8 +195,6 @@ public class VentanaMDIAdministrador extends JFrame {
         NuevoClienteF = new JMenuItem();
         PlanDeClienteF = new JMenuItem();
         PagoAtrasadoF = new JMenuItem();
-        menu8 = new JMenu();
-        DoctoresF = new JMenuItem();
         menu3 = new JMenu();
         GenerosMenu = new JMenuItem();
         menu7 = new JMenu();
@@ -264,17 +250,6 @@ public class VentanaMDIAdministrador extends JFrame {
                 ClienteF.add(PagoAtrasadoF);
             }
             menuBar1.add(ClienteF);
-
-            //======== menu8 ========
-            {
-                menu8.setText("Doctores");
-
-                //---- DoctoresF ----
-                DoctoresF.setText("Lista de doctores");
-                DoctoresF.addActionListener(e -> DoctoresF(e));
-                menu8.add(DoctoresF);
-            }
-            menuBar1.add(menu8);
 
             //======== menu3 ========
             {
@@ -366,8 +341,6 @@ public class VentanaMDIAdministrador extends JFrame {
     private JMenuItem NuevoClienteF;
     private JMenuItem PlanDeClienteF;
     private JMenuItem PagoAtrasadoF;
-    private JMenu menu8;
-    private JMenuItem DoctoresF;
     private JMenu menu3;
     private JMenuItem GenerosMenu;
     private JMenu menu7;

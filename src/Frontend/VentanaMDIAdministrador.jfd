@@ -55,15 +55,6 @@ new FormModel {
 					} )
 				} )
 				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
-					name: "menu8"
-					"text": "Doctores"
-					add( new FormComponent( "javax.swing.JMenuItem" ) {
-						name: "DoctoresF"
-						"text": "Lista de doctores"
-						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "DoctoresF", true ) )
-					} )
-				} )
-				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
 					name: "menu3"
 					"text": "Estadisticas"
 					add( new FormComponent( "javax.swing.JMenuItem" ) {
