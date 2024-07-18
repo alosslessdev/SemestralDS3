@@ -26,29 +26,32 @@ public class InformacionDePlanes extends JInternalFrame {
 
     private void button1(ActionEvent e) {
         // TODO add your code here
-        if (!textField1.getText().equals("")){
+
             Consultas objConsultas = new Consultas();
-            objConsultas.setTitulo(new String[]{"Nombre",
-                    "Apellido",
-                    "Identificacion",
-                    "Codigo de Sucursal"});
-            objConsultas.setDatos(new String[]{
+            objConsultas.setTitulo(new String[]{
+                    "ID de cliente",
                     "Nombre",
                     "Apellido",
-                    "Identificacion",
-                    "CodigoSucursal"});
+                    "Nombre de Plan",
+                    "Costo",
+                    "Fecha de Inicio"});
+            objConsultas.setDatos(new String[]{
+                    "ID_cliente",
+                    "Nombre",
+                    "Apellido",
+                    "Nombre_Plan",
+                    "Costo",
+                    "Fecha_Inicio"});
             objConsultas.setParametroString(
-                    "select Nombre, Apellido, Identificacion, CodigoSucursal from Empleado where Nombre = ? " +
-                            "or Apellido = ? or Identificacion = ? or CodigoSucursal = ?");
-            objConsultas.setParametros(new String[]{
-                    textField1.getText(),
-            });
+                    "SELECT c.ID_cliente, c.Nombre, c.Apellido, p.Nombre_Plan, p.Costo, co.Fecha_Inicio " +
+                            "FROM Clientes c " +
+                            "JOIN Contratos co ON c.ID_cliente = co.ID_Cliente " +
+                            "JOIN Planes p ON co.ID_Plan = p.ID_Plan " +
+                            "ORDER BY c.ID_cliente;");
+            objConsultas.setParametros(null);
 
             table1.setModel(objConsultas.consultas());
             objConsultas.setDatosc(null);
-        }else{
-            //impresionDialogo("El campo esta en blanco", "Sin datos", 1);
-        }
 
     }
 

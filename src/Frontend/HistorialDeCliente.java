@@ -24,18 +24,28 @@ public class HistorialDeCliente extends JInternalFrame {
         // TODO add your code here
         if (!textField1.getText().equals("")){
             Consultas objConsultas = new Consultas();
-            objConsultas.setTitulo(new String[]{"Nombre",
-                    "Apellido",
-                    "Identificacion",
-                    "Codigo de Sucursal"});
-            objConsultas.setDatos(new String[]{
+            objConsultas.setTitulo(new String[]{
+                    "ID de cliente",
                     "Nombre",
                     "Apellido",
-                    "Identificacion",
-                    "CodigoSucursal"});
+                    "ID de Contrato",
+                    "ID de Pago",
+                    "Fecha de Pago",
+                    "Monto",
+                    "Nombre de Plan"
+            });
+            objConsultas.setDatos(new String[]{
+                    "ID_cliente",
+                    "Nombre",
+                    "Apellido",
+                    "ID_Contrato",
+                    "ID_Pago",
+                    "Fecha_Pago",
+                    "Monto",
+                    "Nombre_Plan"
+            });
             objConsultas.setParametroString(
-                    "select Nombre, Apellido, Identificacion, CodigoSucursal from Empleado where Nombre = ? " +
-                            "or Apellido = ? or Identificacion = ? or CodigoSucursal = ?");
+                    "{call HistorialPagosCliente (?)}}");
             objConsultas.setParametros(new String[]{
                     textField1.getText(),
             });
@@ -43,7 +53,8 @@ public class HistorialDeCliente extends JInternalFrame {
             table1.setModel(objConsultas.consultas());
             objConsultas.setDatosc(null);
         }else{
-            //impresionDialogo("El campo esta en blanco", "Sin datos", 1);
+            JOptionPane.showMessageDialog(null, "Uno o mas campos estan en blanco", "Sin datos",
+                    1);       
         }
 
     }

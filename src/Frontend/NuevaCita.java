@@ -50,8 +50,8 @@ public class NuevaCita extends JInternalFrame {
             objInsertarUpdate.insertar();
 
         }else{
-            //impresionDialogo("El campo esta en blanco", "Sin datos", 1);
-        }
+            JOptionPane.showMessageDialog(null, "Uno o mas campos estan en blanco", "Sin datos",
+                    1);        }
 
     }
 
@@ -86,7 +86,7 @@ public class NuevaCita extends JInternalFrame {
         label1.setText("C\u00f3digo de cliente");
 
         //---- label2 ----
-        label2.setText("C\u00f3digo de Programa");
+        label2.setText("ID de Programa");
 
         //---- label5 ----
         label5.setText("Fecha de Cita");
@@ -117,9 +117,9 @@ public class NuevaCita extends JInternalFrame {
                             .addComponent(label6)
                             .addGap(6, 6, 6)
                             .addComponent(textField6, GroupLayout.PREFERRED_SIZE, 155, GroupLayout.PREFERRED_SIZE)))
-                    .addContainerGap(265, Short.MAX_VALUE))
+                    .addContainerGap(258, Short.MAX_VALUE))
                 .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
-                    .addContainerGap(368, Short.MAX_VALUE)
+                    .addContainerGap(367, Short.MAX_VALUE)
                     .addComponent(button1)
                     .addGap(349, 349, 349))
         );

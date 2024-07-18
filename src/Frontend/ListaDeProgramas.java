@@ -22,28 +22,90 @@ public class ListaDeProgramas extends JInternalFrame {
 
     private void button1(ActionEvent e) {
         // TODO add your code here
-        if (!textField1.getText().equals("")){
+        if (!textField2.getText().equals("") || textField3.getText().equals("")){
             Consultas objConsultas = new Consultas();
-            objConsultas.setTitulo(new String[]{"Nombre",
-                    "Apellido",
-                    "Identificacion",
-                    "Codigo de Sucursal"});
+            objConsultas.setTitulo(new String[]{
+                    "ID de Programa",
+                    "Nombre de Programa",
+                    "Duracion",
+                    "Ano de Inicio",
+                    "Edad de Recomendada"});
             objConsultas.setDatos(new String[]{
-                    "Nombre",
-                    "Apellido",
-                    "Identificacion",
-                    "CodigoSucursal"});
+                    "ID_Programa",
+                    "Nombre_Programa",
+                    "Duracion",
+                    "Ano_Inicio",
+                    "Edad_Recomendada"});
             objConsultas.setParametroString(
-                    "select Nombre, Apellido, Identificacion, CodigoSucursal from Empleado where Nombre = ? " +
-                            "or Apellido = ? or Identificacion = ? or CodigoSucursal = ?");
+                    "{call BuscarProgramasPorEdad (?)}");
             objConsultas.setParametros(new String[]{
-                    textField1.getText(),
+                    textField2.getText(),
             });
 
             table1.setModel(objConsultas.consultas());
             objConsultas.setDatosc(null);
-        }else{
-            //impresionDialogo("El campo esta en blanco", "Sin datos", 1);
+        }else if (!textField3.getText().equals("") || textField2.getText().equals("") ){
+            Consultas objConsultas = new Consultas();
+            objConsultas.setTitulo(new String[]{
+                    "ID de Programa",
+                    "Nombre de Programa",
+                    "Duracion",
+                    "Ano de Inicio",
+                    "Edad de Recomendada"});
+            objConsultas.setDatos(new String[]{
+                    "ID_Programa",
+                    "Nombre_Programa",
+                    "Duracion",
+                    "Ano_Inicio",
+                    "Edad_Recomendada"});
+            objConsultas.setParametroString(
+                    "{call BuscarProgramasPorGenero (?)}");
+            objConsultas.setParametros(new String[]{
+                    textField3.getText(),
+            });
+
+            table1.setModel(objConsultas.consultas());
+            objConsultas.setDatosc(null);
+
+        }else if (!textField3.getText().equals("") || !textField2.getText().equals("")){
+            Consultas objConsultas = new Consultas();
+            objConsultas.setTitulo(new String[]{
+                    "ID de Programa",
+                    "Nombre de Programa",
+                    "Duracion",
+                    "Ano de Inicio",
+                    "Edad de Recomendada"});
+            objConsultas.setDatos(new String[]{
+                    "ID_Programa",
+                    "Nombre_Programa",
+                    "Duracion",
+                    "Ano_Inicio",
+                    "Edad_Recomendada"});
+            objConsultas.setParametroString(
+                    "SELECT " +
+                            "ID_Programa, " +
+                            "Nombre_Programa, " +
+                            "Duracion, " +
+                            "Ano_Inicio, " +
+                            "Edad_Recomendada, " +
+                            "CASE " +
+                            "WHEN Genero = 'TE' THEN 'Telemedicina' " +
+                            "WHEN Genero = 'CO' THEN 'Comercial' " +
+                            "WHEN Genero = 'PR' THEN 'Presencial' " +
+                            "END AS Tipo_Programa " +
+                            "FROM " +
+                            "Programas " +
+                            "WHERE " +
+                            "Genero = ? AND Edad_Recomendada = ? " +
+                            "ORDER BY  " +
+                            "Nombre_Programa ");
+            objConsultas.setParametros(new String[]{
+                    textField2.getText(),
+                    textField3.getText()
+            });
+
+            table1.setModel(objConsultas.consultas());
+            objConsultas.setDatosc(null);
         }
 
     }
@@ -72,7 +134,7 @@ public class ListaDeProgramas extends JInternalFrame {
         label1.setText("G\u00e9nero");
 
         //---- label2 ----
-        label2.setText("Duraci\u00f3n");
+        label2.setText("Edad");
 
         //---- button1 ----
         button1.setText("Ver");

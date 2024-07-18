@@ -21,7 +21,7 @@ new FormModel {
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label2"
-				"text": "Duración"
+				"text": "Edad"
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField2"

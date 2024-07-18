@@ -5,6 +5,7 @@
 package Frontend;
 
 import DBConsultas.Consultas;
+import DBConsultas.InsertarUpdate;
 
 import java.awt.event.*;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public class NuevoCliente extends JInternalFrame {
         || !textField3.getText().equals("") || !textField4.getText().equals("")
         || comboBox1.getSelectedItem() != null
                 || comboBox2.getSelectedItem() != null){
-            Consultas objConsultas = new Consultas();
-            objConsultas.setParametroString(
+            InsertarUpdate insertarUpdate = new InsertarUpdate();
+            insertarUpdate.setParametroString(
                     "INSERT INTO [dbo].[Clientes] " +
                             "([Nombre]," +
                             "[Apellido]," +
@@ -38,7 +39,7 @@ public class NuevoCliente extends JInternalFrame {
                             "VALUES " +
                             "(?, ?, ?, ?, ?) "
             );
-            objConsultas.setParametros(new String[]{
+            insertarUpdate.setParametros(new String[]{
                     textField1.getText(),
                     textField2.getText(),
                     textField3.getText(),
@@ -46,10 +47,10 @@ public class NuevoCliente extends JInternalFrame {
                     Objects.requireNonNull(comboBox1.getSelectedItem()).toString(),
                     Objects.requireNonNull(comboBox2.getSelectedItem()).toString()
             });
-            objConsultas.setDatosc(null);
+            insertarUpdate.insertar();
         }else{
-            //impresionDialogo("El campo esta en blanco", "Sin datos", 1);
-        }
+            JOptionPane.showMessageDialog(null, "Uno o mas campos estan en blanco", "Sin datos",
+                    1);        }
 
     }
 

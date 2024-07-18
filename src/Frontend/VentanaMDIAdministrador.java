@@ -77,19 +77,6 @@ public class VentanaMDIAdministrador extends JFrame {
             nuevaCita.show();
     }
 
-        private void InformacionDePagoF(ActionEvent e) {
-            // TODO add your code here
-            InformacionDePago informacionDePago = new InformacionDePago();
-            informacionDePago.setSize(desktopPane1.getSize());
-            try {
-                informacionDePago.setMaximum(true);
-            } catch (PropertyVetoException ex) {
-                ex.printStackTrace();
-            }
-            this.desktopPane1.add(informacionDePago);
-            informacionDePago.show();        
-    }
-
         private void HistorialDeClienteF(ActionEvent e) {
             // TODO add your code here
             HistorialDeCliente historialDeCliente = new HistorialDeCliente();
@@ -216,7 +203,6 @@ public class VentanaMDIAdministrador extends JFrame {
         menu6 = new JMenu();
         NuevaCitaF = new JMenuItem();
         ClienteF = new JMenu();
-        InformacionDePagoF = new JMenuItem();
         HistorialDeClienteF = new JMenuItem();
         NuevoClienteF = new JMenuItem();
         PlanDeClienteF = new JMenuItem();
@@ -227,12 +213,12 @@ public class VentanaMDIAdministrador extends JFrame {
         GenerosMenu = new JMenuItem();
         menu7 = new JMenu();
         NuevoPagoF = new JMenuItem();
-        menu2 = new JMenu();
-        BuscarMenu = new JMenuItem();
-        ClientesPlanF = new JMenuItem();
         menu4 = new JMenu();
         ListaProgramasF = new JMenuItem();
         CrearProgramaF = new JMenuItem();
+        menu2 = new JMenu();
+        BuscarMenu = new JMenuItem();
+        ClientesPlanF = new JMenuItem();
         desktopPane1 = new JDesktopPane();
         button1 = new JButton();
 
@@ -256,11 +242,6 @@ public class VentanaMDIAdministrador extends JFrame {
             //======== ClienteF ========
             {
                 ClienteF.setText("Cliente");
-
-                //---- InformacionDePagoF ----
-                InformacionDePagoF.setText("Informacion de pago");
-                InformacionDePagoF.addActionListener(e -> InformacionDePagoF(e));
-                ClienteF.add(InformacionDePagoF);
 
                 //---- HistorialDeClienteF ----
                 HistorialDeClienteF.setText("Historial de cliente");
@@ -317,22 +298,6 @@ public class VentanaMDIAdministrador extends JFrame {
             }
             menuBar1.add(menu7);
 
-            //======== menu2 ========
-            {
-                menu2.setText("Planes");
-
-                //---- BuscarMenu ----
-                BuscarMenu.setText("Informacion de planes");
-                BuscarMenu.addActionListener(e -> BuscarMenu(e));
-                menu2.add(BuscarMenu);
-
-                //---- ClientesPlanF ----
-                ClientesPlanF.setText("Lista de clientes por plan");
-                ClientesPlanF.addActionListener(e -> ClientesPlanF(e));
-                menu2.add(ClientesPlanF);
-            }
-            menuBar1.add(menu2);
-
             //======== menu4 ========
             {
                 menu4.setText("Programas");
@@ -348,6 +313,22 @@ public class VentanaMDIAdministrador extends JFrame {
                 menu4.add(CrearProgramaF);
             }
             menuBar1.add(menu4);
+
+            //======== menu2 ========
+            {
+                menu2.setText("Planes");
+
+                //---- BuscarMenu ----
+                BuscarMenu.setText("Informacion de planes");
+                BuscarMenu.addActionListener(e -> BuscarMenu(e));
+                menu2.add(BuscarMenu);
+
+                //---- ClientesPlanF ----
+                ClientesPlanF.setText("Lista de clientes por plan");
+                ClientesPlanF.addActionListener(e -> ClientesPlanF(e));
+                menu2.add(ClientesPlanF);
+            }
+            menuBar1.add(menu2);
         }
         setJMenuBar(menuBar1);
 
@@ -381,7 +362,6 @@ public class VentanaMDIAdministrador extends JFrame {
     private JMenu menu6;
     private JMenuItem NuevaCitaF;
     private JMenu ClienteF;
-    private JMenuItem InformacionDePagoF;
     private JMenuItem HistorialDeClienteF;
     private JMenuItem NuevoClienteF;
     private JMenuItem PlanDeClienteF;
@@ -392,12 +372,12 @@ public class VentanaMDIAdministrador extends JFrame {
     private JMenuItem GenerosMenu;
     private JMenu menu7;
     private JMenuItem NuevoPagoF;
-    private JMenu menu2;
-    private JMenuItem BuscarMenu;
-    private JMenuItem ClientesPlanF;
     private JMenu menu4;
     private JMenuItem ListaProgramasF;
     private JMenuItem CrearProgramaF;
+    private JMenu menu2;
+    private JMenuItem BuscarMenu;
+    private JMenuItem ClientesPlanF;
     private JDesktopPane desktopPane1;
     private JButton button1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on

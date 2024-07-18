@@ -3,6 +3,7 @@ package DBConsultas;
 import DBConexion.ConexionSQL;
 import LogsApp.AppLogs;
 
+import javax.swing.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -34,7 +35,9 @@ public class InsertarUpdate {
                 pst.setString(i, parametros[i-1]);
                 }
                 pst.executeQuery();
-
+                JOptionPane.showMessageDialog(null, "Informacion registrada correctamente",
+                        "Insertado",
+                        JOptionPane.INFORMATION_MESSAGE);
 
             }catch (SQLException ex){
                 objLogs.errorLogs(ex);

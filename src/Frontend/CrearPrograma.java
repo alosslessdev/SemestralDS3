@@ -50,7 +50,8 @@ public class CrearPrograma extends JInternalFrame {
             objInsertarUpdate.insertar();
 
         }else{
-            //impresionDialogo("El campo esta en blanco", "Sin datos", 1);
+            JOptionPane.showMessageDialog(null, "Uno o mas campos estan en blanco", "Sin datos",
+                    1);
         }
 
     }

@@ -4,7 +4,7 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormContainer( "javax.swing.JInternalFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq {space :p:241:p, par t {seq t {comp label1:::p::p, space :6:6:p, comp textField3:::p:155:p}, seq t {comp label2:::p::p, space :6:6:p, comp textField4:::p:155:p}, seq t {comp label5:::p::p, space :6:6:p, comp textField5:::p:155:p}, seq t {comp label6:::p::p, space :6:6:p, comp textField6:::p:155:p}}, space ::265:x}, seq t {space ::368:x, comp button1:::p::p, space :p:349:p}}"
+			"$horizontalGroup": "par l {seq {space :p:241:p, par t {seq t {comp label1:::p::p, space :6:6:p, comp textField3:::p:155:p}, seq t {comp label2:::p::p, space :6:6:p, comp textField4:::p:155:p}, seq t {comp label5:::p::p, space :6:6:p, comp textField5:::p:155:p}, seq t {comp label6:::p::p, space :6:6:p, comp textField6:::p:155:p}}, space ::258:x}, seq t {space ::367:x, comp button1:::p::p, space :p:349:p}}"
 			"$verticalGroup": "par l {seq l {space :p:34:p, par l {seq l {space :6:6:p, comp label1:::p::p}, comp textField3:::p::p}, space s:::p, par l {seq l {space :6:6:p, comp label2:::p::p}, comp textField4:::p::p}, space s:::p, par l {seq {space :6:6:p, comp label5:::p::p}, comp textField5:::p::p}, space :p:12:p, par l {seq {space :6:6:p, comp label6:::p::p}, comp textField6:::p::p}, space :p:26:p, comp button1:::p::p, space ::263:x}}"
 		} ) {
 			name: "this"
@@ -23,7 +23,7 @@ new FormModel {
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label2"
-				"text": "Código de Programa"
+				"text": "ID de Programa"
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField4"
@@ -48,4 +48,3 @@ new FormModel {
 		} )
 	}
 }
-
