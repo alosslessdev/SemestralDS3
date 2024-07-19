@@ -33,8 +33,8 @@ public class InsertarUpdate {
                 PreparedStatement pst = conectar.prepareStatement(sql);
                 if (parametros != null){
 
-                    for (int i = 1; i <= parametros.length; i++) {
-                    pst.setString(i, parametros[i-1]);
+                    for (int i = 0; i < parametros.length; i++) {
+                    pst.setString(i+1, parametros[i]);
                     }
                 }
                 pst.executeQuery();
@@ -44,6 +44,7 @@ public class InsertarUpdate {
 
             }catch (SQLException ex){
                 objLogs.errorLogs(ex);
+                //ex.printStackTrace();
             }
         } catch (SQLException e) {
             objLogs.errorLogs(e);

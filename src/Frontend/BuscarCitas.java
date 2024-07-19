@@ -63,23 +63,16 @@ public class BuscarCitas extends JInternalFrame {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         // Generated using JFormDesigner Evaluation license - sdfsf
         this2 = new JInternalFrame();
-        button1 = new JButton();
-        label1 = new JLabel();
-        textField1 = new JTextField();
         scrollPane1 = new JScrollPane();
         table1 = new JTable();
+        button1 = new JButton();
+        textField1 = new JTextField();
+        label1 = new JLabel();
 
         //======== this2 ========
         {
             this2.setVisible(true);
             var this2ContentPane = this2.getContentPane();
-
-            //---- button1 ----
-            button1.setText("Ver");
-            button1.addActionListener(e -> button1(e));
-
-            //---- label1 ----
-            label1.setText("ID_Cliente");
 
             //======== scrollPane1 ========
             {
@@ -91,45 +84,35 @@ public class BuscarCitas extends JInternalFrame {
             this2ContentPaneLayout.setHorizontalGroup(
                 this2ContentPaneLayout.createParallelGroup()
                     .addGroup(this2ContentPaneLayout.createSequentialGroup()
-                        .addGroup(this2ContentPaneLayout.createParallelGroup()
-                            .addGroup(this2ContentPaneLayout.createSequentialGroup()
-                                .addGap(250, 250, 250)
-                                .addComponent(label1)
-                                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(this2ContentPaneLayout.createParallelGroup()
-                                    .addComponent(textField1, GroupLayout.PREFERRED_SIZE, 163, GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(this2ContentPaneLayout.createSequentialGroup()
-                                        .addGap(37, 37, 37)
-                                        .addComponent(button1))))
-                            .addGroup(this2ContentPaneLayout.createSequentialGroup()
-                                .addGap(39, 39, 39)
-                                .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 696, GroupLayout.PREFERRED_SIZE)))
+                        .addGap(39, 39, 39)
+                        .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 696, GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(40, Short.MAX_VALUE))
             );
             this2ContentPaneLayout.setVerticalGroup(
                 this2ContentPaneLayout.createParallelGroup()
                     .addGroup(this2ContentPaneLayout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addGroup(this2ContentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                            .addComponent(label1)
-                            .addComponent(textField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                        .addGap(37, 37, 37)
-                        .addComponent(button1)
-                        .addGap(18, 18, 18)
+                        .addGap(140, 140, 140)
                         .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 341, GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(30, Short.MAX_VALUE))
             );
         }
+
+        //---- button1 ----
+        button1.setText("Ver");
+        button1.addActionListener(e -> button1(e));
+
+        //---- label1 ----
+        label1.setText("ID_Cliente");
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     // Generated using JFormDesigner Evaluation license - sdfsf
     private JInternalFrame this2;
-    private JButton button1;
-    private JLabel label1;
-    private JTextField textField1;
     private JScrollPane scrollPane1;
     private JTable table1;
+    private JButton button1;
+    private JTextField textField1;
+    private JLabel label1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

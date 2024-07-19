@@ -16,7 +16,7 @@ public class ExecProcedimientos {
     private String [] datos;
     private String [] datosc;
 
-    private AppLogs objLogs = new AppLogs(Consultas.class);
+    //private AppLogs objLogs = new AppLogs(Consultas.class);
 
     public void setDatosc(String[] datosc) {
         this.datosc = datosc;
@@ -65,10 +65,10 @@ public class ExecProcedimientos {
                     }
                 }
             }catch (Exception e){
-                objLogs.errorLogs(e);
+                e.printStackTrace();
             }
         }catch (SQLException ex){
-            objLogs.errorLogs(ex);
+            ex.printStackTrace();
         }
         return consulta;
     }
@@ -98,10 +98,10 @@ public class ExecProcedimientos {
                     }
                 }
             }catch (Exception e){
-                objLogs.errorLogs(e);
+                System.out.println(e.toString());
             }
         }catch (SQLException ex){
-            objLogs.errorLogs(ex);
+            System.out.println(ex.toString());
         }
         return consulta;
     }

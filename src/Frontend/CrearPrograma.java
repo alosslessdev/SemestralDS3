@@ -35,13 +35,13 @@ public class CrearPrograma extends JInternalFrame {
                             "[Edad_Recomendada], " +
                             "[Duracion], " +
                             "[Nombre_Programa], " +
-                            "[Año_Inicio]) " +
+                            "[Ano_Inicio]) " +
                             "VALUES " +
                             "(?, ?, ?, ?, ?) "
             );
             objInsertarUpdate.setParametros(new String[]{
                     textField1.getText(),
-                    Objects.requireNonNull(comboBox1.getSelectedItem()).toString(),
+                    comboBox1.getSelectedItem().toString(),
                     textField2.getText(),
                     textField3.getText(),
                     textField4.getText()

@@ -28,23 +28,21 @@ public class NuevaCita extends JInternalFrame {
     private void button1(ActionEvent e) {
         // TODO add your code here
         if (!textField3.getText().equals("") || !textField4.getText().equals("")
-                || !textField5.getText().equals("") || !textField6.getText().equals("")){
+                || !textField5.getText().equals("")){
             InsertarUpdate objInsertarUpdate = new InsertarUpdate();
 
             objInsertarUpdate.setParametroString(
                     "INSERT INTO [Citas] " +
                             "([ID_Cliente], " +
                             "[ID_Programa], " +
-                            "[Fecha_Cita], " +
-                            "[ID_Doctor] " +
+                            "[Fecha_Cita]) " +
                             "VALUES " +
-                            "(?, ?, ?, ?) "
+                            "(?, ?, ?) "
             );
             objInsertarUpdate.setParametros(new String[]{
                     textField3.getText(),
                     textField4.getText(),
                     textField5.getText(),
-                    textField6.getText()
             });
 
             objInsertarUpdate.insertar();

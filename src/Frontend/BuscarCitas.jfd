@@ -4,23 +4,11 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormContainer( "javax.swing.JInternalFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq {par l {seq {space :p:250:p, comp label1:::p::p, space u:::p, par l {comp textField1:::p:163:p, seq l {space :p:37:p, comp button1:::p::p}}}, seq l {space :p:39:p, comp scrollPane1:::p:696:p}}, space ::40:x}}"
-			"$verticalGroup": "par l {seq l {space :p:29:p, par b {comp label1::b:p::p, comp textField1::b:p::p}, space :p:37:p, comp button1:::p::p, space s:::p, comp scrollPane1:::p:341:p, space ::30:x}}"
+			"$horizontalGroup": "par l {seq {space :p:39:p, comp scrollPane1:::p:696:p, space ::40:x}}"
+			"$verticalGroup": "par l {seq l {space :p:140:p, comp scrollPane1:::p:341:p, space ::30:x}}"
 		} ) {
 			name: "this2"
 			"visible": true
-			add( new FormComponent( "javax.swing.JButton" ) {
-				name: "button1"
-				"text": "Ver"
-				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1", true ) )
-			} )
-			add( new FormComponent( "javax.swing.JLabel" ) {
-				name: "label1"
-				"text": "ID_Cliente"
-			} )
-			add( new FormComponent( "javax.swing.JTextField" ) {
-				name: "textField1"
-			} )
 			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
 				name: "scrollPane1"
 				add( new FormComponent( "javax.swing.JTable" ) {
@@ -30,6 +18,27 @@ new FormModel {
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 65 )
 			"size": new java.awt.Dimension( 787, 542 )
+		} )
+		add( new FormComponent( "javax.swing.JButton" ) {
+			name: "button1"
+			"text": "Ver"
+			addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1", true ) )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 313, 688 )
+			"size": new java.awt.Dimension( 46, 28 )
+		} )
+		add( new FormComponent( "javax.swing.JTextField" ) {
+			name: "textField1"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 276, 623 )
+			"size": new java.awt.Dimension( 163, 28 )
+		} )
+		add( new FormComponent( "javax.swing.JLabel" ) {
+			name: "label1"
+			"text": "ID_Cliente"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 210, 629 )
+			"size": new java.awt.Dimension( 54, 16 )
 		} )
 	}
 }

@@ -3,26 +3,18 @@ JFDML JFormDesigner: "8.2.3.0.386" Java: "17.0.10" encoding: "UTF-8"
 new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
-		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
-			"$layoutConstraints": "insets 0,hidemode 3,align center center"
-			"$columnConstraints": "[fill][fill]"
-			"$rowConstraints": "[fill]"
+		add( new FormContainer( "javax.swing.JInternalFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :p:68:p, comp panel1:::p:400:p, space ::70:x}}"
+			"$verticalGroup": "par l {seq l {space :p:37:p, comp panel1:::p:300:p, space ::37:x}}"
 		} ) {
 			name: "this"
-			"title": "Login"
-			"$locationPolicy": 1
-			"defaultCloseOperation": 3
-			"minimumSize": new java.awt.Dimension( 800, 600 )
-			"$sizePolicy": 2
-			"maximumSize": new java.awt.Dimension( 1920, 1080 )
-			"preferredSize": new java.awt.Dimension( 800, 600 )
-			"background": sfield java.awt.Color darkGray
+			"visible": true
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
 				"$layoutConstraints": "fillx,insets 35 45 30 45,hidemode 3,wrap"
 				"$columnConstraints": "[fill]"
 				"$rowConstraints": "[][][][][][]"
 			} ) {
-				name: "panel2"
+				name: "panel1"
 				"foreground": sfield java.awt.Color lightGray
 				"background": sfield java.awt.Color darkGray
 				add( new FormComponent( "javax.swing.JLabel" ) {
@@ -84,12 +76,10 @@ new FormModel {
 				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
 					"value": "cell 0 5"
 				} )
-			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
-				"value": "cell 1 0,width 400,height 300"
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 800, 600 )
+			"size": new java.awt.Dimension( 550, 405 )
 		} )
 	}
 }

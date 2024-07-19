@@ -13,6 +13,7 @@ new FormModel {
 				add( new FormComponent( "javax.swing.JButton" ) {
 					name: "button1"
 					"text": "Iniciar Sesión"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1", true ) )
 				}, new FormLayoutConstraints( null ) {
 					"x": 330
 					"y": 235

@@ -48,7 +48,7 @@ public class VentanaMDIAdministrador extends JFrame {
             ex.printStackTrace();
         }
         this.desktopPane1.add(informacionDePlanes);
-        informacionDePlanes.show();   
+        informacionDePlanes.show();
     }
 
     private void GenerosMenu(ActionEvent e) {
@@ -61,7 +61,7 @@ public class VentanaMDIAdministrador extends JFrame {
             ex.printStackTrace();
         }
         this.desktopPane1.add(generosA);
-        generosA.show();   
+        generosA.show();
     }
 
         private void NuevaCitaF(ActionEvent e) {
@@ -87,7 +87,7 @@ public class VentanaMDIAdministrador extends JFrame {
                 ex.printStackTrace();
             }
             this.desktopPane1.add(historialDeCliente);
-            historialDeCliente.show();      
+            historialDeCliente.show();
     }
 
         private void NuevoClienteF(ActionEvent e) {
@@ -100,7 +100,7 @@ public class VentanaMDIAdministrador extends JFrame {
                 ex.printStackTrace();
             }
             this.desktopPane1.add(nuevoCliente);
-            nuevoCliente.show();      
+            nuevoCliente.show();
     }
 
 
@@ -114,7 +114,7 @@ public class VentanaMDIAdministrador extends JFrame {
                 ex.printStackTrace();
             }
             this.desktopPane1.add(estaMoroso);
-            estaMoroso.show();         
+            estaMoroso.show();
     }
 
 
@@ -128,7 +128,7 @@ public class VentanaMDIAdministrador extends JFrame {
                 ex.printStackTrace();
             }
             this.desktopPane1.add(nuevoPago);
-            nuevoPago.show();        
+            nuevoPago.show();
     }
 
         private void ClientesPlanF(ActionEvent e) {
@@ -141,7 +141,7 @@ public class VentanaMDIAdministrador extends JFrame {
                 ex.printStackTrace();
             }
             this.desktopPane1.add(clientesPorPlan);
-            clientesPorPlan.show();         
+            clientesPorPlan.show();
     }
 
         private void ListaProgramasF(ActionEvent e) {
@@ -154,7 +154,7 @@ public class VentanaMDIAdministrador extends JFrame {
                 ex.printStackTrace();
             }
             this.desktopPane1.add(listaDeProgramas);
-            listaDeProgramas.show();      
+            listaDeProgramas.show();
     }
 
         private void CrearProgramaF(ActionEvent e) {
@@ -167,7 +167,7 @@ public class VentanaMDIAdministrador extends JFrame {
                 ex.printStackTrace();
             }
             this.desktopPane1.add(crearPrograma);
-            crearPrograma.show();        
+            crearPrograma.show();
     }
 
     private void BuscarClienteF(ActionEvent e) {
@@ -195,6 +195,19 @@ public class VentanaMDIAdministrador extends JFrame {
             this.desktopPane1.add(buscarCitas);
             buscarCitas.show();
         }
+
+        private void button1(ActionEvent e) {
+            // TODO add your code here
+            LoginMDI2 loginMDI2 = new LoginMDI2();
+            loginMDI2.setSize(desktopPane1.getSize());
+            try {
+                loginMDI2.setMaximum(true);
+            } catch (PropertyVetoException ex) {
+                ex.printStackTrace();
+            }
+            this.desktopPane1.add(loginMDI2);
+            loginMDI2.show();
+    }
 
 
 
@@ -332,6 +345,7 @@ public class VentanaMDIAdministrador extends JFrame {
 
             //---- button1 ----
             button1.setText("Iniciar Sesi\u00f3n");
+            button1.addActionListener(e -> button1(e));
             desktopPane1.add(button1, JLayeredPane.DEFAULT_LAYER);
             button1.setBounds(330, 235, 110, button1.getPreferredSize().height);
         }
@@ -373,6 +387,6 @@ public class VentanaMDIAdministrador extends JFrame {
     private JMenuItem BuscarMenu;
     private JMenuItem ClientesPlanF;
     private JDesktopPane desktopPane1;
-    private JButton button1;
+    public JButton button1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }
