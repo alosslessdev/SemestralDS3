@@ -1,3 +1,5 @@
+//Hecho por prof. José Chirú
+
 package DBConexion;
 
 import LogsApp.AppLogs;
