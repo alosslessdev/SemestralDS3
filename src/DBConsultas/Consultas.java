@@ -1,3 +1,5 @@
+//Modificado por Francisco Herrera a partir de codigo por prof. José Chirú
+
 package DBConsultas;
 
 import DBConexion.ConexionSQL;
